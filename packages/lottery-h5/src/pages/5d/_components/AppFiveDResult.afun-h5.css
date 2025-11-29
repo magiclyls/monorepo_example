@@ -1,0 +1,31 @@
+.wrap {
+  border-radius: 10rem;
+  background: #213743;
+  box-shadow: 0 0 10rem 0 rgba(0, 0, 0, 0.15);
+  display: flex;
+  color: #b1bad3;
+  padding: 10rem 13rem 7rem;
+}
+.ball {
+  width: 35rem;
+  height: 35rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  border: 1rem solid #0f212e;
+  background: #2f4553;
+  font-size: 13rem;
+  color: #fff;
+  &.total {
+    color: #000;
+    background-color: #24ee89;
+    border-color: #24ee89;
+  }
+}
+.five-d-text {
+  color: #b1bad3;
+}
+.five-d-text1 {
+  color: #fff;
+}

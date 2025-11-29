@@ -1,0 +1,51 @@
+<script lang="ts" setup>
+defineOptions({
+  name: 'IconUniFb',
+})
+</script>
+
+<template>
+  <i class="tg-icon-container">
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      width="16"
+      height="17"
+      viewBox="0 0 16 17"
+      fill="none"
+    >
+      <g clip-path="url(#clip0_3733_1610)">
+        <path
+          d="M0 8.5C0 10.6217 0.842855 12.6566 2.34315 14.1569C3.84344 15.6571 5.87827 16.5 8 16.5C10.1217 16.5 12.1566 15.6571 13.6569 14.1569C15.1571 12.6566 16 10.6217 16 8.5C16 6.37827 15.1571 4.34344 13.6569 2.84315C12.1566 1.34285 10.1217 0.5 8 0.5C5.87827 0.5 3.84344 1.34285 2.34315 2.84315C0.842855 4.34344 0 6.37827 0 8.5Z"
+        />
+        <path
+          d="M16 8.5C16 4.0816 12.4184 0.5 8 0.5C3.5816 0.5 0 4.0816 0 8.5C0 12.9184 3.5816 16.5 8 16.5C12.4184 16.5 16 12.9184 16 8.5ZM5.852 8.5V6.9688H6.7896V6.044C6.7896 4.796 7.1632 3.896 8.5304 3.896H10.156V5.4232H9.012C8.4376 5.4232 8.308 5.804 8.308 6.2032V6.9696H10.072L9.832 8.5H8.308V13.1176H6.7896V8.5H5.852Z"
+        />
+      </g>
+      <defs>
+        <clipPath>
+          <rect width="16" height="16" transform="translate(0 0.5)" />
+        </clipPath>
+      </defs>
+    </svg>
+  </i>
+</template>
+
+<style scoped>
+.tg-icon-container {
+  height: 1em;
+  width: 1em;
+  line-height: 1em;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+}
+
+.tg-icon-container svg {
+  width: 1em;
+  height: 1em;
+  fill: currentColor;
+}
+</style>

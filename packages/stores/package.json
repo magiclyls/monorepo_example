@@ -13,6 +13,8 @@
   "dependencies": {
     "@tg/apis": "workspace:^",
     "@tg/hooks": "workspace:^",
-    "@tg/utils": "workspace:^"
+    "@tg/types": "workspace:^",
+    "@tg/utils": "workspace:^",
+    "@tg/vue-i18n": "workspace:^"
   }
 }

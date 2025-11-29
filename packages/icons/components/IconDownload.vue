@@ -1,0 +1,41 @@
+<script lang="ts" setup>
+defineOptions({
+  name: 'IconDownload',
+})
+</script>
+
+<template>
+  <i class="tg-icon-container">
+    <svg
+      width="20"
+      height="20"
+      viewBox="0 0 20 20"
+      fill="none"
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <path
+        d="M4 2.791C4 1.8028 4.82683 1 5.84158 1H13.1584C14.1759 1 15 1.8082 15 2.791V17.209C15 18.1981 14.1732 19 13.1584 19H5.8425C5.35656 19.0014 4.88984 18.8138 4.54451 18.4781C4.19918 18.1424 4.00339 17.6861 4 17.209V2.791ZM14.0833 15.4V3.7H4.91942V15.4H14.0833ZM9.49817 13.1275L12.25 10H10.4167V6.6952H8.58333V10H6.882L9.49817 13.1275ZM9.49817 18.325C9.64864 18.325 9.79764 18.2959 9.93666 18.2394C10.0757 18.1828 10.202 18.1 10.3084 17.9955C10.4148 17.891 10.4992 17.767 10.5568 17.6305C10.6144 17.494 10.644 17.3477 10.644 17.2C10.644 17.0523 10.6144 16.906 10.5568 16.7695C10.4992 16.633 10.4148 16.509 10.3084 16.4045C10.202 16.3 10.0757 16.2172 9.93666 16.1606C9.79764 16.1041 9.64864 16.075 9.49817 16.075C9.19427 16.075 8.90283 16.1935 8.68794 16.4045C8.47306 16.6155 8.35233 16.9016 8.35233 17.2C8.35233 17.4984 8.47306 17.7845 8.68794 17.9955C8.90283 18.2065 9.19427 18.325 9.49817 18.325Z"
+      />
+    </svg>
+  </i>
+</template>
+
+<style scoped>
+.tg-icon-container {
+  height: 1em;
+  width: 1em;
+  line-height: 1em;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+}
+
+.tg-icon-container svg {
+  width: 1em;
+  height: 1em;
+  fill: currentColor;
+}
+</style>

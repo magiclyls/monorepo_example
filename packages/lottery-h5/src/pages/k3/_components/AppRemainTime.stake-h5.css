@@ -1,0 +1,54 @@
+.dices {
+  position: relative;
+  .item {
+    background: #333333;
+    box-shadow:
+      0 5px 5px 0 #0000004d inset,
+      0 -5px 5px 0 #0000004d inset;
+  }
+  &::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: -5rem;
+    transform: translateY(-50%);
+    z-index: 0;
+    width: 5rem;
+    height: 26rem;
+    background: #008b59;
+    border-radius: 5rem 0 0 5rem;
+  }
+  &::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    right: -5rem;
+    transform: translateY(-50%);
+    z-index: 0;
+    width: 5rem;
+    height: 26rem;
+    background: #008b59;
+    border-radius: 0 5rem 5rem 0;
+  }
+}
+.k3-remain-time-bg {
+  background: #213743;
+}
+.k3-remain-time-bg1 {
+  background: #00b977;
+}
+.k3-remain-time-bg2 {
+  background: #003c26;
+}
+.k3-remain-time-text {
+  color: #b1bad3;
+}
+.k3-remain-time-text1 {
+  color: #15c16b;
+}
+.k3-remain-time-text2 {
+  color: #ffffff;
+}
+.k3-remain-time-border {
+  border-color: #15c16b;
+}

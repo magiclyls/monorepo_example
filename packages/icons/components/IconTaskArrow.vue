@@ -1,0 +1,41 @@
+<script lang="ts" setup>
+defineOptions({
+  name: 'IconTaskArrow',
+})
+</script>
+
+<template>
+  <i class="tg-icon-container">
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      width="14"
+      height="14"
+      viewBox="0 0 14 14"
+      fill="none"
+    >
+      <path
+        d="M7.87489 7L2.625 12.2499L4.37511 14L11.3751 7L4.37511 0L2.625 1.75011L7.87489 7Z"
+      />
+    </svg>
+  </i>
+</template>
+
+<style scoped>
+.tg-icon-container {
+  height: 1em;
+  width: 1em;
+  line-height: 1em;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+}
+
+.tg-icon-container svg {
+  width: 1em;
+  height: 1em;
+  fill: currentColor;
+}
+</style>

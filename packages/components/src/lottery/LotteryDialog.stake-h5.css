@@ -1,0 +1,40 @@
+.lot-dialog-enter-active,
+.lot-dialog-leave-active {
+  transition: all 0.2s ease;
+}
+.lot-dialog-enter-from,
+.lot-dialog-leave-to {
+  opacity: 0;
+}
+.lottery-dialog-bg {
+  --lot-dialog-container-bg: #1a2c38;
+}
+.lot-dialog-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(16, 18, 18, 0.8);
+  width: 100%;
+  height: 100%;
+  max-width: var(--pc-max-width);
+  position: fixed;
+  z-index: 200;
+  top: 0;
+  left: 50%;
+  transform: translate(-50%, 0);
+
+  .lot-dialog-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    overflow-y: auto;
+    overflow-x: hidden;
+    min-width: var(--lot-dialog-container-min-width);
+    min-height: var(--lot-dialog-container-min-height);
+    max-width: var(--lot-dialog-container-max-width);
+    max-height: var(--lot-dialog-container-max-height);
+    background-color: #1a2c38;
+    border-radius: var(--lot-dialog-container-radius);
+    padding: var(--lot-dialog-container-padding);
+  }
+}

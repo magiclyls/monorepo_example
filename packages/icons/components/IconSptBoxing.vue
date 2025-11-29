@@ -1,0 +1,44 @@
+<script lang="ts" setup>
+defineOptions({
+  name: 'IconSptBoxing',
+})
+</script>
+
+<template>
+  <i class="tg-icon-container">
+    <svg
+      width="28"
+      height="28"
+      viewBox="0 0 28 28"
+      fill="none"
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <path
+        d="M23.9149 25.6664C23.9149 26.9553 22.8702 28 21.5813 28H8.74769C7.45881 28 6.41406 26.9553 6.41406 25.6664V24.5H23.9141L23.9149 25.6664Z"
+      />
+      <path
+        d="M5.32036 8.16637C5.42536 8.9145 5.56011 9.562 5.73161 10.1937L5.70536 10.0791C5.95473 10.8999 6.10698 11.8449 6.12536 12.8222V12.8327H7.87536C7.85611 11.7075 7.68286 10.6304 7.37573 9.61012L7.39761 9.69413C7.19811 9.01075 7.05724 8.21537 7.00299 7.3955L7.00123 7.36137V3.5C7.00123 1.56712 8.56836 0 10.5012 0H18.6676C22.5334 0 25.6676 3.13425 25.6676 7V15.1664L23.474 22.1664H7.00036L2.33398 15.1664V11.6664C2.33398 11.655 2.33398 11.6419 2.33398 11.6287C2.33398 9.877 3.62111 8.42537 5.30111 8.169L5.32036 8.16637Z"
+      />
+    </svg>
+  </i>
+</template>
+
+<style scoped>
+.tg-icon-container {
+  height: 1em;
+  width: 1em;
+  line-height: 1em;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+}
+
+.tg-icon-container svg {
+  width: 1em;
+  height: 1em;
+  fill: currentColor;
+}
+</style>

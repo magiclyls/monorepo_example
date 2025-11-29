@@ -1,0 +1,42 @@
+<script lang="ts" setup>
+defineOptions({
+  name: 'IconSptLive',
+})
+</script>
+
+<template>
+  <i class="tg-icon-container">
+    <svg
+      width="28"
+      height="28"
+      viewBox="0 0 28 28"
+      fill="none"
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <path
+        d="M0 0V21.595H28V0H0ZM10.0686 17.2664V4.32775L20.4286 10.7914L10.0686 17.2664Z"
+      />
+      <path d="M4.66602 24.5H23.3324V28H4.66602V24.5Z" />
+    </svg>
+  </i>
+</template>
+
+<style scoped>
+.tg-icon-container {
+  height: 1em;
+  width: 1em;
+  line-height: 1em;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+}
+
+.tg-icon-container svg {
+  width: 1em;
+  height: 1em;
+  fill: currentColor;
+}
+</style>

@@ -1,0 +1,41 @@
+<script lang="ts" setup>
+defineOptions({
+  name: 'IconChessFrame6',
+})
+</script>
+
+<template>
+  <i class="tg-icon-container">
+    <svg
+      width="28"
+      height="28"
+      viewBox="0 0 28 28"
+      fill="none"
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <path
+        d="M25.8569 6.3C25.8569 5.13363 24.9233 4.31638 23.8733 4.31638C22.7069 4.31638 21.8897 5.25 21.8897 6.3V14H19.3233V1.98362C19.3233 0.81725 18.3897 0 17.3397 0C16.2897 0 15.3561 0.933625 15.3561 1.98362V14H12.9061V5.25C12.9061 4.08362 11.9724 3.26637 10.9224 3.26637C9.75606 3.26637 8.93881 4.2 8.93881 5.25V18.6664L5.78881 15.5164C4.97244 14.7 3.57244 14.7 2.75519 15.5164C1.93794 16.3328 1.93881 17.7327 2.75519 18.55L9.05519 26.25C9.75519 27.4164 11.0388 28 12.4388 28H19.5552C22.9388 28 25.7388 25.2 25.7388 21.8164L25.8552 6.3H25.8569Z"
+      />
+    </svg>
+  </i>
+</template>
+
+<style scoped>
+.tg-icon-container {
+  height: 1em;
+  width: 1em;
+  line-height: 1em;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+}
+
+.tg-icon-container svg {
+  width: 1em;
+  height: 1em;
+  fill: currentColor;
+}
+</style>

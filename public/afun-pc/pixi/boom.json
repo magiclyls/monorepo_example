@@ -1,0 +1,73 @@
+{
+  "frames": {
+
+    "crash_boom1.png":
+{
+  "frame": { "x": 125, "y": 137, "w": 44, "h": 44 },
+  "rotated": false,
+  "trimmed": false,
+  "spriteSourceSize": { "x": 0, "y": 0, "w": 44, "h": 44 },
+  "sourceSize": { "w": 44, "h": 44 }
+},
+    "crash_boom2.png":
+{
+  "frame": { "x": 125, "y": 91, "w": 44, "h": 48 },
+  "rotated": true,
+  "trimmed": false,
+  "spriteSourceSize": { "x": 0, "y": 0, "w": 44, "h": 48 },
+  "sourceSize": { "w": 44, "h": 48 }
+},
+    "crash_boom3.png":
+{
+  "frame": { "x": 71, "y": 101, "w": 52, "h": 56 },
+  "rotated": false,
+  "trimmed": false,
+  "spriteSourceSize": { "x": 0, "y": 0, "w": 52, "h": 56 },
+  "sourceSize": { "w": 52, "h": 56 }
+},
+    "crash_boom4.png":
+{
+  "frame": { "x": 1, "y": 101, "w": 68, "h": 76 },
+  "rotated": false,
+  "trimmed": false,
+  "spriteSourceSize": { "x": 0, "y": 0, "w": 68, "h": 76 },
+  "sourceSize": { "w": 68, "h": 76 }
+},
+    "crash_boom5.png":
+{
+  "frame": { "x": 93, "y": 1, "w": 88, "h": 98 },
+  "rotated": true,
+  "trimmed": false,
+  "spriteSourceSize": { "x": 0, "y": 0, "w": 88, "h": 98 },
+  "sourceSize": { "w": 88, "h": 98 }
+},
+    "crash_boom6.png":
+{
+  "frame": { "x": 1, "y": 1, "w": 90, "h": 98 },
+  "rotated": false,
+  "trimmed": false,
+  "spriteSourceSize": { "x": 0, "y": 0, "w": 90, "h": 98 },
+  "sourceSize": { "w": 90, "h": 98 }
+},
+    "crash_boom7.png":
+{
+  "frame": { "x": 93, "y": 91, "w": 3, "h": 3 },
+  "rotated": false,
+  "trimmed": true,
+  "spriteSourceSize": { "x": 0, "y": 0, "w": 3, "h": 3 },
+  "sourceSize": { "w": 90, "h": 98 }
+}
+  },
+  "animations": {
+    "crash_boom": ["crash_boom1.png", "crash_boom2.png", "crash_boom3.png", "crash_boom4.png", "crash_boom5.png", "crash_boom6.png", "crash_boom7.png"]
+  },
+  "meta": {
+    "app": "https://www.codeandweb.com/texturepacker",
+    "version": "1.1",
+    "image": "boom.png",
+    "format": "RGBA8888",
+    "size": { "w": 192, "h": 182 },
+    "scale": "1",
+    "smartupdate": "$TexturePacker:SmartUpdate:dc997f4735ea0e1ad40ca07289f51a87:8d953b668aa2e43556dac4ab3d062aa1:e47eedbaad58bc4f340c3001c2dcf4d3$"
+  }
+}

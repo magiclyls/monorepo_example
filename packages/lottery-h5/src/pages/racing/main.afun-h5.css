@@ -1,0 +1,130 @@
+.racing {
+  .big {
+    border-radius: 5rem;
+    background: linear-gradient(90deg, #ff9000 0%, #ffd000 100%);
+    box-shadow: 0 0 10rem 0 rgba(0, 0, 0, 0.15);
+  }
+  .small {
+    border-radius: 5rem;
+    background: linear-gradient(90deg, #00bdff 0%, #5bcdff 100%);
+  }
+  .odd {
+    border-radius: 5rem;
+    background: linear-gradient(90deg, #fd0261 0%, #ff8a96 100%);
+  }
+  .even {
+    border-radius: 5rem;
+    background: linear-gradient(90deg, #00be50 0%, #9bdf00 100%);
+  }
+  .custom-countdown {
+    --lot-timer-box-radius: 5rem;
+    --lot-timer-box-first-clip: none;
+    --lot-timer-box-last-clip: none;
+  }
+  .race-ball-active {
+    /*outline: 1rem solid #fd565c;*/
+    border-radius: 11rem;
+  }
+  .race-rect-active {
+    /*outline: 1rem solid #fd565c;*/
+    outline-offset: 3rem;
+    border-radius: 2rem;
+  }
+}
+
+@keyframes balls-scale {
+  0% {
+    transform: scale(1);
+  }
+  25% {
+    transform: scale(1.2);
+  }
+  50% {
+    transform: scale(0.85);
+  }
+  75% {
+    transform: scale(1.2);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+.animate-balls-scale {
+  animation: balls-scale 0.3s ease-in-out infinite;
+}
+.zero {
+  background: linear-gradient(to bottom right, #fb4e4e 50%, #eb43dd 50%);
+  color: #fff;
+  border: none;
+}
+.five {
+  background: linear-gradient(to bottom right, #5cba47 50%, #eb43dd 0);
+  color: #fff;
+  border: none;
+}
+.red {
+  background: #fb4e4e;
+  color: #fff;
+  border: none;
+}
+.green {
+  background: #5cba47;
+  color: #fff;
+  border: none;
+}
+.bet-area {
+  background-color: #213743;
+  .bet-green {
+    background-color: #40ad72;
+  }
+  .bet-purple {
+    background-color: #b659fe;
+  }
+  .bet-red {
+    background-color: #fd565c;
+  }
+}
+.bet-grid {
+  background-color: #2f4553;
+  color: #b1bad3;
+}
+.random-btn {
+  background-color: #213743;
+  border: 1px solid #24ee89;
+  --lot-base-btn-default-color: #24ee89;
+  font-weight: 500;
+}
+
+.multiply-btn {
+  background-color: #2f4553;
+  color: #fff;
+}
+
+.multiply-btn-active {
+  background-color: #24ee89;
+  color: #213743;
+}
+.main-text-color {
+  color: #000000;
+}
+.main-text-color1 {
+  color: #b1bad3;
+  background-color: #2f4553;
+  &.racing-active {
+    color: #000000;
+    background-color: #24ee89;
+  }
+}
+.main-text-color2 {
+  color: #b1bad3;
+}
+.main-border-color {
+  color: #000000;
+}
+.racing-main-bg {
+  background: #213743;
+}
+.racing-main-bg1 {
+  background: #2f4553;
+}

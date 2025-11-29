@@ -17,10 +17,10 @@ export function domTransition(
   },
 ) {
   const defaultOptions = {
-    duration: 300,
-    easing: 'linear',
+    duration: 500,
+    easing: 'ease',
     height: '30px',
-    backgroundColor: '#24ee89',
+    backgroundColor: '#1475e1',
     topOffset: 0,
   }
 
@@ -34,14 +34,13 @@ export function domTransition(
   // 创建一个新的div元素，用于动画效果
   const animatedDiv = document.createElement('div')
   animatedDiv.style.position = 'fixed'
-  animatedDiv.style.left = `${startDomRect.left + (startDomRect.width / 2)}px`
+  animatedDiv.style.left = `${startDomRect.left}px`
   animatedDiv.style.top = `${startDomRect.top}px`
-  animatedDiv.style.width = `20px`
-  animatedDiv.style.height = `20px`
+  animatedDiv.style.width = `${startDomRect.width}px`
+  animatedDiv.style.height = `${startDomRect.height}px`
   animatedDiv.style.background = mergedOptions.backgroundColor
   animatedDiv.style.opacity = '1'
   animatedDiv.style.zIndex = '9999'
-  animatedDiv.style.borderRadius = '50%'
 
   // 将动画元素添加到DOM中
   document.body.appendChild(animatedDiv)
@@ -71,4 +70,66 @@ export function domTransition(
  */
 export function getStyle(dom: HTMLElement, styleName: any) {
   return window.getComputedStyle(dom)[styleName]
+}
+
+/**
+ * 滚动到顶部
+ */
+export function scrollToTop() {
+  window.scrollTo({
+    top: 0,
+    behavior: 'smooth',
+  })
+}
+
+/**
+ * 获取 富文本内容的纯文本
+ * @param html
+ * @returns {string}
+ */
+export function getPlainTextFromHtml(html: string) {
+  const parser = new DOMParser()
+  const doc = parser.parseFromString(html, 'text/html')
+  return (doc.body.textContent || '').replaceAll('\n', '').replaceAll('\t', '').trim()
+}
+
+export function domClassAddRemove(name: string, addOrRemove: 'add' | 'remove') {
+  if (addOrRemove === 'add' && !document.documentElement.className.includes(name))
+    document.documentElement.className += ` ${name}`
+  else if (addOrRemove === 'remove')
+    document.documentElement.className = document.documentElement.className.replaceAll(name, ' ')
+}
+
+/**
+ * 获取元素的左偏移量
+ * @param element
+ *
+ */
+export function getElementLeftOffset(element: HTMLElement) {
+  const rect = element.getBoundingClientRect()
+  return rect.left + window.scrollX
+}
+
+/**
+ * 添加script字符串到head中
+ * @param scriptContent
+ *
+ */
+export function addScriptToHead(scriptContent?: string) {
+  try {
+    if (!scriptContent)
+      return
+
+    const parser = new DOMParser()
+    const doc = parser.parseFromString(scriptContent, 'text/html')
+    const _ontent = doc.querySelector('script')?.innerHTML || ''
+
+    const script = document.createElement('script')
+    script.type = 'text/javascript'
+    script.text = _ontent
+    document.head.appendChild(script)
+  }
+  catch (error) {
+    console.error('addScriptToHead error', error)
+  }
 }

@@ -1,0 +1,53 @@
+.base-table {
+  width: 100%;
+  overflow-x: auto;
+
+  table {
+    border-collapse: collapse;
+    width: 100%;
+    thead {
+      background-color: #f23038;
+      tr {
+        background-color: #f23038;
+      }
+      th {
+        padding: 0 0;
+        border: none;
+        color: #fff;
+        font-size: 13rem;
+        font-weight: 700;
+        height: 40rem;
+      }
+    }
+    tbody {
+      td {
+        padding: 0 0;
+        color: #0d2245;
+        font-size: 13rem;
+        font-weight: 500;
+        height: 40rem;
+      }
+      tr {
+        background: #fff;
+      }
+    }
+    &:not(.no-left-right-border) {
+      tbody {
+        td {
+          border: 1rem solid #e1e1e1;
+        }
+      }
+    }
+    &.no-left-right-border {
+      tbody {
+        tr {
+          border-top: 1rem solid #e1e1e1;
+          border-bottom: 1rem solid #e1e1e1;
+          &:last-child {
+            border-bottom: none;
+          }
+        }
+      }
+    }
+  }
+}

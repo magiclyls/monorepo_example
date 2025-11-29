@@ -1,0 +1,44 @@
+<script lang="ts" setup>
+defineOptions({
+  name: 'IconUniSearch',
+})
+</script>
+
+<template>
+  <i class="tg-icon-container">
+    <svg
+      width="28"
+      height="28"
+      viewBox="0 0 28 28"
+      fill="none"
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <path
+        d="M20.2689 16.8662C19.3563 18.2242 18.2232 19.3573 16.909 20.2419L16.8652 20.2699L24.5958 28.0005L27.9995 24.5967L20.2689 16.8662Z"
+      />
+      <path
+        d="M10.1061 0C4.52457 0 0 4.52457 0 10.1061C0 15.6877 4.52457 20.2123 10.1061 20.2123C15.6877 20.2123 20.2123 15.6877 20.2123 10.1061C20.2123 4.52457 15.6877 0 10.1061 0ZM10.1061 16.1873C6.74792 16.1873 4.02495 13.4643 4.02495 10.1061C4.02495 6.74792 6.74792 4.02495 10.1061 4.02495C13.4643 4.02495 16.1873 6.74792 16.1873 10.1061C16.1873 13.4643 13.4643 16.1873 10.1061 16.1873Z"
+      />
+    </svg>
+  </i>
+</template>
+
+<style scoped>
+.tg-icon-container {
+  height: 1em;
+  width: 1em;
+  line-height: 1em;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+}
+
+.tg-icon-container svg {
+  width: 1em;
+  height: 1em;
+  fill: currentColor;
+}
+</style>

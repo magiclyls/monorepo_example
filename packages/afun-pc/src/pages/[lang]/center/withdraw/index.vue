@@ -1,0 +1,28 @@
+<script setup lang='ts'>
+
+</script>
+<template>
+<div class="wraper">
+  <Suspense timeout="0">
+    <template #default>
+        <AppWalletWithDrawV3   />
+    </template>
+    <template #fallback>
+      <AppLoading />
+    </template>
+  </Suspense>
+
+ </div>
+</template>
+<style lang="scss" scoped>
+  .wraper{
+    border-radius: 4px;
+    border: 1px solid #2F4553;
+    background: #1A2C38;
+    box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.20), 0 1px 2px 0 rgba(0, 0, 0, 0.12);
+  }
+</style>
+<route lang="yaml">
+meta:
+  layout: center
+</route>

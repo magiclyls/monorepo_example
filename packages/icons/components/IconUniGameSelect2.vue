@@ -1,0 +1,43 @@
+<script lang="ts" setup>
+defineOptions({
+  name: 'IconUniGameSelect2',
+})
+</script>
+
+<template>
+  <i class="tg-icon-container">
+    <svg
+      width="79"
+      height="104"
+      viewBox="0 0 79 104"
+      fill="none"
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <path
+        d="M3.25416 8.98936C25.8487 0.268797 52.9992 0.405599 75.6969 8.98908L38.5585 96.5623L3.25416 8.98936Z"
+        stroke="#FFEA00"
+        stroke-width="5"
+      />
+    </svg>
+  </i>
+</template>
+
+<style scoped>
+.tg-icon-container {
+  height: 1em;
+  width: 1em;
+  line-height: 1em;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+}
+
+.tg-icon-container svg {
+  width: 1em;
+  height: 1em;
+  fill: currentColor;
+}
+</style>

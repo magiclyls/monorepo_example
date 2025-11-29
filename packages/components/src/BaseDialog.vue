@@ -1,314 +1,201 @@
 <script setup lang="ts">
-import { useDialogStore } from '@tg/stores'
-import { computed, onUnmounted, watch } from 'vue'
-import BaseIcon from './BaseIcon.vue'
+import type { Component, Ref } from 'vue'
+import { IconUniClose3 } from '@tg/icons'
+import { provide } from 'vue'
 
 interface Props {
   modelValue: boolean
+  icon?: Component
   title?: string
-  appendToBody?: boolean
-  closeOnClickModal?: boolean
+  showLoad?: boolean
   showClose?: boolean
-  showBack?: boolean
-  loading?: boolean
-  loadingSize?: number
   showHeader?: boolean
-  dialogStyle?: object
-  // name用于自动查找store里面的set方法
-  name?: string
+  position?: 'center' | 'start' | 'end'
+  teleport?: string | Ref
 }
 
+defineOptions({ name: 'BaseDialog' })
 const props = withDefaults(defineProps<Props>(), {
-  title: '',
-  appendToBody: true,
-  closeOnClickModal: true,
+  showLoad: true,
   showClose: true,
-  showBack: false,
-  loading: false,
-  loadingSize: 30,
   showHeader: true,
-  dialogStyle: () => ({
-    width: '30rem',
-    top: '15vh',
-  }),
+  teleport: 'body',
+  position: 'center',
 })
-const emit = defineEmits(['update:modelValue', 'close', 'back'])
-const dialogStore = useDialogStore()
-/** 获取对应弹窗变量的set函数 */
-const setterName = `set${props.name?.charAt(0).toUpperCase()}${props.name?.slice(1)}`
+const emit = defineEmits(['update:modelValue'])
 
-// 添加 watch 来监听 modelValue 的变化
-watch(() => props.modelValue, (val) => {
-  if (val) {
-    document.body.style.overflow = 'hidden'
-  }
-  else {
-    document.body.style.overflow = ''
-  }
-})
-
-// 组件卸载时确保恢复滚动
-onUnmounted(() => {
-  document.body.style.overflow = ''
-})
-
-const computedDialogStyle = computed(() => ({
-  width: '30rem',
-  top: '15vh',
-  ...props.dialogStyle,
-}))
-
-const loadingStyle = computed(() => ({
-  width: `${props.loadingSize}px`,
-  height: `${props.loadingSize}px`,
-  borderWidth: `${Math.max(3, props.loadingSize / 5)}px`,
-}))
-
-function handleClose() {
-  if (props.name) {
-    (dialogStore as any)[setterName](false)
-  }
-  else {
-    emit('update:modelValue', false)
-    emit('close')
-  }
+function close() {
+  emit('update:modelValue', !props.modelValue)
 }
 
-function handleWrapperClick() {
-  if (props.closeOnClickModal) {
-    handleClose()
-  }
-}
-
-function handleBack() {
-  emit('back')
-}
+provide('closeDialog', close)
 </script>
 
 <template>
-  <teleport to="body" :disabled="!appendToBody">
-    <transition name="dialog-wrapper-fade">
-      <div v-show="modelValue" class="yl-dialog__wrapper" @click="handleWrapperClick">
-        <transition name="dialog-fade">
-          <div v-show="modelValue" class="yl-dialog" :style="computedDialogStyle" @click.stop>
-            <div v-if="showHeader" class="yl-dialog__header">
-              <template v-if="showBack">
-                <button class="yl-dialog__headerbtn yl-dialog__backbtn" @click="handleBack">
-                  <BaseIcon name="left" style="font-size: 0.6rem" />
-                </button>
-              </template>
-              <div class="yl-dialog__header-left" :class="{ 'no-back': !showBack }">
-                <slot name="header-left" />
+  <Teleport :to="teleport">
+    <!-- 兼容pc动画再套一个盒子 -->
+    <Transition name="fixed">
+      <div v-show="modelValue" class="popup-overlay-pc-wrapper" v-bind="$attrs">
+        <div class="popup-overlay">
+          <Transition :name="position">
+            <div v-show="modelValue" class="w-full h-full flex justify-center items-center" :style="{ alignItems: `flex-${position}` }" @click.self="close">
+              <div class="dialog-wrapper">
+                <div v-if="showHeader" class="header">
+                  <slot name="header">
+                    <div class="flex items-center">
+                      <slot name="icon">
+                        <component
+                          :is="icon" v-if="icon" class="flex-none"
+                          :style="{
+                            color: 'var(--ph-base-dialog-icon-color)',
+                            fontSize: 'var(--ph-base-dialog-icon-size)',
+                            marginRight: 'var(--ph-base-dialog-header-icon-mr)',
+                          }"
+                        />
+                      </slot>
+                      <span>{{ title }}</span>
+                    </div>
+                  </slot>
+                  <div v-if="showClose" class="close" @click.stop="close">
+                    <IconUniClose3 style="color: var(--ph-base-dialog-close-color);" />
+                  </div>
+                </div>
+                <div class="scroll-contain scroll-y max-h-[500rem] hide-scroll-bar">
+                  <div class="modal-content">
+                    <slot />
+                  </div>
+                </div>
               </div>
-              <slot name="header">
-                <span class="yl-dialog__title">{{ title }}</span>
-              </slot>
-              <div class="yl-dialog__header-right" :class="{ 'no-close': !showClose }">
-                <slot name="header-right" />
-              </div>
-              <template v-if="showClose">
-                <button class="yl-dialog__headerbtn" @click="handleClose">
-                  <BaseIcon name="x" style="font-size: 0.5rem;" />
-                </button>
-              </template>
             </div>
-
-            <div class="yl-dialog__body">
-              <div v-if="loading" class="yl-dialog__loading">
-                <div class="yl-dialog__loading-spinner" :style="loadingStyle" />
-              </div>
-              <slot />
-            </div>
-
-            <div v-if="$slots.footer" class="yl-dialog__footer">
-              <slot name="footer" />
-            </div>
-          </div>
-        </transition>
+          </Transition>
+        </div>
       </div>
-    </transition>
-  </teleport>
+    </Transition>
+  </Teleport>
 </template>
 
 <style>
 :root {
-  --dialog-header-bg: #232626;
-  --dialog-body-bg: #232626;
-  --dialog-body-padding: 1rem;
-  --dialog-body-min-height: auto;
+  --ph-base-dialog-max-height: calc(100% - 4em);
+  --ph-base-dialog-background-color: #fff;
+  --ph-base-dialog-border-color: transparent;
+  --ph-base-dialog-content-text-color: #0d2245;
+  --ph-base-dialog-header-background-color: transparent;
+  --ph-base-dialog-header-height: auto;
+  --ph-base-dialog-header-padding-top: 16rem;
+  --ph-base-dialog-close-top: 20.5rem;
+  --ph-base-dialog-icon-color: #9dabc8;
+  --ph-base-dialog-icon-size: 16rem;
+  --ph-base-dialog-width: 345rem;
+  --ph-base-dialog-position: fixed;
+  --ph-base-dialog-border-top-radius: 4rem;
+  --ph-base-dialog-border-bottom-radius: 4rem;
+  --ph-base-dialog-header-font-weight: 500;
+  --ph-base-dialog-header-font-size: 18rem;
+  --ph-base-dialog-header-icon-mr: 8rem;
+  --ph-base-dialog-close-color: #0d2245;
+  --ph-base-dialog-header-color: #0d2245;
 }
 </style>
 
-<style scoped>
-.yl-dialog__wrapper {
-  position: fixed;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  overflow: auto;
-  margin: 0;
-  z-index: 2000;
-  background-color: rgba(0, 0, 0, 0.5);
+<style lang='scss' scoped>
+.dialog-wrapper {
+  width: var(--ph-base-dialog-width);
+  height: auto;
+  max-height: var(--ph-base-dialog-max-height);
+  border: 1px solid var(--ph-base-dialog-border-color);
+  border-radius: var(--ph-base-dialog-border-top-radius) var(--ph-base-dialog-border-top-radius)
+    var(--ph-base-dialog-border-bottom-radius) var(--ph-base-dialog-border-bottom-radius);
+  overflow: hidden;
+  background-color: var(--ph-base-dialog-background-color);
 }
-.yl-dialog {
+.header {
+  background-color: var(--ph-base-dialog-header-background-color);
+  width: 100%;
+  display: flex;
+  align-items: center;
   position: relative;
-  margin: 0 auto 3.125rem;
-  border-radius: 0.5rem;
-  box-shadow: 0 0.0625rem 0.1875rem rgba(0, 0, 0, 0.3);
-  box-sizing: border-box;
-}
-
-.yl-dialog__header {
-  height: 3.5rem;
-  padding: 0 0.75rem;
-  border-radius: 0.5rem 0.5rem 0 0;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background-color: var(--dialog-header-bg);
-}
-
-.yl-dialog__title {
-  line-height: 1.5rem;
-  font-size: 1rem;
-  color: #fff;
-  font-weight: 700;
-}
-
-.yl-dialog__headerbtn {
-  position: absolute;
-  width: 1.5rem;
-  height: 1.5rem;
-  padding: 0;
-  background: #464f50;
-  border: none;
-  border-radius: 0.5rem;
-  outline: none;
-  cursor: pointer;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.yl-dialog__backbtn {
-  left: 0.75rem;
-}
-
-.yl-dialog__headerbtn:last-child {
-  right: 0.75rem;
-}
-
-.yl-dialog__close,
-.yl-dialog__back {
-  font-size: 0.875rem;
-  color: #909399;
-}
-
-.yl-dialog__close {
-  display: inline-block;
-}
-
-.yl-dialog__back {
-  display: inline-block;
-}
-
-.yl-dialog__headerbtn:hover {
-  background: #363b3d;
-}
-
-.yl-dialog__headerbtn:hover .yl-dialog__close,
-.yl-dialog__headerbtn:hover .yl-dialog__back {
-  color: #ffffff;
-}
-
-.yl-dialog__body {
-  padding: var(--dialog-body-padding);
-  color: #606266;
-  font-size: 0.875rem;
-  word-break: break-all;
-  position: relative;
-  background-color: var(--dialog-body-bg);
-  border-radius: 0 0 0.5rem 0.5rem;
-  min-height: var(--dialog-body-min-height);
-}
-
-.yl-dialog__loading {
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  z-index: 1;
-}
-
-.yl-dialog__loading-spinner {
-  border-style: solid;
-  border-color: #27563e;
-  border-radius: 50%;
-  border-bottom-color: #24ee89;
-  animation: dialog-spin 1s linear infinite;
-}
-
-@keyframes dialog-spin {
-  0% {
-    transform: rotate(0deg);
-  }
-
-  100% {
-    transform: rotate(360deg);
+  padding-left: 16rem;
+  color: var(--ph-base-dialog-header-color);
+  font-size: var(--ph-base-dialog-header-font-size);
+  font-weight: var(--ph-base-dialog-header-font-weight);
+  line-height: 25rem;
+  padding-top: var(--ph-base-dialog-header-padding-top);
+  height: var(--ph-base-dialog-header-height);
+  .close {
+    position: absolute;
+    right: 16rem;
+    top: var(--ph-base-dialog-close-top);
+    display: flex;
+    align-items: center;
+    z-index: 10;
+    color: var(--ph-base-dialog-close-color);
   }
 }
-
-.yl-dialog__footer {
-  padding: 0.625rem 1.25rem 1.25rem;
-  text-align: right;
-  box-sizing: border-box;
+.modal-content {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  color: var(--ph-base-dialog-content-text-color);
+}
+.scroll-contain {
+  overscroll-behavior: contain;
+}
+.popup-overlay-pc-wrapper {
+  position: var(--ph-base-dialog-position);
+  inset: 0;
+  max-width: var(--pc-max-width);
+  width: 100%;
+  left: 50%;
+  transform: translate(-50%, 0);
+  overflow: hidden;
+  z-index: 999;
 }
 
-/* 外层包装动画 */
-.dialog-wrapper-fade-enter-active {
-  transition: opacity 0.2s ease;
+.popup-overlay {
+  position: var(--ph-base-dialog-position);
+  inset: 0;
+  touch-action: pan-x;
+  background-color: #0009;
+  visibility: visible;
+  max-width: var(--pc-max-width);
+  width: 100%;
+  left: 50%;
+  transform: translate(-50%, 0);
 }
-.dialog-wrapper-fade-leave-active {
-  transition: opacity 0.2s ease;
+
+.fixed-enter-active,
+.fixed-leave-active {
+  transition: all 100ms;
 }
-.dialog-wrapper-fade-enter-from,
-.dialog-wrapper-fade-leave-to {
+
+.center-enter-active,
+.center-leave-active {
+  transition: transform 100ms linear;
+}
+
+.center-enter-from,
+.center-leave-to {
   opacity: 0;
+  transform: scale(0.96);
 }
 
-/* 对话框本身动画 */
-.dialog-fade-enter-active {
-  transition: all 0.2s ease;
+.start-enter-active,
+.start-leave-active {
+  transition:
+    opacity 100ms ease,
+    transform 100ms ease;
 }
-.dialog-fade-leave-active {
-  transition: all 0.2s ease;
-}
-.dialog-fade-enter-from,
-.dialog-fade-leave-to {
+
+.start-enter-from,
+.start-leave-to {
   opacity: 0;
-  transform: scale(0.8);
+  transform: translateY(-10px); /* 初始位置略高 */
 }
 
-.yl-dialog__header-left {
-  position: absolute;
-  left: 3rem;
-}
-
-.yl-dialog__header-left.no-back {
-  left: 0.75rem;
-}
-
-.yl-dialog__header-right {
-  position: absolute;
-  right: 3rem;
-}
-
-.yl-dialog__header-right.no-close {
-  right: 0.75rem;
+.start-enter-to,
+.start-leave-from {
+  opacity: 1;
+  transform: translateY(0); /* 回到正常位置 */
 }
 </style>

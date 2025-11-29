@@ -1,0 +1,41 @@
+<script lang="ts" setup>
+defineOptions({
+  name: 'IconUniPlayrules',
+})
+</script>
+
+<template>
+  <i class="tg-icon-container">
+    <svg
+      width="28"
+      height="28"
+      viewBox="0 0 28 28"
+      fill="none"
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <path
+        d="M14 0C6.286 0 0 6.286 0 14C0 21.714 6.286 28 14 28C21.714 28 28 21.714 28 14C28 6.286 21.714 0 14 0ZM15.4 22.4H12.6V20.174H15.4V22.4ZM18.088 13.958L16.884 15.19C16.03 16.058 15.582 16.548 15.47 18.2L12.656 18.158C12.656 16.688 13.258 15.498 14.224 14.518L15.876 12.838C16.366 12.362 16.66 11.69 16.66 10.948C16.66 9.478 15.456 8.274 13.986 8.274C12.642 8.274 11.522 9.59 11.34 10.948H8.666C8.862 8.148 11.158 5.6 13.986 5.6C16.814 5.6 19.334 7.994 19.334 10.948C19.334 12.124 18.858 13.188 18.088 13.958Z"
+      />
+    </svg>
+  </i>
+</template>
+
+<style scoped>
+.tg-icon-container {
+  height: 1em;
+  width: 1em;
+  line-height: 1em;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+}
+
+.tg-icon-container svg {
+  width: 1em;
+  height: 1em;
+  fill: currentColor;
+}
+</style>

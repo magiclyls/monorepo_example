@@ -1,0 +1,25 @@
+{
+  "name": "@tg/vue-i18n",
+  "version": "1.0.0",
+  "packageManager": "pnpm@10.13.1",
+  "description": "",
+  "author": "",
+  "license": "ISC",
+  "keywords": [],
+  "exports": {
+    ".": {
+      "import": "./src/index.ts"
+    }
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "dependencies": {
+    "@tg/types": "workspace:*",
+    "@tg/utils": "workspace:*",
+    "vue-i18n": "^11.1.11"
+  },
+  "devDependencies": {
+    "@intlify/unplugin-vue-i18n": "^0.12.3"
+  }
+}

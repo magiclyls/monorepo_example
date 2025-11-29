@@ -1,0 +1,9 @@
+.bet-item-text {
+  color: #b1bad3;
+}
+.bet-item-bg {
+  border-radius: 50%;
+  background: #fff;
+  display: inline-block;
+  overflow: hidden;
+}

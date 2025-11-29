@@ -1,0 +1,57 @@
+<script lang="ts" setup>
+defineOptions({
+  name: 'IconUniGoogle',
+})
+</script>
+
+<template>
+  <i class="tg-icon-container">
+    <svg
+      width="17"
+      height="16"
+      viewBox="0 0 17 16"
+      fill="none"
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <g clip-path="url(#clip0_1594_237)">
+        <path
+          d="M3.8229 8.05443C3.8229 7.53122 3.9109 7.02961 4.0669 6.55922L1.3269 4.48682C0.775738 5.59521 0.489816 6.81656 0.491709 8.05443C0.491709 9.33643 0.791709 10.5456 1.3253 11.6192L4.06451 9.54322C3.90451 9.06322 3.8233 8.56041 3.8229 8.05443Z"
+        />
+        <path
+          d="M8.63635 3.29602C9.72802 3.29383 10.787 3.66853 11.6344 4.35681L14.0036 2.01442C12.56 0.770424 10.7091 0.0012207 8.63637 0.0012207C5.41796 0.0012207 2.65155 1.82402 1.32715 4.48681L4.06915 6.55924C4.70035 4.66083 6.50035 3.29564 8.63715 3.29564"
+        />
+        <path
+          d="M8.67072 12.7068C6.52271 12.7068 4.71391 11.3504 4.07871 9.46362L1.32471 11.5236C2.65552 14.17 5.43552 15.9808 8.67071 15.9808C10.6663 15.9808 12.5719 15.2872 14.0027 13.9864L11.3879 12.0072C10.6507 12.462 9.7215 12.7072 8.66991 12.7072"
+        />
+        <path
+          d="M16.4827 7.9784C16.4827 7.50558 16.4079 6.99599 16.2967 6.52319H8.66992V9.61519H13.0595C12.8407 10.6696 12.2435 11.48 11.3883 12.0072L14.0027 13.9864C15.5055 12.6212 16.4827 10.5872 16.4827 7.9784Z"
+        />
+      </g>
+      <defs>
+        <clipPath>
+          <rect width="16" height="16" transform="translate(0.491699)" />
+        </clipPath>
+      </defs>
+    </svg>
+  </i>
+</template>
+
+<style scoped>
+.tg-icon-container {
+  height: 1em;
+  width: 1em;
+  line-height: 1em;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+}
+
+.tg-icon-container svg {
+  width: 1em;
+  height: 1em;
+  fill: currentColor;
+}
+</style>

@@ -1,0 +1,36 @@
+<script lang="ts" setup>
+defineOptions({
+  name: 'IconUniEditAmount',
+})
+</script>
+
+<template>
+  <i class="tg-icon-container">
+    <svg viewBox="0 0 64 64" class="svg-icon" style="">
+      <title />
+      <path
+        d="M57.89 0H6.11A6.12 6.12 0 0 0 0 6.11v51.78A6.12 6.12 0 0 0 6.11 64h51.78A6.12 6.12 0 0 0 64 57.89V6.11A6.12 6.12 0 0 0 57.89 0ZM25 50.09H11.13a2.79 2.79 0 0 1-.008-5.568H25a2.791 2.791 0 1 1 .166 5.574c-.058 0-.118-.002-.174-.006H25ZM23.65 25a8.346 8.346 0 0 1-7.842-5.502l-.018-.058h-4.66a2.791 2.791 0 0 1-.008-5.57h4.668c1.182-3.262 4.254-5.55 7.86-5.55a8.34 8.34 0 0 1 0 16.68Zm29.22 25.09h-4.66c-1.182 3.27-4.258 5.564-7.872 5.564a8.35 8.35 0 0 1-8.35-8.35 8.35 8.35 0 0 1 8.35-8.35 8.356 8.356 0 0 1 7.854 5.506l.018.058h4.66a2.79 2.79 0 0 1 .008 5.568h-.008v.004Zm0-30.61H39c-.05.004-.108.004-.166.004a2.791 2.791 0 0 1 0-5.58c.058 0 .118.002.174.006H39h13.87a2.79 2.79 0 0 1 .008 5.568h-.008v.002Z"
+      />
+    </svg>
+  </i>
+</template>
+
+<style scoped>
+.tg-icon-container {
+  height: 1em;
+  width: 1em;
+  line-height: 1em;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+}
+
+.tg-icon-container svg {
+  width: 1em;
+  height: 1em;
+  fill: currentColor;
+}
+</style>

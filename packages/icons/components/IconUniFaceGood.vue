@@ -1,0 +1,59 @@
+<script lang="ts" setup>
+defineOptions({
+  name: 'IconUniFaceGood',
+})
+</script>
+
+<template>
+  <i class="tg-icon-container">
+    <svg
+      width="21"
+      height="21"
+      viewBox="0 0 21 21"
+      fill="none"
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <g clip-path="url(#clip0_7018_51229)">
+        <path
+          d="M18.5837 9.73355V10.5002C18.5826 12.2972 18.0007 14.0458 16.9248 15.4851C15.8488 16.9244 14.3364 17.9773 12.6131 18.4868C10.8899 18.9963 9.04804 18.9351 7.36238 18.3124C5.67673 17.6896 4.23754 16.5386 3.25946 15.0311C2.28138 13.5236 1.81682 11.7403 1.93506 9.94714C2.05329 8.15402 2.748 6.44715 3.91556 5.08111C5.08312 3.71506 6.66098 2.76303 8.41382 2.367C10.1667 1.97097 12.0005 2.15216 13.642 2.88355"
+          stroke="CURRENTCOLOR"
+          stroke-width="2"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+        />
+        <path
+          d="M18.5833 3.8335L10.25 12.1752L7.75 9.67516"
+          stroke="CURRENTCOLOR"
+          stroke-width="2"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+        />
+      </g>
+      <defs>
+        <clipPath>
+          <rect width="20" height="20" transform="translate(0.25 0.5)" />
+        </clipPath>
+      </defs>
+    </svg>
+  </i>
+</template>
+
+<style scoped>
+.tg-icon-container {
+  height: 1em;
+  width: 1em;
+  line-height: 1em;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+}
+
+.tg-icon-container svg {
+  width: 1em;
+  height: 1em;
+  fill: currentColor;
+}
+</style>

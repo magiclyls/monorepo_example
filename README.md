@@ -1,100 +1,183 @@
-## 在终端执行 chmod +x scripts/\*.sh
 
-## 不要自己安装任何 三方 npm 包和本地包，需要安装请通知 akun
 
-## 路由跳转 （尽量使用 BaseRouterLink 来进行跳转）
+## 📦 项目基础
 
-```vue
-import { useLocalRouter, BaseRouterLink } from '@tg/shared-router'
+- **Node版本：**
+  ```
+  v20.19.2
+  ```
+
+- **终端执行脚本：**
+  ```bash
+  chmod +x scripts/*.sh
+  ```
+- **禁止私自安装三方 npm 包和本地包**
+
+  > 需要安装请联系 **Tim**
+
+- **项目使用 pnpm 作为包管理工具**
+  ```bash
+  pnpm install       # 安装依赖
+  pnpm dev           # 启动项目（根据提示访问）
+  pnpm vitepress     # 访问组件库
+  ```
+
+---
+
+## 🧱 公共组件规范
+
+- **组件统一放在** `components` **项目下**
+- 非本人维护组件 **禁止随意修改**，如有需求请联系 **组件开发人员**，如果组件开发人员已经离职，就联系 **Tim**
+- 目录结构
+  ```
+  tg-Frontend/packages/components/
+  ├── ph-h5   # 菲律宾H5
+  │   ├── PhBaseXxx.vue
+  ├── lottery  # 彩票项目公共组件
+  |   ├── LotteryBaseXxx.vue
+  ├── bc-game  # bc项目（暂停）
+  |   ├── BaseXxx.vue
+  ```
+---
+
+<details>
+<summary>🖼 图片生成规范（generateImg 脚本使用说明）</summary>
+
+### 📁 目录结构
+将原始图片放在对应项目的png目录。在跟目录执行`generateImg`命令，根据命令选择
+
+```
+tg-Frontend/public/独立的项目名称(ph-h5)/
+├── png/   # 所有原始 PNG 图像
+│   ├── icon-home.png
+│   ├── btn-start.png
+│   └── flag/
+│       ├── cn.png
+│       └── us.png
+├── webp/  # 自动生成的 webp 图片（结构保持一致）
+├── avif/  # 自动生成的 avif 图片（结构保持一致）
 ```
 
-## components项目下面的组件，不是自己的不要去改，不满足需求联系akun
+### 🧾 命名规范
 
-## 项目使用 pnpm 作为包管理工具
+- 文件名使用中横线（**kebab-case**）
+- 禁止使用 驼峰、下划线、大写
 
-## 安装依赖 `pnpm install`
+✅ 正确示例：
 
-## 启动项目 `pnpm dev` 根据对应提示访问
+- `icon-user.png`
+- `btn-start.png`
 
-## 访问组件库 `pnpm vitepress`
+❌ 错误示例：
 
-## 所有的css变量都已经写在config.css里面了，写组件的时候要注意使用变量
+- `iconUser.png`
+- `btn_start.PNG`
+- `BgHeader.png`
 
-## 公共组件全部放在 `components` 项目下
+### 🗂 分类建议
 
-### 路由
+- **不要创建子文件夹**，统一放在 `png/`
+- 可使用前缀进行逻辑分类：
+  - `home-tab-1.png`
+  - `home-tab-2.png`
 
-所有的路由配置都 mount 负责，要添加新路由就给 mount。路由页面必须有一个根组件用来继承类名
-路由replace和push 要用这个方法 import { useLocalRouter } from '@tg/shared-router'
+📌 例外：如国旗等大量图片，允许放入独立目录（如 `flag/`）
 
-### 关于全局数据
+</details>
 
-为了避免产生太多重复的代码，
-stores、
-http
-utils
-vite.config.js
-.eslintrc
-文件和文件夹 代码全部由akun维护，如果需要添加或者修改，可以直接通知修改，或者直接提供代码给akun。
+---
 
-### 组件
+<details>
+<summary>🧩 全局代码管理</summary>
 
-基础组件都使用 `Base` 开头，如 `BaseButton、BaseInput` 等。
-业务组件都使用 `App` 开头，如 `AppHeader、AppFooter` 等。
-组件写好后全部在 `/components/index.vue` 下把demo写上，复制功能加上。
-给组件把README.md写上，方便后续使用。
+- 公共模块如 `stores/`、`http/`、`utils/`、`vite.config.js`、`.eslintrc` 等 **全部由 Tim 维护**
+- 需要修改请联系 Tim 或提供修改代码
 
-```js
-// vue文件，必须添加名称（名称和文件名称一样）
-defineOptions({
-  name: '文件名称',
-})
+</details>
+
+---
+
+<details>
+<summary>🧱 组件开发规范</summary>
+
+### ✅ 命名约定
+
+- 基础组件：以 `Base` 开头，如 `BaseButton`, `BaseInput`
+- 业务组件：以 `App` 开头，如 `AppHeader`, `AppFooter`
+
+### 📘 编写要求
+
+- 写好组件后，必须：
+
+  - 在 `/components/index.vue` 中写上 Demo
+  - 实现复制功能
+  - 撰写 `README.md` 方便后续使用
+
+- 所有 Vue 文件需添加 `defineOptions` 并设定组件名：
+
+  ```ts
+  defineOptions({
+    name: '组件文件名',
+  })
+  ```
+
+</details>
+
+---
+
+<details>
+<summary>🗂 Pages 文件命名规范</summary>
+
+- 所有文件和文件夹使用中横线（`kebab-case`）
+- 示例：`home-page`、`login-page`
+
+- Pages里面的路由如果要封装自己页面的组件，使用`_components`作为文件名称
+
+</details>
+
+---
+
+<details>
+<summary>🎨 CSS 与 Class 命名</summary>
+
+- 所有 `class` 使用中横线命名，如 `app-header`
+- 禁止使用下划线 `_` 或驼峰命名法
+- 所有 CSS 变量已写入 `config.css`，编写组件时请使用变量
+
+### `:root` 中命名规范：
+
+```css
+--tg-组件名称-style-属性名
 ```
 
-### Pages文件夹
+✅ 示例：
 
-pages 下面所有的文件夹和文件都使用中横线 `-` 连接，如 `home-page`。
-
-### Class 命名
-
-统一使用中横线 `-` 连接，如 `app-header`。 不要出现下划线 `_` 和驼峰命名法。
-
-### 组件内部:root 命名规范
-
-使用 --tg-组件名称-style-xxxx 这样命名
-
-### 关于网络请求
-
-```js
-// 统一使用vue-request, 全局已经将manual设置成了true，所以需要手动调用，要使用runAsync，不能使用run
-await application.allSettled([run1(), run2()])
+```css
+--tg-button-style-radius
+--tg-card-style-padding
 ```
 
-### script setup 代码顺序，编写hooks的方法，每类之间空一行，保证代码优美
+</details>
 
-```js
-// 类型定义(interface, type)
+---
 
-// 即使封装了很多hooks，也避免不了组件内代码乱
-// 有很多组件内部的逻辑为了方便阅读，也需要封装成hooks，
-// 如果不想将hooks放在composables文件夹中，可以在当前位置写hooks函数
+<details>
+<summary>🧠 组件内代码书写顺序</summary>
+
+```ts
+// 类型定义 (interface, type)
+
+// 内部 hooks（可以就地写 useXXX 函数）
 function useTest() {
   const a = ref(1)
-
-  const changeA = () => {
-    a.value = 2
-  }
-
-  return {
-    a,
-    changeA,
-  }
+  const changeA = () => (a.value = 2)
+  return { a, changeA }
 }
 
 // props
 
-// 外部hooks
-const roter = useRouter()
+// 外部 hooks
+const router = useRouter()
 const test = useTest()
 
 // data
@@ -103,46 +186,46 @@ const test = useTest()
 
 // methods
 
-// watch, watchEffect
+// watch / watchEffect
 
-// mounted
+// mounted / 其他生命周期
 
-// …生命周期
-
-// 初始化需要执行的函数，比如网络请求 init()之类的
+// 初始化函数（如 init() 网络请求）
 ```
 
-### 关于KeepAlive名称
+</details>
 
-```js
-// 统一使用 KeepAlive开头+组件名称，如
+---
+
+<details>
+<summary>🧷 KeepAlive 命名规范</summary>
+
+所有使用 KeepAlive 缓存的页面组件，命名必须为：
+
+```ts
 defineOptions({
-  name: 'KeepAliveCasino',
+  name: 'KeepAlive+组件名' // 示例：KeepAliveCasino
 })
 ```
 
-### 不要出现any类型
+</details>
 
-### 多语言
+---
 
-安装依赖 `pip3 install --user pyyaml pandas openpyxl`
+<details>
+<summary>⛔️ TypeScript 类型规范</summary>
 
-#### 新增多语言
+- 严禁使用 `any` 类型
+- 请定义具体类型或使用 `unknown` + 类型收缩
 
-将多语言添加到根目录的 lang.yml 文件中，如：
+</details>
 
-```yml
-test: 测试
-```
+---
 
-然后终端执行 `pnpm add:lang` 会自动添加到 `src/locales` 下的所有语言文件中。
+<details>
+<summary>⛔️ Git 管理</summary>
 
-#### 翻译内容
+- 使用 `createBranch` 创建分支
+- 不要动 `锁定文件`
 
-由于新增的多语言全是中文。所以需要`翻译内容`，步骤如下
-
-1. 跟目录新建 `locales_get_unconverted_fields` 文件夹
-2. 项目目录执行 `sh ./scripts/runZhFieldsToExcel.sh` 会将除了中文的其他语言翻译内容导出到 `locales_get_unconverted_fields` 文件夹下成为`excel`文件
-3. 然后将`excel`文件发给翻译人员翻译，翻译完成后，将翻译内容替换到`locales_get_unconverted_fields` 文件夹下的`excel`文件
-4. 项目目录执行`sh ./scripts/runUpdateLang.sh` 会将翻译好的`excel`文件按照key更新到`src/locales` 下的所有语言文件中
-5. 完成翻译
+</details>

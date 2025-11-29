@@ -1,0 +1,22 @@
+.big {
+  background-color: #ffa82e;
+}
+.small {
+  background-color: #6da7f4;
+}
+.odd {
+  background-color: #40ad72;
+}
+.even {
+  background-color: #fd565c;
+}
+.chart-bg {
+  background-color: #fff;
+}
+.chart-text {
+  color: #3d3d3d;
+}
+.chart-ball {
+  border: 1rem solid #f23038;
+  color: #f23038;
+}

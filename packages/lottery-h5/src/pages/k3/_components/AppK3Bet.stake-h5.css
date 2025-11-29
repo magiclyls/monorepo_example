@@ -1,0 +1,30 @@
+.k3-bet-bg {
+  background: #1a2c38;
+  color: #b1bad3;
+}
+.k3-bet-bg1 {
+  background: linear-gradient(90deg, #24ee89 0%, #9fe871 100%);
+}
+
+.k3-bet-bg2 {
+  background: #2f4553;
+}
+.k3-bet-text {
+  color: #b1bad3;
+}
+.k3-bet-text1 {
+  color: #fd565c;
+}
+.k3-bet-text2 {
+  color: #000;
+}
+.k3-bet-text3 {
+  color: #b1bad3;
+}
+.k3-bet-text4 {
+  color: #24ee89;
+}
+.k3-bet-border {
+  border-color: #2f4553;
+  background: #0f212e;
+}

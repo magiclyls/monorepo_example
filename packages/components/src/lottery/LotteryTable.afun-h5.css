@@ -1,0 +1,53 @@
+.base-table {
+  width: 100%;
+  overflow-x: auto;
+
+  table {
+    border-collapse: collapse;
+    width: 100%;
+    thead {
+      background-color: #24ee89;
+      tr {
+        background-color: #24ee89;
+      }
+      th {
+        padding: 0 0;
+        border: none;
+        color: #000;
+        font-size: 13rem;
+        font-weight: 700;
+        height: 40rem;
+      }
+    }
+    tbody {
+      td {
+        padding: 0 0;
+        color: #fff;
+        font-size: 13rem;
+        font-weight: 500;
+        height: 40rem;
+      }
+      tr {
+        background: #213743;
+      }
+    }
+    &:not(.no-left-right-border) {
+      tbody {
+        td {
+          border: 1rem solid #2f4553;
+        }
+      }
+    }
+    &.no-left-right-border {
+      tbody {
+        tr {
+          border-top: 1rem solid #2f4553;
+          border-bottom: 1rem solid #2f4553;
+          &:last-child {
+            border-bottom: none;
+          }
+        }
+      }
+    }
+  }
+}

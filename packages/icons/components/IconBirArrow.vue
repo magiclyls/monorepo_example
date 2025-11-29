@@ -1,0 +1,55 @@
+<script lang="ts" setup>
+defineOptions({
+  name: 'IconBirArrow',
+})
+</script>
+
+<template>
+  <i class="tg-icon-container">
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      width="14"
+      height="14"
+      viewBox="0 0 14 14"
+      fill="none"
+    >
+      <g clip-path="url(#clip0_868_1004)">
+        <path
+          d="M7.19169 11.2862L0.991207 5.08576C0.648764 4.74331 0.648764 4.1881 0.991207 3.84566C1.33365 3.50322 1.88886 3.50322 2.2313 3.84566L8.45033 10.0689L7.19169 11.2862Z"
+        />
+        <path
+          d="M6.01756 10.1121L12.3624 3.84579C12.7049 3.50335 13.2601 3.50335 13.6025 3.84579C13.945 4.18824 13.945 4.74345 13.6025 5.08589L7.19169 11.2862L6.01756 10.1121Z"
+        />
+      </g>
+      <defs>
+        <clipPath>
+          <rect
+            width="14"
+            height="14"
+            transform="translate(0 14) rotate(-90)"
+          />
+        </clipPath>
+      </defs>
+    </svg>
+  </i>
+</template>
+
+<style scoped>
+.tg-icon-container {
+  height: 1em;
+  width: 1em;
+  line-height: 1em;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+}
+
+.tg-icon-container svg {
+  width: 1em;
+  height: 1em;
+  fill: currentColor;
+}
+</style>

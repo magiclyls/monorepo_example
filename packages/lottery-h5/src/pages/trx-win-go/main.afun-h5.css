@@ -1,0 +1,87 @@
+@keyframes balls-scale {
+  0% {
+    transform: scale(1);
+  }
+  25% {
+    transform: scale(1.2);
+  }
+  50% {
+    transform: scale(0.85);
+  }
+  75% {
+    transform: scale(1.2);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+.animate-balls-scale {
+  animation: balls-scale 0.3s ease-in-out infinite;
+}
+.custom-countdown {
+  --lot-timer-box-first-clip: none;
+  --lot-timer-box-last-clip: none;
+}
+.zero {
+  background: linear-gradient(to bottom right, #fb4e4e 50%, #eb43dd 50%);
+  color: #fff;
+  border: none;
+}
+.five {
+  background: linear-gradient(to bottom right, #5cba47 50%, #eb43dd 0);
+  color: #fff;
+  border: none;
+}
+.red {
+  background: #fb4e4e;
+  color: #fff;
+  border: none;
+}
+.green {
+  background: #5cba47;
+  color: #fff;
+  border: none;
+}
+.bet-area {
+  background-color: #213743;
+  .bet-green {
+    background-color: #40ad72;
+  }
+  .bet-purple {
+    background-color: #b659fe;
+  }
+  .bet-red {
+    background-color: #fd565c;
+  }
+}
+.bet-grid {
+  background-color: #2f4553;
+  color: #b1bad3;
+}
+.random-btn {
+  background-color: #213743;
+  border: 1px solid #24ee89;
+  --lot-base-btn-default-color: #24ee89;
+  font-weight: 500;
+}
+
+.multiply-btn {
+  background-color: #2f4553;
+  color: #fff;
+}
+
+.multiply-btn-active {
+  background-color: #24ee89;
+  color: #213743;
+}
+.main-text-color {
+  color: #000000;
+}
+.main-border-color {
+  color: #000000;
+}
+.main-border-color2 {
+  color: #24ee89;
+  background-color: #000;
+}

@@ -1,0 +1,36 @@
+<script lang="ts" setup>
+defineOptions({
+  name: 'IconFacebook',
+})
+</script>
+
+<template>
+  <i class="tg-icon-container">
+    <svg viewBox="0 0 96 96" class="svg-icon" style="">
+      <title />
+      <path
+        d="M72.612.633c-1.05 0-2.1-.195-3.165-.27-1.5-.105-3.135-.21-4.71-.27-1.575-.06-3.24-.09-4.935-.09C59.67 0 59.514 0 59.358 0c-2.993 0-5.87.513-8.54 1.455l.18-.054c-4.326 1.479-7.842 4.386-10.061 8.147l-.048.087c-1.311 2.238-2.268 4.854-2.712 7.64l-.018.13a31.101 31.101 0 0 0-.405 5.079v.29-.014 12.419h-14.7v17.099H37.74V96h17.759V52.263h14.654c.735-5.715 1.5-11.385 2.205-17.1h-16.86a2.729 2.729 0 0 1 0-.338v.009-11.61c0-1.23.238-2.405.667-3.482l-.021.063a5.483 5.483 0 0 1 3.5-3.291l.04-.009a11.719 11.719 0 0 1 3.611-.555h.192-.009 9.09c.375 0 .375 0 .375-.36V1.026c0-.24-.03-.375-.33-.39V.633Z"
+      />
+    </svg>
+  </i>
+</template>
+
+<style scoped>
+.tg-icon-container {
+  height: 1em;
+  width: 1em;
+  line-height: 1em;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+}
+
+.tg-icon-container svg {
+  width: 1em;
+  height: 1em;
+  fill: currentColor;
+}
+</style>

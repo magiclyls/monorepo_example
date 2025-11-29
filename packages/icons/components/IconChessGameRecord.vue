@@ -1,0 +1,44 @@
+<script lang="ts" setup>
+defineOptions({
+  name: 'IconChessGameRecord',
+})
+</script>
+
+<template>
+  <i class="tg-icon-container">
+    <svg
+      width="28"
+      height="28"
+      viewBox="0 0 28 28"
+      fill="none"
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <path
+        d="M15.2012 1.2001C8.6239 1.23787 3.21661 6.19894 2.47614 12.5821L2.47087 12.6418H0L4.33303 18.7905L8.67836 12.6418H6.39458C7.08586 8.35447 10.7592 5.12029 15.188 5.12029C20.1034 5.12029 24.0886 9.10548 24.0886 14.0209C24.0886 18.9363 20.1034 22.9215 15.188 22.9215C12.9525 22.9215 10.9103 22.0975 9.3468 20.7369L9.35734 20.7457L6.8162 23.6734C9.04903 25.6163 11.9854 26.8004 15.1994 26.8004C22.2695 26.8004 28 21.069 28 13.9998C28 6.93062 22.2704 1.2001 15.2012 1.19922V1.2001Z"
+      />
+      <path
+        d="M13.2559 8.56543V14.8081L17.9525 19.5047L20.7045 16.7528L17.1444 13.1927V8.56631H13.2559V8.56543Z"
+      />
+    </svg>
+  </i>
+</template>
+
+<style scoped>
+.tg-icon-container {
+  height: 1em;
+  width: 1em;
+  line-height: 1em;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+}
+
+.tg-icon-container svg {
+  width: 1em;
+  height: 1em;
+  fill: currentColor;
+}
+</style>

@@ -36,6 +36,11 @@ const routes = [
     component: () => import('~/pages/icon-list.vue'),
   },
   {
+    path: '/:lang/menu',
+    name: 'SideMenu',
+    component: () => import('~/pages/menu/index.vue'),
+  },
+  {
     path: '/:lang/turntable-translation',
     name: 'TurntableTranslation',
     component: () => import('~/pages/turntable-translation/index.vue'),

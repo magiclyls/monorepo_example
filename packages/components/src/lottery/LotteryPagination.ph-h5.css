@@ -1,0 +1,15 @@
+.page-bg {
+  background-color: #fff;
+  color: #000;
+}
+
+.pagination-btn {
+  background-color: #f23038;
+  color: #fff;
+}
+
+.pagination-btn-disabled {
+  pointer-events: none;
+  background-color: #ebebeb;
+  color: #9dabc9;
+}

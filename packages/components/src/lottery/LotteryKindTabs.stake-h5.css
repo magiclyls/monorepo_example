@@ -1,0 +1,9 @@
+.watch-active {
+  color: #24ee89;
+  border-radius: 8rem;
+  background: linear-gradient(0deg, #233846 0%, #24ee89 100%);
+}
+.lottery-kind-tabs-bg1 {
+  background: #213743;
+  color: #b1bad3;
+}

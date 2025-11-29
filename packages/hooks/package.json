@@ -11,6 +11,12 @@
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "dependencies": {
-    "@tg/utils": "workspace:^"
+    "@tg/apis": "workspace:^",
+    "@tg/bccomponents": "workspace:^",
+    "@tg/icons": "workspace:^",
+    "@tg/stores": "workspace:^",
+    "@tg/types": "workspace:^",
+    "@tg/utils": "workspace:^",
+    "@tg/vue-i18n": "workspace:^"
   }
 }

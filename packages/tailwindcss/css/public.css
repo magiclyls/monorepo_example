@@ -1,7 +1,6 @@
 @layer base {
   body {
     color: var(--color-white);
-    font-family: avertastd;
     font-size: 0.875rem;
     line-height: 1.5;
     background-color: var(--color-bg-black-2);
@@ -57,8 +56,8 @@
 }
 
 .scroll-bar *::-webkit-scrollbar {
-  height: 0.5rem;
-  width: 0.5rem;
+  height: 8rem;
+  width: 8rem;
 }
 
 .scroll-bar *::-webkit-scrollbar-track {
@@ -67,13 +66,13 @@
 
 .scroll-bar *::-webkit-scrollbar-thumb {
   background-color: #0000004d;
-  border-radius: 0.25rem;
+  border-radius: 4rem;
 }
 
 .scroll-x {
   overflow-y: hidden;
   overflow-x: auto;
-  overscroll-behavior: contain;
+  overscroll-behavior-x: contain;
 }
 
 .scroll-bar .scroll-x,
@@ -88,6 +87,10 @@
 
 .hide-scroll {
   scrollbar-width: none;
+}
+
+.hide-scroll::-webkit-scrollbar {
+  display: none;
 }
 
 .dropdown-layer {

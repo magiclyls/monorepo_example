@@ -1,0 +1,80 @@
+@import './animation.css';
+
+:root {
+  --ph-game-gap-x: 5px;
+  --ph-game-gap-y: 11px;
+}
+
+:root {
+  font-family: proxima-nova, sans-serif;
+}
+
+:root[lang='zh-CN'] {
+  font-family:
+    PingFang SC,
+    sans-serif;
+}
+
+body {
+  font-size: 14px;
+  background-color: #1a2c38;
+  color: #fff;
+  padding-bottom: calc(60px + env(safe-area-inset-bottom));
+}
+.global-padding-bottom {
+  padding-bottom: 12px;
+}
+.center {
+  @apply flex justify-center items-center;
+}
+
+.hide-scroll-bar {
+  scrollbar-width: none;
+}
+
+.hide-scroll-bar::-webkit-scrollbar {
+  display: none;
+}
+
+/* 设置 info-tooltip样式 */
+.v-popper--theme-info-tooltip {
+  z-index: 1 !important;
+  .v-popper__inner {
+    background-color: rgba(0, 0, 0, 0.75);
+    color: #ffffff;
+    padding: 1px 10px;
+    border-radius: 4px;
+    font-size: 10px;
+    line-height: 14px;
+    font-weight: 600;
+  }
+  .v-popper__arrow-outer {
+    border-color: rgba(0, 0, 0, 0.75);
+  }
+}
+.h5-fixed-top {
+  position: fixed;
+  left: 50%;
+  transform: translate(-50%);
+  max-width: var(--pc-max-width);
+  width: 100%;
+  top: 0;
+  padding: 0 calc(var(--download-left, 0) + env(safe-area-inset-right)) 0
+    calc(var(--download-right, 0) + env(safe-area-inset-left));
+}
+
+.h5-sticky-top {
+  position: sticky;
+  max-width: var(--pc-max-width);
+  width: 100%;
+  top: 0;
+}
+
+.h5-fixed-bottom {
+  position: fixed;
+  left: 50%;
+  transform: translate(-50%);
+  max-width: var(--pc-max-width);
+  width: 100%;
+  bottom: 0;
+}

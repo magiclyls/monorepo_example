@@ -57,7 +57,7 @@ R
 <script lang="ts" setup>
 import { ref } from 'vue'
 import * as Yup from 'yup'
-import { BaseButton, BaseForm, BaseInput, BaseLoading } from '../index.js'
+import { BaseButton, BaseForm, BaseInput, BaseLoading } from '../index.jsx'
 
 const schema = Yup.object().shape({
   username: Yup.string().required('用户名必须填写'),

@@ -1,0 +1,112 @@
+<!doctype html>
+<html lang="zh" class="scroll-bar hide-scroll-bar" data-themenameforglobalcss="themenameforglobalcss-ph-h5">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="mobile-web-app-capable" content="yes" />
+    <link rel="stylesheet" href="https://use.typekit.net/aba0ebl.css" />
+    <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#00aba9" />
+    <script type="text/javascript" src="https://d3lxmpzmffxrcj.cloudfront.net/sdk/dankex.js" defer></script>
+    <meta name="msapplication-TileColor" content="#00aba9" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="#00aba9" />
+    <meta name="application-name" content="" />
+    <meta name="theme-color" content="#fff" />
+
+    <style type="text/css">
+      * {
+        touch-action: manipulation;
+      }
+    </style>
+    <script>
+      function isMobile() {
+        var ua = navigator.userAgent
+        return /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(ua)
+      }
+
+      function getPageHtmlFontSize() {
+        const baseWidth = 375 // 设计稿基准宽度
+        const baseHeight = 667 // 设计稿基准高度（可以换成你的设计稿高度）
+
+        const docEl = document.documentElement
+        const clientWidth = docEl.clientWidth
+        const clientHeight = docEl.clientHeight
+
+        if (isMobile()) {
+          // 移动端主要跟随宽度缩放
+          docEl.style.fontSize = clientWidth / baseWidth + 'px'
+        } else {
+          const maxWidth = 486
+          const deviceWidth = Math.min(clientWidth, maxWidth)
+
+          // 宽度、高度分别算缩放比例
+          const scaleW = deviceWidth / baseWidth
+          const scaleH = clientHeight / baseHeight
+
+          // 取较小的缩放比，避免溢出
+          docEl.style.fontSize = Math.min(scaleW, scaleH) + 'px'
+        }
+      }
+
+      function setBodyFontSize() {
+        var body = document.body
+        if (!body) return
+
+        if (isMobile()) {
+          document.body.setAttribute('data-device', 'h5')
+        } else {
+          document.body.setAttribute('data-device', 'pc')
+        }
+      }
+
+      getPageHtmlFontSize()
+
+      window.addEventListener('resize', getPageHtmlFontSize)
+      window.onload = function () {
+        setBodyFontSize()
+      }
+    </script>
+    <script src="/static-js/touch.js"></script>
+    <script src="/static-js/wangyi.js" defer></script>
+  </head>
+
+  <body style="margin: 0 auto; --pc-max-width: 375rem">
+    <div id="app"></div>
+    <div style="width: 0; height: 0; overflow: hidden">
+      <div id="b"></div>
+      <div id="c">
+        <div id="title">OOPS, SITE UNREACHABLE...</div>
+        <hr id="line" />
+        <div id="text">
+          <p>Please make sure your device is connected to mobile data or a Wi-Fi network.</p>
+          <p>
+            If you need to connect to the internet, please refer to the following:
+            <li>Check the Wi-Fi settings on your phone to see if there is a Wi-Fi network you can connect to.</li>
+            <li>Check if your phone is connected to mobile data.</li>
+          </p>
+          <p>
+            If you are connected to Wi-Fi:
+            <li>
+              Please check whether the Wi-Fi hotspot you're connected to has internet access or if it permits your
+              device to access the internet.
+            </li>
+          </p>
+        </div>
+        <div id="url"><span class="t">TRY </span><a class="v" href="#">THIS FALLBACK LINK</a> :'(</div>
+        <div id="tid" class="flex"><span class="t">Trace ID:</span><span class="v"></span></div>
+      </div>
+      <div id="debug">
+        <div class="t">DEBUG</div>
+        <ul class="c" id="d"></ul>
+      </div>
+    </div>
+    <div data-portal="true"></div>
+    <div class="tg-dialog-list"></div>
+    <div class="tg-notification-list" style="left: var(--pc-h5model-left-notify-list, 1rem)"></div>
+    <script src="/static-js/image.js"></script>
+    <script src="/static-js/flutter.js"></script>
+    <script src="/static-js/server-time.js"></script>
+    <script id="oldEntryIndex" type="module" src="/src/main.ts"></script>
+    <noscript>This website requires JavaScript to function properly. Please enable JavaScript to continue...</noscript>
+  </body>
+</html>

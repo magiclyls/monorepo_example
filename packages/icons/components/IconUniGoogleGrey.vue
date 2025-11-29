@@ -1,0 +1,38 @@
+<script lang="ts" setup>
+defineOptions({
+  name: 'IconUniGoogleGrey',
+})
+</script>
+
+<template>
+  <i class="tg-icon-container">
+    <svg class="icon text-secondary h-5 w-5" viewBox="0 0 32 32">
+      <path
+        d="M21.14 10.407c-1.306-1.21-3.084-1.883-4.89-1.856-3.334 0-6.14 2.151-7.168 5.083l-4.223-3.173c2.167-4.168 6.557-6.804 11.391-6.804 3.167-0.027 6.223 1.103 8.529 3.2l-3.64 3.55z"
+      />
+      <path
+        d="M9.078 18.366c-0.528-1.533-0.528-3.2 0-4.733l-4.223-3.173c-1.806 3.496-1.806 7.611-0 11.080 2.167 4.168 6.557 6.804 11.391 6.804 3.436 0 6.319-1.097 8.429-2.97l0.017 0.013c2.417-2.179 3.806-5.352 3.806-9.090 0-0.834-0.083-1.694-0.222-2.501h-12.030v4.76h6.89c-0.278 1.533-1.194 2.877-2.555 3.738-1.139 0.753-2.612 1.183-4.334 1.183-3.334 0-6.14-2.178-7.168-5.082l-4.217 3.141 4.216-3.168z"
+      />
+    </svg>
+  </i>
+</template>
+
+<style scoped>
+.tg-icon-container {
+  height: 1em;
+  width: 1em;
+  line-height: 1em;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+}
+
+.tg-icon-container svg {
+  width: 1em;
+  height: 1em;
+  fill: currentColor;
+}
+</style>

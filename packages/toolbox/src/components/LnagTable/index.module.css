@@ -1,0 +1,62 @@
+.tableContainer {
+  overflow-x: scroll;
+}
+
+.tableContainer textarea {
+  color: black;
+  width: 500px;
+  flex: 1;
+}
+
+
+.table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 20px 0;
+  text-align: center;
+}
+
+.tdDiv {
+  border-width: 1px;
+  border-style: solid;
+  border-color: transparent;
+}
+
+@keyframes border-flash {
+  0% {
+    border-color: red;
+  }
+  50% {
+    border-color: transparent;
+  }
+  100% {
+    border-color: red;
+  }
+}
+
+.tableAnimation {
+  animation: border-flash 1s infinite;
+}
+
+.updateOper {
+  display: flex;
+}
+
+.updateOper .right {
+  width: 300px;
+  padding-left: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  align-items: center;
+}
+
+.updateOper .right button {
+  width: 100%;
+}
+
+.oper {
+  display: inline-flex;
+  align-items: center;
+  justify-content: space-around;
+}

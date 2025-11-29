@@ -1,0 +1,45 @@
+<script lang="ts" setup>
+defineOptions({
+  name: 'IconSptUserBook',
+})
+</script>
+
+<template>
+  <i class="tg-icon-container">
+    <svg
+      width="21"
+      height="20"
+      viewBox="0 0 21 20"
+      fill="none"
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <g>
+        <path
+          d="M9.66732 3.2335H9.56732V3.3335V9.06683H3.83398H3.73398V9.16683V10.8335V10.9335H3.83398H9.56732V16.6668V16.7668H9.66732H11.334H11.434V16.6668V10.9335H17.1673H17.2673V10.8335V9.16683V9.06683H17.1673H11.434V3.3335V3.2335H11.334H9.66732Z"
+          stroke="currentColor"
+          stroke-width="0.2"
+        />
+      </g>
+    </svg>
+  </i>
+</template>
+
+<style scoped>
+.tg-icon-container {
+  height: 1em;
+  width: 1em;
+  line-height: 1em;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+}
+
+.tg-icon-container svg {
+  width: 1em;
+  height: 1em;
+  fill: currentColor;
+}
+</style>

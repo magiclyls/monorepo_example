@@ -30,7 +30,8 @@ const symbolId = computed(() => `#${props.prefix}-${props.name}`)
 
 <style>
 :root {
-  --tg-base-icon-color: rgb(179 190 193);
+  --tg-base-icon-color: #9dabc8;
+  --tg-base-icon-height: 1em;
 }
 </style>
 
@@ -39,7 +40,7 @@ const symbolId = computed(() => `#${props.prefix}-${props.name}`)
   display: inline-block;
   color: var(--tg-base-icon-color);
   width: 1em;
-  height: 1em;
+  height: var(--tg-base-icon-height);
   pointer-events: none;
   stroke-width: 0;
   flex-shrink: 0;

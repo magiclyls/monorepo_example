@@ -1,0 +1,41 @@
+<script lang="ts" setup>
+defineOptions({
+  name: 'IconSearch',
+})
+</script>
+
+<template>
+  <i class="tg-icon-container">
+    <svg
+      width="24"
+      height="24"
+      viewBox="0 0 24 24"
+      fill="none"
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <path
+        d="M15.025 15.8914L14.1453 15.0117C13.1013 15.8662 11.7675 16.3795 10.3137 16.3813C6.96717 16.3813 4.25391 13.668 4.25391 10.3215C4.25391 6.97498 6.96717 4.26172 10.3137 4.26172C13.6602 4.26172 16.3734 6.97498 16.3734 10.3215C16.3717 11.7647 15.8654 13.0898 15.0227 14.1304L15.9041 15.0117L15.8842 15.0311L15.8918 15.0247C16.082 14.8737 16.3594 14.8865 16.5356 15.0621L19.6041 18.1306C19.7931 18.3196 19.7931 18.6269 19.6041 18.8165L18.8245 19.5961C18.6355 19.7852 18.3282 19.7852 18.1386 19.5961L15.0701 16.5276C14.8945 16.352 14.8817 16.0746 15.0326 15.8838L15.0256 15.8908L15.025 15.8914ZM10.3137 5.71258C7.76839 5.71258 5.70476 7.7762 5.70476 10.3215C5.70476 12.8668 7.76839 14.9304 10.3137 14.9304C12.859 14.9304 14.9226 12.8668 14.9226 10.3215C14.9202 7.77678 12.8584 5.71492 10.3137 5.71258Z"
+      />
+    </svg>
+  </i>
+</template>
+
+<style scoped>
+.tg-icon-container {
+  height: 1em;
+  width: 1em;
+  line-height: 1em;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+}
+
+.tg-icon-container svg {
+  width: 1em;
+  height: 1em;
+  fill: currentColor;
+}
+</style>

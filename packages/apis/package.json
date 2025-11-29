@@ -11,8 +11,10 @@
   },
   "dependencies": {
     "@tg/apis": "workspace:^",
+    "@tg/stores": "workspace:^",
     "@tg/types": "workspace:^",
     "@tg/utils": "workspace:^",
+    "@tg/vue-i18n": "workspace:*",
     "feie-ui": "^0.1.7"
   }
 }

@@ -1,0 +1,41 @@
+<script lang="ts" setup>
+defineOptions({
+  name: 'IconUniChecklist',
+})
+</script>
+
+<template>
+  <i class="tg-icon-container">
+    <svg
+      width="28"
+      height="28"
+      viewBox="0 0 28 28"
+      fill="none"
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <path
+        d="M26.1327 0H1.86637C0.835625 0 0 0.835625 0 1.86637V26.25C0 27.2169 0.783125 28 1.75 28H26.25C27.2169 28 28 27.2169 28 26.25V1.86637C28 0.835625 27.1644 0 26.1336 0H26.1327ZM7.87412 21.98L4.37413 18.48L6.2405 16.6136L7.93187 18.3172L12.1905 14.0009L14.0569 15.8673L7.87412 21.98ZM7.87412 13.23L4.37413 9.73L6.18275 7.81637L7.87412 9.52L12.1905 5.19138L14.0569 7.05775L7.87412 13.23ZM23.6241 19.6936H17.4991V17.0572H23.6241V19.6936ZM23.6241 10.9436H17.4991V8.30725H23.6241V10.9436Z"
+      />
+    </svg>
+  </i>
+</template>
+
+<style scoped>
+.tg-icon-container {
+  height: 1em;
+  width: 1em;
+  line-height: 1em;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+}
+
+.tg-icon-container svg {
+  width: 1em;
+  height: 1em;
+  fill: currentColor;
+}
+</style>

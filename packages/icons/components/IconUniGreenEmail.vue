@@ -1,0 +1,41 @@
+<script lang="ts" setup>
+defineOptions({
+  name: 'IconUniGreenEmail',
+})
+</script>
+
+<template>
+  <i class="tg-icon-container">
+    <svg
+      width="28"
+      height="28"
+      viewBox="0 0 28 28"
+      fill="none"
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <path
+        d="M25.2929 2.93457H2.70684C1.21185 2.93457 0 4.14651 0 5.64156V22.3588C0 23.8539 1.21185 25.0658 2.70684 25.0658H25.2929C26.788 25.0658 28 23.8539 28 22.3588V5.64156C28 4.14648 26.788 2.93457 25.2929 2.93457ZM25.3265 6.06283L14.3518 17.2358C14.2485 17.3404 14.1084 17.3997 13.9611 17.3997H13.9599C13.8126 17.3991 13.6724 17.3398 13.5691 17.2346L2.67165 6.07291C2.46143 5.85674 2.46497 5.50993 2.68113 5.29911C2.89849 5.0877 3.24293 5.09243 3.45553 5.308L13.9622 16.0701L24.5449 5.29554C24.7564 5.07937 25.1032 5.07699 25.3193 5.289C25.5343 5.50044 25.5379 5.84725 25.3265 6.06283Z"
+      />
+    </svg>
+  </i>
+</template>
+
+<style scoped>
+.tg-icon-container {
+  height: 1em;
+  width: 1em;
+  line-height: 1em;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+}
+
+.tg-icon-container svg {
+  width: 1em;
+  height: 1em;
+  fill: currentColor;
+}
+</style>

@@ -1,0 +1,21 @@
+:root {
+}
+
+body {
+  font-size: 14rem;
+  font-family: 'PingFang SC', serif;
+  background-color: #f7f8ff;
+  color: #0d2245;
+}
+
+.center {
+  @apply flex justify-center items-center;
+}
+
+.hide-scroll-bar {
+  scrollbar-width: none;
+}
+
+.hide-scroll-bar::-webkit-scrollbar {
+  display: none;
+}

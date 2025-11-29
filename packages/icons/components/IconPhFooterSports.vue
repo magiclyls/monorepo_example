@@ -1,0 +1,41 @@
+<script lang="ts" setup>
+defineOptions({
+  name: 'IconPhFooterSports',
+})
+</script>
+
+<template>
+  <i class="tg-icon-container">
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      width="24"
+      height="24"
+      viewBox="0 0 24 24"
+      fill="none"
+    >
+      <path
+        d="M12 2C17.5214 2 22 6.47621 22 12C22 17.5238 17.5238 22 12 22C6.47621 22 2 17.5214 2 12C2 6.47856 6.47856 2 12 2ZM13.671 15.9981H10.3314L8.95102 17.8941L9.5041 19.6002C10.3097 19.8645 11.1522 19.999 12 19.9986C12.8718 19.9986 13.7108 19.858 14.4959 19.6025L15.049 17.8964L13.6686 16.0005L13.671 15.9981ZM5.29505 10.8704L4.00375 11.8078L4.00141 12C4.00141 13.7296 4.5498 15.3302 5.48254 16.6403H7.39255L8.71432 14.8193L7.68549 11.6485L5.29271 10.8704H5.29505ZM18.7049 10.8704L16.3122 11.6485L15.2833 14.8193L16.6051 16.6403H18.5151C19.4822 15.2865 20.001 13.6637 19.9986 12L19.9963 11.8102L18.7049 10.8727V10.8704ZM14.2897 4.33419L13.0007 5.27396V7.79095L15.6935 9.74783L17.9316 9.02133L18.4846 7.31755C17.4525 5.88877 15.9781 4.84018 14.2897 4.33419ZM9.70799 4.33419C8.01926 4.8408 6.54477 5.89024 5.51301 7.3199L6.06609 9.02133L8.30419 9.74783L10.9993 7.79095V5.27396L9.70799 4.33419Z"
+      />
+    </svg>
+  </i>
+</template>
+
+<style scoped>
+.tg-icon-container {
+  height: 1em;
+  width: 1em;
+  line-height: 1em;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+}
+
+.tg-icon-container svg {
+  width: 1em;
+  height: 1em;
+  fill: currentColor;
+}
+</style>

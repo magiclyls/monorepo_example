@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <script src="/static-js/handle-redirect.js"></script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="mobile-web-app-capable" content="yes" />
+  <meta name="msapplication-TileColor" content="#00aba9">
+  <meta name="apple-mobile-web-app-status-bar-style" content="#00aba9" />
+  <meta name="application-name" content="" />
+  <meta name="theme-color" content="">
+  <meta http-equiv="Content-Language" content="pt-BR">
+
+  <style type="text/css">
+    * {
+      touch-action: manipulation;
+    }
+
+    #full-loading {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: #1A2C38;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      z-index: 9999;
+    }
+
+    #full-loading img {
+      outline: none;
+      height: 55.55px;
+      width: auto;
+      display: none;
+      font-weight: bold;
+      color: #00aba9;
+      text-transform: uppercase;
+    }
+  </style>
+
+  <script src="/stake/static-js/pwa.js"></script>
+  <script src="/stake/static-js/image.js"></script>
+  <script src="/stake/static-js/pc-to-h5.js"></script>
+
+  <script src="/stake/static-js/flutter.js" defer></script>
+  <!-- <script src="/stake/static-js/vconsole.js" defer></script> -->
+  <script src="/stake/static-js/wangyi.js" defer></script>
+  <script src="/stake/static-js/keyboard.js" defer></script>
+
+  <script src="/stake/static-js/statistics.js" async></script>
+  <script type="text/javascript" src="https://d3lxmpzmffxrcj.cloudfront.net/sdk/dankex.js"></script>
+  <!-- <script type="text/javascript" charset="UTF-8" src="https://res.codeinstall.vip/codeinstall_activity/static/sdk/web_sdk.min.js"></script> -->
+  <!-- <script src="https://unpkg.com/vconsole@latest/dist/vconsole.min.js"></script>
+  <script>
+    var vConsole = new window.VConsole()1
+  </script> -->
+
+</head>
+
+<body class="font-sans"
+  style="
+    touch-action: none;
+    margin: 0 auto;
+  "
+>
+  <div id="app" class="min-h-full" data-test="缓存"></div>
+  <script src="/stake/static-js/index-loading.js"></script>
+  <div style="width:0;height:0;overflow: hidden;">
+    <div id="b"></div>
+    <div id="c">
+      <div id="title">OOPS, SITE UNREACHABLE...</div>
+      <hr id="line">
+      </hr>
+      <!-- 首访才会显示的葡语占位（可见文本，帮助 Chrome 判定） -->
+      <div id="first-visit-pt" style="font-family:sans-serif;line-height:1.6;max-width:640px;margin:24px auto 0;padding:0 16px;display:none">
+        <p>Certifique-se de que seu dispositivo esteja conectado a uma rede de dados móveis ou Wi-Fi.</p>
+        <p>Se precisar se conectar à internet, siga as instruções abaixo:
+          <li>Verifique as configurações de Wi-Fi do seu telefone para ver se há uma rede disponível para conexão.</li>
+          <li>Verifique se o seu telefone está conectado aos dados móveis.</li>
+        </p>
+        <p>Se você estiver conectado ao Wi-Fi:
+          <li>Verifique se o ponto de acesso Wi-Fi ao qual você está conectado possui acesso à internet ou se permite que seu dispositivo acesse a internet.</li>
+        </p>
+      </div>
+      <div id="url"><span class="t">TRY </span><a class="v" href="#">THIS FALLBACK LINK</a> :'(</div>
+      <div id="tid" class="flex"><span class="t">Trace ID:</span><span class="v"></span></div>
+    </div>
+    <div id="debug">
+      <div class="t">DEBUG</div>
+      <ul class="c" id="d"></ul>
+    </div>
+  </div>
+  <div data-portal="true"></div>
+  <div class="tg-dialog-list" id="tg-dialog-list"></div>
+  <div class="tg-notification-list" style="left: var(--pc-h5model-left-notify-list,1rem)"></div>
+  <script type="module" src="/src/main.ts"></script>
+  <script src="/static-js/server-time.js"></script>
+  <noscript>This website requires JavaScript to function properly. Please enable JavaScript to continue...</noscript>
+</body>
+
+  <script>
+    (function () {
+      // 是否已经做过“首访处理”
+      var firstVisitDone = document.cookie.indexOf('fv=1') !== -1;
+      // 首次访问：展示葡语占位（给 Chrome 语言检测看）
+      var splash = document.getElementById('first-visit-pt');
+      if (splash && !firstVisitDone) {
+        splash.style.display = 'block';
+        // 记一次标志，1 天内不再算“首访”
+        document.cookie = 'fv=1=1; Max-Age=' + (60*60*24*1) + '; Path=/; SameSite=Lax';
+      }
+
+      // 应用就绪时移除占位（两种兜底方式，二选一或都保留）
+      // 方式 1：你的应用触发一个事件（推荐你在 main.ts 就绪后 dispatch）
+      window.addEventListener('app:ready', function () {
+        if (splash) splash.remove();
+      });
+
+      // 方式 2：兜底计时器（防止事件没触发）
+      setTimeout(function () {
+        if (splash) splash.remove();
+      }, 6000);
+    })();
+  </script>
+
+</html>

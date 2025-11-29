@@ -1,0 +1,11 @@
+.item {
+  border-radius: 5rem 5rem 0 0;
+  background: #2f4553;
+  color: #b1bad3;
+  font-size: 11rem;
+  height: 40rem;
+  &.active {
+    background: #24ee89;
+    color: #000;
+  }
+}

@@ -1,0 +1,48 @@
+<script lang="ts" setup>
+defineOptions({
+  name: 'IconUniComputer',
+})
+</script>
+
+<template>
+  <i class="tg-icon-container">
+    <svg
+      width="8"
+      height="8"
+      viewBox="0 0 8 8"
+      fill="none"
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <g clip-path="url(#clip0_9937_6133)">
+        <path
+          d="M0 6.2C0 6.31046 0.0895431 6.4 0.2 6.4H3.6V7.2H2.6C2.48954 7.2 2.4 7.28954 2.4 7.4V7.8C2.4 7.91046 2.48954 8 2.6 8H5.4C5.51046 8 5.6 7.91046 5.6 7.8V7.4C5.6 7.28954 5.51046 7.2 5.4 7.2H4.4V6.4H7.8C7.91046 6.4 8 6.31046 8 6.2V5.4C8 5.28954 7.91046 5.2 7.8 5.2H0.2C0.0895429 5.2 0 5.28954 0 5.4V6.2ZM0 0.2C0 0.0895429 0.0895431 0 0.2 0H7.8C7.91046 0 8 0.089543 8 0.2V4.6C8 4.71046 7.91046 4.8 7.8 4.8H0.2C0.0895429 4.8 0 4.71046 0 4.6V0.2Z"
+        />
+      </g>
+      <defs>
+        <clipPath>
+          <rect width="8" height="8" />
+        </clipPath>
+      </defs>
+    </svg>
+  </i>
+</template>
+
+<style scoped>
+.tg-icon-container {
+  height: 1em;
+  width: 1em;
+  line-height: 1em;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+}
+
+.tg-icon-container svg {
+  width: 1em;
+  height: 1em;
+  fill: currentColor;
+}
+</style>

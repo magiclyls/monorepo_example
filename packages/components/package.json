@@ -3,6 +3,7 @@
   "type": "module",
   "version": "0.0.8",
   "packageManager": "pnpm@8.6.7",
+  "sideEffects": false,
   "main": "index.ts",
   "scripts": {
     "docs:dev": "vitepress dev .docs",
@@ -10,10 +11,13 @@
     "docs:preview": "vitepress preview .docs"
   },
   "dependencies": {
+    "@tg/apis": "workspace:^",
     "@tg/hooks": "workspace:^",
+    "@tg/icons": "workspace:^",
     "@tg/stores": "workspace:^",
     "@tg/types": "workspace:^",
-    "@tg/utils": "workspace:^"
+    "@tg/utils": "workspace:^",
+    "@tg/vue-i18n": "workspace:*"
   },
   "devDependencies": {
     "vitepress": "^1.6.3"

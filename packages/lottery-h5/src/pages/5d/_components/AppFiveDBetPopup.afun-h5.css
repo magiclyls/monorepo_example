@@ -1,0 +1,30 @@
+.lottery-5d-bg {
+  background: #1a2c38;
+  color: #b1bad3;
+}
+.lottery-5d-bg1 {
+  background: linear-gradient(90deg, #24ee89 0%, #9fe871 100%);
+}
+
+.lottery-5d-bg2 {
+  background: #2f4553;
+}
+.lottery-5d-text {
+  color: #b1bad3;
+}
+.lottery-5d-text1 {
+  color: #fd565c;
+}
+.lottery-5d-text2 {
+  color: #000;
+}
+.lottery-5d-text3 {
+  color: #b1bad3;
+}
+.lottery-5d-text4 {
+  color: #24ee89;
+}
+.lottery-5d-border {
+  border-color: #2f4553;
+  background: #0f212e;
+}

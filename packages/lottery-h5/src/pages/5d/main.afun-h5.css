@@ -1,0 +1,39 @@
+.time-mask {
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.6);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  top: 0;
+  left: 0;
+  border-radius: 10rem;
+
+  .num {
+    display: flex;
+    width: 107.87rem;
+    height: 160.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 140rem;
+    font-weight: 700;
+    color: #fff;
+    background-color: #f23038;
+    border-radius: 15rem;
+  }
+}
+.bet-area-bg {
+  background-color: #213743;
+}
+.period-text {
+  color: #b1bad3;
+}
+.direct-btn {
+  color: #24ee89;
+  border: 1rem solid #24ee89;
+}
+.id-text {
+  color: #fff;
+}

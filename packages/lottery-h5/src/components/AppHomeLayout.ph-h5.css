@@ -1,0 +1,12 @@
+.lottery-home-gradient {
+  background: linear-gradient(180deg, #e22727 -3.42%, #ff4343 35.95%, rgba(255, 255, 255, 0.5) 94.06%);
+  background-size: 100% 238rem;
+  background-repeat: no-repeat;
+}
+
+.lottery-home-bar-bg {
+  background: #e22727;
+}
+.lottery-home-bar-height {
+  height: 42rem;
+}

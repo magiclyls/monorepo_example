@@ -1,0 +1,415 @@
+:root {
+  /* 主色&辅色 */
+  --tg-primary-main: #1a2c38;
+  --tg-primary-main-colon:rgba(26, 44, 56, 0.91);
+  --tg-primary-light: var(--tg-primary-main);
+  --tg-secondary-main: #2f4553;
+  --tg-secondary-light: #b1bad3;
+  --tg-secondary-grey: #213743;
+  --tg-secondary-dark: #0f212e;
+  --tg-secondary-deepdark: #071824;
+  --tg-third-grey: #557086;
+  --tg-primary-success: #1fff20;
+  --tg-primary-fail: #e91134;
+  --tg-button-secondary-main: #e9113c;
+  --tg-bet-slip-error: #5d0718;
+  --tg-bet-button-deepblue: #082f5a;
+  --tg-primary-active: linear-gradient(90deg, #24ee89, #9fe871);
+  --th-secondary-grey-100: #677386;
+
+  /* body背景 */
+  --tg-body-bg : var(--tg-primary-main);
+  --tg-body-bg-colon:var(--tg-primary-main-colon);
+  /* 点缀色 */
+  --tg-sub-info: #008a01;
+  --tg-sub-deepblue: #105eb5;
+  --tg-sub-blue: #1f8bff;
+  --tg-sub-lightblue: #72aced;
+  --tg-sub-green: #0fcd13;
+  --tg-sub-green-deep: #034704;
+  --tg-sub-green-light: #57ff5a;
+  /* 文字颜色 注意只能用于文字颜色 */
+  --tg-text-white: #ffffff;
+  --tg-text-black: #000000;
+  --tg-text-black-secondary: #222222;
+  --tg-text-error: #ed4163;
+  --tg-text-error-sub: #f2708a;
+  --tg-text-warn: #ff9800;
+  --tg-text-alltheme-warn: #ff9800;
+  --tg-text-warn-sub: #ff9d00;
+  --tg-text-green: #00e701;
+  --tg-text-alltheme-green: #00e701;
+  --tg-text-green-main: #42bc91;
+  --tg-text-green-sub: #5ecea6;
+  --tg-text-green-btn: #055434 ;
+  --tg-text-green-light: #69e244;
+  --tg-text-green-deep: #00b801;
+  --tg-text-green-lighter: #055031;
+  --tg-text-pink: #ffb1fb;
+  --tg-text-blue: #1475e1;
+  --tg-text-lightblue: #24ee89;
+  --tg-text-dark: #05080a;
+  --tg-text-grey-deep: #071d2a;
+  --tg-text-grey: #557086;
+  --tg-text-grey-light: #d5dceb;
+  --tg-text-grey-lighter: #d9d9d9;
+  --tg-text-grey-secondary: #979aa7;
+  --tg-text-grey-third: #4d5d6f;
+  --tg-text-placeholder: #566671;
+  --tg-text-purple: #962eff;
+  --tg-text-yellow: #ffffb0;
+  --tg-text-yellow-light: #ffaa09;
+  --tg-text-lightgrey: #b1bad3;
+  --tg-text-secondary-main: var(--tg-secondary-main);
+  --tg-text-greenblack-main: #26ffbe;
+  /* 透明色 */
+  --tg-color-black-rgb: 0, 0, 0;
+  --tg-color-white-rgb: 255, 255, 255;
+  --tg-color-grey-rgb: 14, 18, 36;
+  --tg-color-blue-rgb: 26, 46, 56;
+  --tg-color-green-rgb: 0, 231, 1;
+  /* 边框颜色 */
+  --tg-border-color-grey:  #d5dceb;
+  --tg-secondary-border-color-grey: var(--tg-secondary-grey);
+  --tg-border-color-deep-grey: #557086;
+  --tg-border-color-main: var(--tg-secondary-main);
+  --tg-border-color-white:  #ffffff;
+  --tg-border-color-grey-light: #2f4553;
+  /** 骨架屏颜色 */
+  --tg-skeleton-color1: #738299;
+  --tg-skeleton-color2: #aeb8d6;
+  /** 公告背景色（t老板要求背景透明） **/
+  --tg-notice-bg-color: rgba(27, 44, 55, 0.90);
+  /** 提交成功颜色 */
+  --tg-notice-update-bg: #ff9800;
+  /* 自定义断点 */
+  --breakpoint-2xl: 1280px;
+  --breakpoint-xl: 1280px;
+  --breakpoint-lg: 1024px;
+  --breakpoint-md: 768px;
+  --breakpoint-sm: 640px;
+  --breakpoint-xs: 375px;
+  --breakpoint-vs: 320px;
+}
+
+/* 特殊组件变量 */
+:root {
+    /* 兼容文字颜色 */
+    --tg-text-secondary : #2f4553;
+    /* popper 背景 字体色 */
+    --tg-popper-bg: #ffffff;
+    --tg-popper-hover-bg: #b1bad3;
+    --tg-popper-active-bg: #ffffff;
+    --tg-popper-active-text-color: var(--tg-text-blue);
+    --tg-popper-color-default: var(--tg-secondary-main);
+    --tg-popper-hover-color-default: var(--tg-text-blue);
+    /** tabactivebar颜色 */
+    --tg-tab-active-bar: var(--tg-primary-active);
+    /** svg颜色 */
+    --tg-svg-default-color: var(--tg-text-lightgrey);
+    --tg-svg-active-color: var(--tg-text-white);
+    /* 通知图标提示点的颜色 */
+     --tg-dot-state-bg: #1fff20;
+    /* table组件文字颜色 */
+    --tg-table-amount-color: inherit;
+    --tg-table-text-color: inherit;
+    /* 统一活动规则颜色 */
+    --tg-promotion-text-color: var(--tg-text-lightgrey);
+    /* 存钱款placehoder统一颜色 */
+    --tg-wallet-optionbs-placehoder-color: #ffffff4d;
+    /* 体育 */
+    --tg-sport-card-bg: #304554;
+    --tg-sport-btn-hover: #2f4554;
+    --tg-sport-grey-deep : #071d2a;
+    /* 钱包 */
+    --tg-wallet-left-card-bg: var(--tg-secondary-grey);
+}
+
+[theme="white"] {
+  /* 主色&辅色 */
+  --tg-primary-main: #ffffff;
+  --tg-primary-main-colon:#f4f4f4;
+  --tg-primary-light: var(--tg-primary-main);
+  --tg-secondary-main: #cbcbcb;
+  --tg-secondary-light: #484848;
+  --tg-secondary-grey: #e8e8e8;
+  --tg-secondary-dark: #f5f5f5;
+  --tg-secondary-deepdark: #b28406;
+  --tg-third-grey: #557086;
+  --tg-primary-success: #1fff20;
+  --tg-primary-fail: #e91134;
+  --tg-button-secondary-main: #e9113c;
+  --tg-bet-slip-error: #5d0718;
+  --tg-bet-button-deepblue: #082f5a;
+  --tg-primary-active: #111111;
+  /* body背景 */
+  --tg-body-bg : var(--tg-primary-main);
+  --tg-body-bg-colon:var(--tg-primary-main-colon);
+  /* 点缀色 */
+  --tg-sub-info: #008a01;
+  --tg-sub-deepblue: #105eb5;
+  --tg-sub-blue: #1f8bff;
+  --tg-sub-lightblue: #72aced;
+  --tg-sub-green: #0fcd13;
+  --tg-sub-green-deep: #034704;
+  --tg-sub-green-light: #57ff5a;
+  /* 文字颜色 注意只能用于文字颜色 */
+  --tg-text-white: #111111;
+  --tg-text-black: #484848;
+  --tg-text-black-secondary: #484848;
+  --tg-text-error: #ed4163;
+  --tg-text-alltheme-error: #ed4163;
+  --tg-text-error-sub: #f2708a;
+  --tg-text-warn: #484848;
+  --tg-text-warn-sub: #484848;
+  --tg-text-green: #484848;
+  --tg-text-green-main: #484848;
+  --tg-text-green-sub: #484848;
+  --tg-text-green-btn: #484848 ;
+  --tg-text-green-light: #484848;
+  --tg-text-green-deep: #484848;
+  --tg-text-green-lighter: #484848;
+  --tg-text-pink: #484848;
+  --tg-text-blue: #484848;
+  --tg-text-lightblue: #484848;
+  --tg-text-dark: #484848;
+  --tg-text-grey-deep: #484848;
+  --tg-text-grey: #484848;
+  --tg-text-grey-light: #484848;
+  --tg-text-grey-lighter: #484848;
+  --tg-text-grey-secondary: #484848;
+  --tg-text-grey-third: #484848;
+  --tg-text-placeholder: #484848;
+  --tg-text-purple: #484848;
+  --tg-text-yellow: #484848;
+  --tg-text-yellow-light: #484848;
+  --tg-text-lightgrey: #555555;
+  --tg-text-secondary-main: var(--tg-secondary-main);
+  --tg-text-greenblack-main: #484848;
+  /* 透明色 */
+  --tg-color-grey-rgb: 162, 162, 162;
+  /* 边框颜色 */
+  --tg-border-color-grey:  #d5dceb;
+  --tg-secondary-border-color-grey: var(--tg-secondary-grey);
+  --tg-border-color-deep-grey: #f2ca5c;
+  --tg-border-color-main: #e3e3e3;
+  --tg-border-color-white:  #ffffff;
+  --tg-border-color-grey-light: #e8e8e8;
+  /** 骨架屏颜色 */
+  --tg-skeleton-color1: #738299;
+  --tg-skeleton-color2: #aeb8d6;
+  /** 公告背景色（t老板要求背景透明） **/
+  --tg-notice-bg-color: rgba(27, 44, 55, 0.90);
+  /** 提交成功颜色 */
+  --tg-notice-update-bg: #fe9700;
+}
+
+/* 特殊组件变量 */
+[theme="white"] {
+    /* 兼容文字颜色 */
+    --tg-text-secondary : #2f4553;
+    /* popper 背景 字体色 */
+    --tg-popper-bg: #e8e8e8;
+    --tg-popper-hover-bg: #f2ca5c;
+    --tg-popper-active-bg: white;
+    --tg-popper-active-text-color: #f2ca5c;
+    --tg-popper-color-default: #484848;
+    --tg-popper-hover-color-default: var(--tg-text-blue);
+    /** tabactivebar颜色 */
+    --tg-tab-active-bar: var(--tg-primary-active);
+    /** svg颜色 */
+    --tg-svg-default-color: #484848;
+    --tg-svg-active-color: #111111;
+    /* 通知图标提示点的颜色 */
+    --tg-dot-state-bg: #f34b39;
+    /* table组件文字颜色 */
+    --tg-table-amount-color: inherit;
+    --tg-table-text-color: inherit;
+    /* 统一活动规则颜色 */
+    --tg-promotion-text-color: var(--tg-text-lightgrey);
+    /* 存钱款placehoder统一颜色 */
+    --tg-wallet-optionbs-placehoder-color: #c1c1c1;
+    /* 体育 */
+    --tg-sport-card-bg: #ffffff;
+    --tg-sport-btn-hover: #f2ca5c;
+    --tg-sport-grey-deep : #cbcbcb;
+    /* 钱包 */
+    --tg-wallet-left-card-bg: #e8e8e8;
+}
+
+ /* 白色主题特有变量 */
+[theme="white"] {
+  --tg-white-primary-active-bg: #f2ca5c ;
+  --tg-white-text-main-color: #111111 ;
+  --tg-white-text-secondary-color: #111111cc ;
+  --tg-white-text-third-color: #484848 ;
+}
+
+
+
+[theme="greenblack"] {
+  /* 主色&辅色 */
+  --tg-primary-main: #282828;
+  --tg-primary-main-colon:#2f3f4a;
+  --tg-primary-light:  var(--tg-primary-main);
+  --tg-secondary-main: #585858;
+  --tg-secondary-light: #e4e4e4;
+  --tg-secondary-grey: #454545;
+  --tg-secondary-dark: #373737;
+  --tg-secondary-deepdark: #242628;
+  --tg-third-grey: #557086;
+  --tg-primary-success: #1fff20;
+  --tg-primary-fail: #e91134;
+  --tg-button-secondary-main: #e9113c;
+  --tg-bet-slip-error: #5d0718;
+  --tg-bet-button-deepblue: #082f5a;
+  --tg-primary-active: #26ffbe;
+
+  /* body背景 */
+  --tg-body-bg : var(--tg-primary-main);
+  --tg-body-bg-colon:var(--tg-primary-main-colon);
+  /* 点缀色 */
+  --tg-sub-info: #008a01;
+  --tg-sub-deepblue: #ffefb0;
+  --tg-sub-blue: #26ffbe;
+  --tg-sub-lightblue: #72aced;
+  --tg-sub-green: #0fcd13;
+  --tg-sub-green-deep: #034704;
+  --tg-sub-green-light: #57ff5a;
+  /* 文字颜色 注意只能用于文字颜色 */
+  --tg-text-placeholder: #e4e4e4;
+  --tg-text-blue: #26ffbe;
+  --tg-text-lightgrey: #e4e4e4;
+  /* 边框颜色 */
+  --tg-border-color-grey:  #585858;
+  --tg-secondary-border-color-grey: var(--tg-secondary-grey);
+  --tg-border-color-deep-grey: #24e6a8;
+  --tg-border-color-main: var(--tg-secondary-main);
+  --tg-border-color-white:  #ffefb0;
+  --tg-border-color-grey-light:  var(--tg-border-color-grey);
+  /** 骨架屏颜色 */
+  --tg-skeleton-color1: #42bc91;
+  --tg-skeleton-color2: #42bc91;
+  /** 公告背景色（t老板要求背景透明） **/
+  --tg-notice-bg-color: rgba(0, 88, 62, 0.9);
+}
+
+/* 特殊组件变量 */
+[theme="greenblack"] {
+  /* 兼容文字颜色 */
+  --tg-text-secondary : var(--tg-text-green-main);
+  /* popper 背景 字体色 */
+  --tg-popper-bg: #454545;
+  --tg-popper-hover-bg: #373737;
+  --tg-popper-active-bg: #ffffff;
+  --tg-popper-active-text-color: var(--tg-primary-active);
+  --tg-popper-color-default: #e4e4e4;
+  --tg-popper-hover-color-default: #373737;
+  /** tabactivebar颜色 */
+  --tg-tab-active-bar: var(--tg-primary-active);
+  /** svg颜色 */
+  --tg-svg-default-color: #e4e4e4;
+  --tg-svg-active-color: var(--tg-primary-active);
+  /* 通知图标提示点的颜色 */
+  --tg-dot-state-bg: #f34b39;
+  /* table组件文字颜色 */
+  --tg-table-amount-color: #28ffbb;
+  --tg-table-text-color: #e4e4e4;
+  /* 统一活动规则颜色 */
+  --tg-promotion-text-color: #e4e4e4;
+  /* 存钱款placehoder统一颜色 */
+  --tg-wallet-optionbs-placehoder-color: rgba(0, 255, 166, 0.3);
+  /* 体育 */
+  --tg-sport-card-bg: #585858;
+  --tg-sport-btn-hover: #42bc91;
+  --tg-sport-grey-deep : #055434;
+  /* 钱包 */
+  --tg-wallet-left-card-bg: var(--tg-secondary-grey);
+}
+
+[theme="green"] {
+  /* 主色&辅色 */
+  --tg-primary-main: #02432d;
+  --tg-primary-main-colon:#195440;
+  --tg-primary-light: #076237;
+  --tg-secondary-main: #0e6746;
+  --tg-secondary-light: #76f0c5;
+  --tg-secondary-grey: #22774f;
+  --tg-secondary-dark: #055434;
+  --tg-secondary-deepdark: #0e6746;
+  --tg-third-grey: #4aa882;
+  --tg-primary-success: #1fff20;
+  --tg-primary-fail: #e91134;
+  --tg-button-secondary-main: #e9113c;
+  --tg-bet-slip-error: #5d0718;
+  --tg-bet-button-deepblue: #082f5a;
+  --tg-primary-active: #f6d14a;
+
+  /* body背景 */
+  --tg-body-bg : #076237;
+  --tg-body-bg-colon:var(--tg-primary-main-colon);
+  /* 点缀色 */
+  --tg-sub-info: #008a01;
+  --tg-sub-deepblue: #ffefb0;
+  --tg-sub-blue: #1f8bff;
+  --tg-sub-lightblue: #72aced;
+  --tg-sub-green: #0fcd13;
+  --tg-sub-green-deep: #034704;
+  --tg-sub-green-light: #57ff5a;
+  /* 文字颜色 注意只能用于文字颜色 */
+  --tg-text-placeholder: #3cb389;
+  --tg-text-lightgrey: #ffffff;
+  --tg-text-blue: #f6d14a;
+  --tg-text-lightblue: #ff9724;
+  --tg-text-dark: #ffffff;
+  --tg-text-grey-secondary: var(--tg-text-green-main);
+  /* 边框颜色 */
+  --tg-border-color-grey:  #197b59;
+  --tg-secondary-border-color-grey: var(--tg-secondary-grey);
+  --tg-border-color-deep-grey: #5ecea6;
+  --tg-border-color-main: #197b59;
+  --tg-border-color-white:  #ffefb0;
+  --tg-border-color-grey-light:  var(--tg-border-color-grey);
+  /** 骨架屏颜色 */
+  --tg-skeleton-color1: #42bc91;
+  --tg-skeleton-color2: #42bc91;
+    /** 公告背景色（t老板要求背景透明） **/
+    --tg-notice-bg-color: rgba(14, 103, 70, 0.90);
+    --tg-text-alltheme-green: #2dff0b;
+  /** 提交成功颜色 */
+  --tg-notice-update-bg: #1fff20;
+}
+
+/* 特殊组件变量 */
+[theme="green"] {
+  /* 兼容文字颜色 */
+  --tg-text-secondary : var(--tg-text-green-main);
+  /* popper 背景 字体色 */
+  --tg-popper-bg: #fff;
+  --tg-popper-hover-bg: #197b5980;
+  --tg-popper-active-bg: #ffffff;
+  --tg-popper-active-text-color: var(--tg-text-yellow);
+  --tg-popper-color-default: #02432d;
+  --tg-popper-hover-color-default: #ffefb0;
+  /** tabactivebar颜色 */
+  --tg-tab-active-bar: var(--tg-primary-active);
+  /** svg默认颜色 */
+  --tg-svg-default-color: #5ecea6;
+  /* 通知图标提示点的颜色 */
+  --tg-dot-state-bg: #f34b39;
+  /* table组件文字颜色 */
+  --tg-table-amount-color: var(--tg-text-yellow-light);
+  --tg-table-text-color: var(--tg-text-green-main);
+  /* 统一活动规则颜色 */
+  --tg-promotion-text-color: #3cb389;
+  /* 存钱款placehoder统一颜色 */
+  --tg-wallet-optionbs-placehoder-color: rgba(0, 255, 166, 0.3);
+  /* 体育 */
+  --tg-sport-card-bg: #055434;
+  --tg-sport-btn-hover: #42bc91;
+  --tg-sport-grey-deep : #055434;
+  /* 钱包 */
+  --tg-wallet-left-card-bg: var(--tg-secondary-grey);
+}
+
+

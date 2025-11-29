@@ -1,5 +1,8 @@
+import type { MqttCallbackParamType } from '@tg/types'
 import type { MqttClient as TMqttClient } from 'precompiled-mqtt'
-import { getEnv } from './bc.game'
+import { EventBusNames } from '@tg/types'
+import { appEventBus } from './event-bus'
+import { getEnv } from './main'
 
 /**
  * ws://34.92.35.218:8088
@@ -13,27 +16,26 @@ type TMqttServer = Array<{
   protocol?: TMqttProtocol
 }>
 
+const mqttMsgCallbacks: {
+  [p: string]: ({ topic, message }: MqttCallbackParamType) => void
+} = {}
+
 export class SocketClient {
   client: TMqttClient | null = null
 
   subscribeList: string[] = []
 
-  /** 上一次连接登录状态 */
-  lastLoginStatus?: boolean
+  /** 上一次连接登录ID */
+  lastLoginID: string = ''
 
   #MQTT_SERVER: TMqttServer | null = null
 
-  clientId?: string
-
-  isLogin: boolean = false
-
   #log = (message: string, ...rest: any) => {
-    // eslint-disable-next-line no-console
     console.log(`%c Mqtt ${message}`, 'color: #e10d8a', ...rest)
   }
 
-  constructor(SOCKET_URL_LIST_STRING: string) {
-    this.#log('实例化')
+  constructor(projectId: string, SOCKET_URL_LIST_STRING: string) {
+    this.#log(`实例化 ${projectId}`)
     this.generateMQTT_SERVER(SOCKET_URL_LIST_STRING)
   }
 
@@ -72,57 +74,50 @@ export class SocketClient {
   public endOrConnect() {
     if (this.client != null) {
       this.#log('已经连接, 断开连接中...')
+      appEventBus.emit(EventBusNames.MQTT_DISCONNECT_BUS, true)
       const opts: any = null
       this.client.end(true, opts, () => {
-        this.connect({
-          msg: '断开 重新连接',
-          clientId: this.clientId,
-          isLogin: this.isLogin,
-        })
+        this.connect('断开 重新连接')
       })
     }
   }
 
-  public async connect(args: {
-    clientId?: string
-    /** 链接消息，判断是从哪里链接的 */
-    msg?: string
-    isLogin?: boolean
-  }) {
-    this.isLogin = args.isLogin ?? false
-    this.clientId = args.clientId ?? Math.random().toString(36).slice(-10)
-
-    this.#log('CONNECT', args.msg)
+  /**
+   * 需要登录状态的需要从外部传入
+   * @param msg
+   * @param userId
+   * @returns
+   */
+  public async connect(
+    msg: string,
+    userId?: string,
+  ) {
+    this.#log('MQTT CONNECT', msg)
     if (this.#MQTT_SERVER) {
-      if (this.lastLoginStatus === undefined)
-        this.lastLoginStatus = this.isLogin
+      userId = userId ?? ''
 
-      if (this.lastLoginStatus === this.isLogin) {
+      if (this.lastLoginID === userId) {
         if (this.client != null) {
-          this.#log('登录状态相同，且已经连接过，不执行连接', args.msg)
+          this.#log('登录状态相同，且已经连接过，不执行连接', msg)
           return
         }
       }
-      else {
-        this.lastLoginStatus = this.isLogin
-        this.endOrConnect()
-        return
-      }
 
-      this.#log('连接中...')
-
-      this.#log('clientId', this.clientId)
-
-      import('precompiled-mqtt').then((mqtt) => {
-        this.client = mqtt.connect({
-          // username: VITE_SOCKET_USERNAME,
-          // password: VITE_SOCKET_PASSWORD,
-          keepalive: 20,
-          clientId: this.clientId,
-          servers: this.#MQTT_SERVER!,
+      // 新UId
+      this.lastLoginID = userId
+      if (this.client != null) {
+        this.#log('已经连接, 断开连接中...')
+        appEventBus.emit(EventBusNames.MQTT_DISCONNECT_BUS, true)
+        const opts: any = null
+        this.client.end(true, opts, () => {
+          this.#log('已经断开 重新连接中...')
+          this.subscribeList = []
+          this.handleConnect()
         })
-        this.eventHandler()
-      })
+      }
+      else {
+        this.handleConnect()
+      }
     }
     else {
       this.#log('请在 env文件中 配置连接地址')
@@ -131,22 +126,40 @@ export class SocketClient {
 
   /**
    * @param subscribeEvent 订阅的频道
+   * @param options callback 收到mqtt消息时候的回调函数 successFn 订阅成功的回调函数
    */
-  public addSubscribe(subscribeEvent: string) {
-    this.#log('开始订阅', subscribeEvent)
-    if (this.client != null && subscribeEvent) {
-      this.client.subscribe(subscribeEvent, { qos: 2 }, (error, granted) => {
-        if (error) {
-          this.#log(`订阅失败${subscribeEvent}`, error)
-        }
-        else {
-          this.#log('订阅成功', granted)
-        }
-      })
+  public addSubscribe(subscribeEvent: string, options: { successFn?: () => void, callback: ({ topic, message }: MqttCallbackParamType) => void }) {
+    this.#log('尝试订阅', subscribeEvent)
+
+    if (!this.client || !subscribeEvent)
+      return
+    // 如果已经订阅过该 topic
+    if (this.subscribeList.includes(subscribeEvent)) {
+      this.#log(`重复订阅检测：${subscribeEvent} 已经存在`)
+      // 更新 callback
+      mqttMsgCallbacks[subscribeEvent] = options.callback
+      if (options.successFn)
+        options.successFn()
+      return
     }
+
+    this.client.subscribe(subscribeEvent, { qos: 2 }, (error, granted) => {
+      if (error) {
+        this.#log(`订阅失败${subscribeEvent}`, error)
+      }
+      else {
+        this.#log('订阅成功', granted)
+        if (options.successFn)
+          options.successFn()
+        this.subscribeList.push(subscribeEvent)
+        console.log('🚀 ~ SocketClient ~ addSubscribe ~ this.subscribeList:', this.subscribeList)
+        if (!mqttMsgCallbacks[subscribeEvent])
+          mqttMsgCallbacks[subscribeEvent] = options.callback
+      }
+    })
   }
 
-  public removeSubscribe(subscribeEvent: string) {
+  public removeSubscribe(subscribeEvent: string, successFn?: () => void) {
     if (this.client != null && subscribeEvent) {
       this.client.unsubscribe(subscribeEvent, (error: any) => {
         if (error) {
@@ -157,6 +170,11 @@ export class SocketClient {
           const index = this.subscribeList.indexOf(subscribeEvent)
           if (index > -1)
             this.subscribeList.splice(index, 1)
+          // console.log("🚀 ~ SocketClient ~ addSubscribe ~ this.subscribeList:", this.subscribeList)
+
+          if (successFn)
+            successFn()
+          delete mqttMsgCallbacks[subscribeEvent]
         }
       })
     }
@@ -165,15 +183,31 @@ export class SocketClient {
   public eventHandler() {
     if (this.client != null) {
       this.client.on('connect', (arg) => {
-        this.#log('连接成功', 'Info: ', arg)
+        this.#log('连接成功✅', 'Info: ', arg)
+        appEventBus.emit(EventBusNames.MQTT_CONNECT_SUCCESS_BUS, true)
       })
 
       this.client.on('message', (topic, _message, packet) => {
+        // const message = CBOR.decode(uint8ArrayToArrayBuffer(_message))
         const message = packet.payload
+        if (mqttMsgCallbacks[topic]) {
+          const strMsg = message.toString()
+          let parsedMsg
+          try {
+            parsedMsg = JSON.parse(strMsg)
+          }
+          catch (error) {
+            parsedMsg = void 0
+            this.#log('收到消息解析失败 -- 返回字符串', strMsg)
+          }
+          mqttMsgCallbacks[topic]({ topic, message: { origin: strMsg, parsed: parsedMsg } })
+        }
 
-        this.#log(`收到消息Topic：${topic}`)
-        this.#log(`收到消息Message：${message}`)
-        this.#log('收到消息Packet：', packet)
+        if (!topic.includes('sport/delta') && !topic.includes('crash')) {
+          this.#log(`收到消息Topic：${topic}`)
+          this.#log(`收到消息Message：${message}`)
+          this.#log('收到消息Packet：', packet)
+        }
       })
 
       this.client.on('error', (error) => {
@@ -208,14 +242,38 @@ export class SocketClient {
         this.#log('发送队列为空')
       })
 
-      this.client.on('packetreceive', () => {
+      this.client.on('packetreceive', (packetreceiveInfo) => {
         // this.#log('收到数据包 《《《《《《《《《《《', packetreceiveInfo)
       })
 
-      this.client.on('packetsend', () => {
+      this.client.on('packetsend', (packetsendInfo) => {
         // this.#log('发送数据包 》》》》》》》》》》》', packetsendInfo)
       })
     }
+  }
+
+  handleConnect() {
+    this.#log('连接中...')
+
+    // 随机生成10位的 客户端ID
+    const r = Math.random().toString(36).slice(-10)
+    // const login_r = Local.get(STORAGE_LOGIN_MQTT_ID)?.value
+    const clientId = this.lastLoginID
+      ? `${this.lastLoginID}-${Math.floor(Math.random() * 100)}`
+      : `web-random-${r}`
+    this.#log('clientId', clientId)
+
+    import('precompiled-mqtt').then((mqtt) => {
+      // const { VITE_SOCKET_USERNAME, VITE_SOCKET_PASSWORD } = getEnv()
+      this.client = mqtt.connect({
+        // username: VITE_SOCKET_USERNAME,
+        // password: VITE_SOCKET_PASSWORD,
+        keepalive: 20,
+        clientId,
+        servers: this.#MQTT_SERVER!,
+      })
+      this.eventHandler()
+    })
   }
 
   /** 关闭mqtt连接 */
@@ -227,5 +285,37 @@ export class SocketClient {
   }
 }
 
+/** 多实例统一管理 */
+class MqttClientManager {
+  private clients: Map<string, SocketClient> = new Map()
+
+  /** 获取或创建客户端实例 */
+  getClient(projectId: string, serverList: string): SocketClient {
+    if (!this.clients.has(projectId)) {
+      const client = new SocketClient(projectId, serverList)
+      this.clients.set(projectId, client)
+    }
+    return this.clients.get(projectId)!
+  }
+
+  /** 关闭某个客户端 */
+  closeClient(projectId: string) {
+    const client = this.clients.get(projectId)
+    if (client) {
+      client.close()
+      this.clients.delete(projectId)
+    }
+  }
+
+  /** 关闭全部客户端 */
+  closeAll() {
+    this.clients.forEach(client => client.close())
+    this.clients.clear()
+  }
+}
+
+export const MqttManager = new MqttClientManager()
+
+/** 兼容以前代码 */
 const { VITE_SOCKET_URL_LIST_STRING } = getEnv()
-export const socketClient = new SocketClient(VITE_SOCKET_URL_LIST_STRING)
+export const socketClient = MqttManager.getClient('SG', VITE_SOCKET_URL_LIST_STRING)

@@ -1,0 +1,44 @@
+<script lang="ts" setup>
+defineOptions({
+  name: 'IconChatRain',
+})
+</script>
+
+<template>
+  <i class="tg-icon-container">
+    <svg
+      width="28"
+      height="28"
+      viewBox="0 0 28 28"
+      fill="none"
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <path
+        d="M23.6601 18.3444C23.6601 23.6766 19.335 28 14.0001 28C8.66521 28 4.34009 23.6775 4.34009 18.3444C4.34009 13.0121 14.0001 0 14.0001 0C14.0001 0 23.6601 13.0121 23.6601 18.3444Z"
+      />
+      <path
+        d="M12.2876 15.4858C11.6034 18.039 10.4011 18.9525 9.33365 18.6664C8.26615 18.3803 7.7394 17.003 8.42365 14.4506C9.1079 11.8974 12.0523 8.638 12.0523 8.638C12.0523 8.638 12.9719 12.9325 12.2876 15.4858Z"
+      />
+    </svg>
+  </i>
+</template>
+
+<style scoped>
+.tg-icon-container {
+  height: 1em;
+  width: 1em;
+  line-height: 1em;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+}
+
+.tg-icon-container svg {
+  width: 1em;
+  height: 1em;
+  fill: currentColor;
+}
+</style>

@@ -1,0 +1,4 @@
+.btn-default {
+  background: var(--lot-base-btn-default-bg-color);
+  color: var(--lot-base-btn-default-color);
+}

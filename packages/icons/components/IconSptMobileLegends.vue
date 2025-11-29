@@ -1,0 +1,47 @@
+<script lang="ts" setup>
+defineOptions({
+  name: 'IconSptMobileLegends',
+})
+</script>
+
+<template>
+  <i class="tg-icon-container">
+    <svg
+      width="28"
+      height="28"
+      viewBox="0 0 28 28"
+      fill="none"
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <path
+        d="M27.4158 23.9981V12.2031C27.4158 10.8381 26.8672 9.51947 25.9108 8.56309L18.8644 1.51672C17.8958 0.548094 16.5894 0.0117188 15.2244 0.0117188H3.30078L13.9408 10.6517L19.3194 5.27309L23.3558 9.34447V19.9608L27.4158 24.0208V23.9981Z"
+      />
+      <path
+        d="M25.3054 27.9995L19.0404 21.7345V11.6432L13.9304 16.7532L8.86673 11.6895V23.0295L4.55036 18.6309V7.36091L0.583984 3.39453V15.7259C0.583984 17.0909 1.13261 18.4095 2.08898 19.3659L9.21761 26.4945C10.1862 27.4632 11.4926 27.9995 12.8576 27.9995H25.3054Z"
+      />
+      <path d="M27.4171 6.39363V0H21.0234L27.4171 6.39363Z" />
+      <path d="M27.3711 28H27.4175V27.9414L27.3711 28Z" />
+      <path d="M0.583984 21.5244V27.9994H7.04761L0.583984 21.5244Z" />
+    </svg>
+  </i>
+</template>
+
+<style scoped>
+.tg-icon-container {
+  height: 1em;
+  width: 1em;
+  line-height: 1em;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+}
+
+.tg-icon-container svg {
+  width: 1em;
+  height: 1em;
+  fill: currentColor;
+}
+</style>

@@ -1,5 +1,7 @@
 import type { EnumCurrencyKey } from '@tg/types'
-import { Local } from './storage'
+import { getEnv, getFlutterAppToken, isExternal, isFlutterApp } from './main'
+import { Local, STORAGE_TOKEN_KEY } from './storage'
+
 /**
  * 判断是不是虚拟货币
  * @param {EnumCurrencyKey} currency
@@ -31,22 +33,6 @@ export function isVirtualCurrency(currency: EnumCurrencyKey) {
 }
 
 /**
- * 获取当前环境变量
- */
-export function getEnv() {
-  return import.meta.env
-}
-
-/**
- * 获取Url参数
- * @param key
- * @returns {string | null}
- */
-export function getParamsQuery(key: string): string | null {
-  return new URLSearchParams(window.location.search).get(key)
-}
-
-/**
  * 添加或更新 URL 参数的方法
  * @param {string} key 参数名
  * @param {string} value 参数值
@@ -60,32 +46,6 @@ export function addUrlParam(key: string, value: string) {
 
   // 使用 history API 更新 URL（不刷新页面）
   window.history.replaceState(null, '', currentUrl.toString())
-}
-
-/**
- * 锁定body滚动
- * @param {boolean} isLock 是否锁定
- * @param {string} className 锁定时添加的类名
- * @returns {void}
- * @example lockBodyScroll(true, 'lock-scroll')
- * @example lockBodyScroll(false, 'lock-scroll')
- */
-export function lockBodyScroll(isLock: boolean, className = 'lock-scroll'): void {
-  const body = document.body
-  if (isLock)
-    body.classList.add(className)
-
-  else
-    body.classList.remove(className)
-}
-
-/**
- * 判断是不是外部链接
- * @param path
- * @returns {boolean}
- */
-export function isExternal(path: string): boolean {
-  return path.startsWith('http')
 }
 
 /**
@@ -106,7 +66,10 @@ export function getImgUrl(url: string) {
  * @returns {string | undefined}
  */
 export function getToken() {
-  return Local.get<string>('STORAGE_TOKEN_KEY')?.value
+  if (isFlutterApp())
+    return getFlutterAppToken()
+
+  return Local.get<string>(STORAGE_TOKEN_KEY)?.value
 }
 
 /**
@@ -115,7 +78,7 @@ export function getToken() {
  * @returns {void}
  */
 export function setToken(token: string) {
-  Local.set('STORAGE_TOKEN_KEY', token)
+  Local.set(STORAGE_TOKEN_KEY, token)
 }
 
 /**
@@ -123,7 +86,7 @@ export function setToken(token: string) {
  * @returns {void}
  */
 export function removeToken() {
-  Local.remove('STORAGE_TOKEN_KEY')
+  Local.remove(STORAGE_TOKEN_KEY)
 }
 
 /**

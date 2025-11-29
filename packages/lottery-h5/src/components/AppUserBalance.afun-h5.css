@@ -1,0 +1,10 @@
+.lottery-user-balance-bg {
+  background: #213743;
+  color: #fff;
+
+  --lot-base-btn-default-bg-color: #f23038;
+  --lot-base-btn-default-color: #213743;
+}
+.lottery-user-balance-text1 {
+  color: #9dabc8;
+}

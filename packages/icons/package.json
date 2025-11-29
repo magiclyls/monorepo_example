@@ -1,0 +1,28 @@
+{
+  "name": "@tg/icons",
+  "version": "1.0.0",
+  "packageManager": "pnpm@10.13.1",
+  "description": "",
+  "author": "",
+  "license": "ISC",
+  "keywords": [],
+  "exports": {
+    ".": "./index.ts",
+    "./components/*": "./components/*"
+  },
+  "main": "index.ts",
+  "types": "index.d.ts",
+  "scripts": {
+    "generate": "ts-node scripts/generate-icons.ts",
+    "watch-svg": "ts-node scripts/watch-svg.js",
+    "fix-vue-ts": "eslint --fix components/*.vue ./index.ts",
+    "generate-and-fix": "ts-node scripts/generate-icons.ts && eslint --fix components/*.vue ./index.ts"
+  },
+  "devDependencies": {
+    "@vue/compiler-sfc": "^3.5.18",
+    "chokidar": "^4.0.3",
+    "fast-glob": "^3.3.3",
+    "prettier": "^3.6.2",
+    "ts-node": "^10.9.2"
+  }
+}

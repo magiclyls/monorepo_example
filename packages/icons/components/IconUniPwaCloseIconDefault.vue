@@ -1,0 +1,42 @@
+<script lang="ts" setup>
+defineOptions({
+  name: 'IconUniPwaCloseIconDefault',
+})
+</script>
+
+<template>
+  <i class="tg-icon-container">
+    <svg
+      width="20"
+      height="20"
+      viewBox="0 0 20 20"
+      fill="none"
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <path
+        d="M14 7.19974L12.8 6L10.0015 8.79989L7.20223 6L6.00297 7.19974L8.79926 9.99963L6 12.7995L7.19926 14L9.9985 11.2001L12.797 14L13.997 12.7995L11.2007 9.99963L14 7.19974Z"
+      />
+      <circle cx="10" cy="10" r="9.5" stroke="#B1BAD3" />
+    </svg>
+  </i>
+</template>
+
+<style scoped>
+.tg-icon-container {
+  height: 1em;
+  width: 1em;
+  line-height: 1em;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+}
+
+.tg-icon-container svg {
+  width: 1em;
+  height: 1em;
+  fill: currentColor;
+}
+</style>

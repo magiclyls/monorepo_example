@@ -1,0 +1,48 @@
+<script lang="ts" setup>
+defineOptions({
+  name: 'IconCurrencyPhp',
+})
+</script>
+
+<template>
+  <i class="tg-icon-container">
+    <svg
+      width="13"
+      height="12"
+      viewBox="0 0 13 12"
+      fill="none"
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <g clip-path="url(#clip0_43601_4007)">
+        <path
+          d="M12.6235 2.8157L12.4484 4.05338H0.914314L1.08936 2.8157H12.6235ZM12.3832 4.5147L12.2081 5.75238H0.674022L0.849069 4.5147H12.3832ZM6.17257 8.09273H3.26348L3.54037 6.13494H6.44946C6.91537 6.13494 7.30284 6.0468 7.61186 5.87052C7.92141 5.6905 8.16047 5.45984 8.32904 5.17855C8.49815 4.8935 8.6074 4.58971 8.65681 4.26716C8.6997 3.93711 8.6777 3.62394 8.59082 3.32765C8.50447 3.0276 8.33224 2.78569 8.07414 2.60192C7.81657 2.41439 7.45673 2.32062 6.99461 2.32062H4.91506L3.56561 11.862H1.13379L2.76332 0.340332H7.27468C8.2065 0.340332 8.97539 0.514733 9.58137 0.863534C10.1911 1.21234 10.6264 1.68303 10.8873 2.27562C11.1525 2.86446 11.2353 3.52455 11.1357 4.25591C11.03 4.97602 10.7619 5.62674 10.3312 6.20807C9.90099 6.78566 9.33222 7.2451 8.62486 7.5864C7.92182 7.92395 7.10439 8.09273 6.17257 8.09273Z"
+        />
+      </g>
+      <defs>
+        <clipPath>
+          <rect width="13" height="12" />
+        </clipPath>
+      </defs>
+    </svg>
+  </i>
+</template>
+
+<style scoped>
+.tg-icon-container {
+  height: 1em;
+  width: 1em;
+  line-height: 1em;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+}
+
+.tg-icon-container svg {
+  width: 1em;
+  height: 1em;
+  fill: currentColor;
+}
+</style>

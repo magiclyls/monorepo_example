@@ -1,0 +1,8 @@
+.tab-bg-active {
+  background: linear-gradient(338deg, #f23038 14.55%, #ff7474 85.19%);
+  color: #fff;
+}
+.tab-bg {
+  background: #ebebeb;
+  color: #0d2245;
+}

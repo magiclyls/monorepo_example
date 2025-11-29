@@ -1,9 +1,7 @@
-import path from 'node:path'
-import { createSvgIconsPlugin } from 'vite-plugin-svg-icons'
 import { defineConfig } from 'vitepress'
+import TailwindcssConfig from '../../../tailwindcss/vite.tailwindcss.config'
 // import { mdVueDemoPlugin } from 'vitepress-vue-demo'
 
-import TailwindcssConfig from '../../../tailwindcss/vite.tailwindcss.config'
 // https://vitepress.dev/reference/site-config
 export default defineConfig({
   title: 'TG-前端',
@@ -46,27 +44,19 @@ export default defineConfig({
           // { text: 'BaseCollapse', link: '/BaseCollapse' },
           { text: 'BaseDropDown', link: '/BaseDropDown' },
           { text: 'BaseTable', link: '/BaseTable' },
+          { text: 'PhBaseTabs', link: '/PhBaseTabs' },
+          { text: 'PhBaseGameItem', link: '/PhBaseGameItem' },
         ],
       },
     ],
-
     socialLinks: [
       { icon: 'github', link: 'https://github.com/vuejs/vitepress' },
     ],
   },
   vite: {
     plugins: [
-      createSvgIconsPlugin({
-        iconDirs: [path.resolve(process.cwd(), '../../icons')],
-        symbolId: 'icon-[name]',
-      }),
       TailwindcssConfig.tailwindcss(),
     ],
-    // markdown: {
-    //   config: (md) => {
-    //     md.use(mdVueDemoPlugin)
-    //   },
-    // },
     publicDir: '../../../public',
     envDir: '../../../',
   },

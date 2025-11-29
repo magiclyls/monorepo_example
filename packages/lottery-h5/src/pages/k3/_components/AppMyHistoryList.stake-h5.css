@@ -1,0 +1,43 @@
+.detail-bg {
+  padding-left: 2rem;
+  padding-right: 2rem;
+  background-color: #2f4553;
+  border-radius: 4rem;
+  line-height: 25rem;
+}
+.Succeed {
+  border-color: #47ba7c;
+  color: #47ba7c;
+}
+
+.Failed {
+  border-color: #fd565c;
+  color: #fd565c;
+}
+.k3-history-bg {
+  background: #213743;
+}
+.k3-history-border {
+  border-color: #213743;
+}
+.k3-history-text1 {
+  color: #b1bad3;
+}
+.k3-history-text2 {
+  color: #b1bad3;
+}
+.k3-history-text3 {
+  color: #9dabc8;
+}
+.k3-history-text4 {
+  color: #47ba7c;
+}
+.k3-history-text5 {
+  color: #fd565c;
+}
+.k3-history-text6 {
+  color: #f2413b;
+}
+.k3-history-text7 {
+  color: #fff;
+}

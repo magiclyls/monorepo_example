@@ -1,0 +1,50 @@
+<script lang="ts" setup>
+defineOptions({
+  name: 'IconMiniCrash',
+})
+</script>
+
+<template>
+  <i class="tg-icon-container">
+    <svg
+      width="12"
+      height="12"
+      viewBox="0 0 12 12"
+      fill="none"
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <g clip-path="url(#clip0_550_1681)">
+        <path
+          fill-rule="evenodd"
+          clip-rule="evenodd"
+          d="M9.99698 3.99963C11.1014 3.99963 11.9969 3.1045 11.9969 1.99975C11.9969 0.895378 11.1014 -0.00012207 9.99686 -0.00012207C8.89261 -0.00012207 7.99711 0.895003 7.99711 1.99975C7.99711 3.10413 8.89261 3.99963 9.99698 3.99963ZM6.58198 6.17488L7.76698 3.99988V4.00025L7.77036 4.004C8.20873 4.5125 8.81548 4.87213 9.52198 5L7.87698 8L7.87423 8.0045C7.78561 8.15358 7.65975 8.27704 7.50899 8.36277C7.35824 8.4485 7.18778 8.49355 7.01436 8.4935C6.85314 8.49404 6.69424 8.45503 6.55161 8.37988L4.37661 7.295L1.85173 11.5L1.84923 11.5048C1.76204 11.6539 1.63768 11.778 1.48828 11.8648C1.33887 11.9516 1.16952 11.9982 0.996732 12.0001H0.996357C0.819702 11.9986 0.646885 11.9484 0.496857 11.8551L0.492357 11.8524C0.343284 11.7638 0.219821 11.6379 0.134089 11.4871C0.0483578 11.3364 0.00330594 11.1659 0.00335698 10.9925C0.00335698 10.8054 0.054732 10.63 0.141732 10.4848L3.14173 5.48488L3.14436 5.48038C3.23363 5.33396 3.35906 5.21298 3.5086 5.12904C3.65813 5.04511 3.82675 5.00106 3.99823 5.00113C4.15986 5.00113 4.31248 5.03938 4.44198 5.105L6.58198 6.175V6.17488Z"
+        />
+      </g>
+      <defs>
+        <clipPath>
+          <rect width="12" height="12" />
+        </clipPath>
+      </defs>
+    </svg>
+  </i>
+</template>
+
+<style scoped>
+.tg-icon-container {
+  height: 1em;
+  width: 1em;
+  line-height: 1em;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+}
+
+.tg-icon-container svg {
+  width: 1em;
+  height: 1em;
+  fill: currentColor;
+}
+</style>

@@ -1,0 +1,10 @@
+.num {
+  width: 108rem;
+  height: 160rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #24ee89;
+  border-radius: 15rem;
+  color: #000;
+}

@@ -1,0 +1,41 @@
+<script lang="ts" setup>
+defineOptions({
+  name: 'IconToastInfo',
+})
+</script>
+
+<template>
+  <i class="tg-icon-container">
+    <svg
+      width="16"
+      height="16"
+      viewBox="0 0 16 16"
+      fill="none"
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <path
+        d="M16 8C16 3.58172 12.4183 0 8 0C3.58172 0 0 3.58172 0 8C0 12.4183 3.58172 16 8 16C12.4183 16 16 12.4183 16 8ZM7.08571 3.41878H8.91429L8.65306 9.29633H7.34694L7.08571 3.41878ZM8 12.5812C7.36882 12.5812 6.85714 12.0695 6.85714 11.4384C6.85714 10.8072 7.36882 10.2955 8 10.2955C8.63118 10.2955 9.14286 10.8072 9.14286 11.4384C9.14286 12.0695 8.63118 12.5812 8 12.5812Z"
+      />
+    </svg>
+  </i>
+</template>
+
+<style scoped>
+.tg-icon-container {
+  height: 1em;
+  width: 1em;
+  line-height: 1em;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+}
+
+.tg-icon-container svg {
+  width: 1em;
+  height: 1em;
+  fill: currentColor;
+}
+</style>

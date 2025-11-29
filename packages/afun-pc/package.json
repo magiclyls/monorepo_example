@@ -1,0 +1,49 @@
+{
+  "name": "@tg/afun-pc",
+  "type": "module",
+  "version": "0.0.9",
+  "private": true,
+  "packageManager": "pnpm@8.6.7",
+  "scripts": {
+    "build": "vite build --mode test",
+    "build:production": "vite build --mode production",
+    "build:production:a01": "vite build --mode production-a01",
+    "build:production:btb": "vite build --mode production-btb",
+    "build:production:btf": "vite build --mode production-btf",
+    "build:production:wi6": "vite build --mode production-wi6",
+    "build:production:x02": "vite build --mode production-x02",
+    "build:production:btm": "vite build --mode production-btm",
+    "dev": "vite --port 9820",
+    "predev": "sh ./scripts/to-lower-cash.sh ",
+    "lint": "eslint .",
+    "preview": "vite preview",
+    "preview-https": "serve dist",
+    "test": "vitest",
+    "test:e2e": "cypress open",
+    "test:unit": "vitest",
+    "typecheck": "vue-tsc --noEmit",
+    "up": "taze major -I",
+    "sizecheck": "npx vite-bundle-visualizer"
+  },
+  "dependencies": {
+    "@tg/apis": "workspace:*",
+    "@tg/icons": "workspace:*",
+    "@tg/tailwindcss": "workspace:*",
+    "@tg/types": "workspace:*",
+    "@tg/chat-h5": "workspace:*",
+    "@tg/vue-i18n": "workspace:*",
+    "@unocss/reset": "^0.53.5",
+    "lodash-es": "^4.17.21"
+  },
+  "devDependencies": {
+    "critters": "^0.0.19",
+    "unplugin-auto-import": "^0.16.6",
+    "unplugin-vue-macros": "^2.3.6",
+    "vite-plugin-pages": "^0.31.0",
+    "vite-plugin-pwa": "^0.20.5",
+    "vite-plugin-svg-icons": "^2.0.1",
+    "vite-plugin-vue-component-preview": "^1.1.6",
+    "vite-plugin-vue-layouts": "^0.8.0",
+    "vite-plugin-vue-markdown": "^0.23.5"
+  }
+}

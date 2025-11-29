@@ -1,0 +1,51 @@
+<script lang="ts" setup>
+defineOptions({
+  name: 'IconUniSearch2',
+})
+</script>
+
+<template>
+  <i class="tg-icon-container">
+    <svg
+      width="20"
+      height="20"
+      viewBox="0 0 20 20"
+      fill="none"
+      xmlns="http://www.w3.org/2000/svg"
+      xmlns:xlink="http://www.w3.org/1999/xlink"
+    >
+      <rect width="20" height="20" />
+      <defs>
+        <pattern patternContentUnits="objectBoundingBox" width="1" height="1">
+          <use xlink:href="#image0_38_661" transform="scale(0.025)" />
+        </pattern>
+        <image
+          width="40"
+          height="40"
+          preserveAspectRatio="none"
+          xlink:href="data:image/png;base64,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"
+        />
+      </defs>
+    </svg>
+  </i>
+</template>
+
+<style scoped>
+.tg-icon-container {
+  height: 1em;
+  width: 1em;
+  line-height: 1em;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+}
+
+.tg-icon-container svg {
+  width: 1em;
+  height: 1em;
+  fill: currentColor;
+}
+</style>

@@ -1,0 +1,61 @@
+.item-bg {
+  background-color: #213743;
+  border-top: 1rem solid #2f4553;
+}
+.item-bg:first-child {
+  border-top: none;
+}
+.detail-time {
+  color: #b1bad3;
+}
+.detail {
+  color: #b1bad3;
+}
+.detail-title {
+  color: #fff;
+}
+.detail-bg {
+  border-radius: 4rem;
+  background: #2f4553;
+  padding: 0 2rem;
+  height: 25rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.select-text {
+  color: #b1bad3;
+}
+.detail-ball {
+  border: 1rem solid #fff;
+  color: #fff;
+}
+.Succeed {
+  border-color: #47ba7c;
+  color: #47ba7c;
+}
+
+.Failed {
+  border-color: #fd565c;
+  color: #fd565c;
+}
+
+.Big {
+  background-color: #ffa82e;
+}
+
+.Small {
+  background-color: #6da7f4;
+}
+
+.Odd {
+  background-color: #40ad72;
+}
+
+.Even {
+  background-color: #fd565c;
+}
+
+.Ball {
+  background-color: #fd565c;
+}

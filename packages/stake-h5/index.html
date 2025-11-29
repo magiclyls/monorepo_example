@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="mobile-web-app-capable" content="yes" />
+  <meta name="msapplication-TileColor" content="#00aba9">
+  <meta name="apple-mobile-web-app-status-bar-style" content="#00aba9" />
+  <meta name="application-name" content="" />
+  <meta name="theme-color" content="">
+
+  <style type="text/css">
+    * {
+      touch-action: manipulation;
+    }
+
+    #full-loading {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: #1A2C38;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      z-index: 9999;
+    }
+
+    #full-loading img {
+      outline: none;
+      height: 55.55px;
+      width: auto;
+      display: none;
+      font-weight: bold;
+      color: #00aba9;
+      text-transform: uppercase;
+    }
+  </style>
+
+  <script src="/stake/static-js/pwa.js"></script>
+  <script src="/stake/static-js/image.js"></script>
+  <script src="/stake/static-js/pc-to-h5.js"></script>
+
+  <script src="/stake/static-js/flutter.js" defer></script>
+  <!-- <script src="/stake/static-js/vconsole.js" defer></script> -->
+  <script src="/stake/static-js/wangyi.js" defer></script>
+  <script src="/stake/static-js/keyboard.js" defer></script>
+
+  <script src="/stake/static-js/statistics.js" async></script>
+  <script type="text/javascript" src="https://d3lxmpzmffxrcj.cloudfront.net/sdk/dankex.js"></script>
+  <!-- <script type="text/javascript" charset="UTF-8" src="https://res.codeinstall.vip/codeinstall_activity/static/sdk/web_sdk.min.js"></script> -->
+  <!-- <script src="https://unpkg.com/vconsole@latest/dist/vconsole.min.js"></script>
+  <script>
+    var vConsole = new window.VConsole()1
+  </script> -->
+</head>
+
+<body class="font-sans"
+  style="
+    touch-action: none;
+    margin: 0 auto;
+  "
+>
+  <div id="app" class="min-h-full" data-test="缓存"></div>
+  <script src="/stake/static-js/index-loading.js"></script>
+  <div style="width:0;height:0;overflow: hidden;">
+    <div id="b"></div>
+    <div id="c">
+      <div id="title">OOPS, SITE UNREACHABLE...</div>
+      <hr id="line">
+      </hr>
+      <div id="text">
+        <p>Please make sure your device is connected to mobile data or a Wi-Fi network.</p>
+        <p>If you need to connect to the internet, please refer to the following:<li>Check the Wi-Fi settings on your
+            phone to see if there is a Wi-Fi network you can connect to.</li>
+          <li>Check if your phone is connected to mobile data.</li>
+        </p>
+        <p>If you are connected to Wi-Fi:<li>Please check whether the Wi-Fi hotspot you're connected to has internet
+            access or if it permits
+            your device to access the internet.</li>
+        </p>
+      </div>
+      <div id="url"><span class="t">TRY </span><a class="v" href="#">THIS FALLBACK LINK</a> :'(</div>
+      <div id="tid" class="flex"><span class="t">Trace ID:</span><span class="v"></span></div>
+    </div>
+    <div id="debug">
+      <div class="t">DEBUG</div>
+      <ul class="c" id="d"></ul>
+    </div>
+  </div>
+  <div data-portal="true"></div>
+  <div class="tg-dialog-list" id="tg-dialog-list"></div>
+  <div class="tg-notification-list" style="left: var(--pc-h5model-left-notify-list,1rem)"></div>
+  <script type="module" src="/src/main.ts"></script>
+  <script src="/static-js/server-time.js"></script>
+  <noscript>This website requires JavaScript to function properly. Please enable JavaScript to continue...</noscript>
+</body>
+
+</html>

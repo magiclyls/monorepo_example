@@ -1,0 +1,55 @@
+<script lang="ts" setup>
+defineOptions({
+  name: 'IconPerson',
+})
+</script>
+
+<template>
+  <i class="tg-icon-container">
+    <svg
+      width="10"
+      height="10"
+      viewBox="0 0 10 10"
+      fill="none"
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <g clip-path="url(#clip0_9961_4443)">
+        <path
+          d="M2.42188 3.41237C2.42188 4.09646 2.69363 4.75253 3.17735 5.23626C3.66108 5.71998 4.31715 5.99174 5.00124 5.99174C5.68533 5.99174 6.3414 5.71998 6.82513 5.23626C7.30885 4.75253 7.58061 4.09646 7.58061 3.41237C7.58061 3.07365 7.51389 2.73824 7.38426 2.42529C7.25464 2.11235 7.06464 1.828 6.82513 1.58849C6.58561 1.34897 6.30126 1.15898 5.98832 1.02935C5.67538 0.899725 5.33997 0.833008 5.00124 0.833008C4.66251 0.833008 4.3271 0.899725 4.01416 1.02935C3.70122 1.15898 3.41687 1.34897 3.17735 1.58849C2.93784 1.828 2.74784 2.11235 2.61822 2.42529C2.48859 2.73824 2.42187 3.07365 2.42188 3.41237Z"
+        />
+        <path
+          d="M7.18319 6.3877H2.81811C1.72684 6.3877 0.833984 7.28055 0.833984 8.37182V8.57023C0.833984 8.90754 1.09192 9.16547 1.42922 9.16547H8.57208C8.90938 9.16547 9.16732 8.90754 9.16732 8.57023V8.37182C9.16732 7.28055 8.27446 6.3877 7.18319 6.3877Z"
+        />
+      </g>
+      <defs>
+        <clipPath>
+          <rect
+            width="8.33333"
+            height="8.33333"
+            transform="translate(0.833984 0.833496)"
+          />
+        </clipPath>
+      </defs>
+    </svg>
+  </i>
+</template>
+
+<style scoped>
+.tg-icon-container {
+  height: 1em;
+  width: 1em;
+  line-height: 1em;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+}
+
+.tg-icon-container svg {
+  width: 1em;
+  height: 1em;
+  fill: currentColor;
+}
+</style>

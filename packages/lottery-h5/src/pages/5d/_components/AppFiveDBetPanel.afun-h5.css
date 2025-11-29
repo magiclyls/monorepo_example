@@ -1,0 +1,30 @@
+.Big-active {
+  background-color: #ffa82e;
+}
+.Small-active {
+  background-color: #6da7f4;
+}
+.Odd-active {
+  background-color: #40ad72;
+}
+.Even-active {
+  background-color: #fd565c;
+}
+.bsoe-btn {
+  color: #b1bad3;
+}
+.bsoe-btn-default {
+  background-color: #2f4553;
+}
+.ball-btn {
+  color: #b1bad3;
+  border-color: #557086;
+}
+.ball-btn-active {
+  background-color: #24ee89;
+  border-color: #24ee89;
+  color: #000;
+}
+.ball-odd {
+  color: #b1bad3;
+}

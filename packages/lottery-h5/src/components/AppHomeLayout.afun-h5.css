@@ -1,0 +1,12 @@
+.lottery-home-gradient {
+  background: transparent;
+}
+.lottery-home-bar-bg {
+  background: #1a2c38;
+  box-shadow:
+    0 4px 6px -1px rgba(0, 0, 0, 0.2),
+    0 2px 4px -1px rgba(0, 0, 0, 0.12);
+}
+.lottery-home-bar-height {
+  height: 60rem;
+}

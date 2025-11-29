@@ -1,0 +1,81 @@
+table {
+  width: 100%;
+  border-collapse: collapse;
+  thead {
+    background-color: #24ee89;
+    th {
+      text-align: center;
+      height: 40rem;
+      color: #000;
+      font-weight: 700;
+      font-size: 13rem;
+    }
+  }
+  tbody[last-body] {
+    width: 100%;
+    td {
+      height: 30rem;
+      font-size: 12rem;
+      font-weight: 400;
+      color: #fff;
+    }
+    tr {
+      background: #213743;
+      &:first-child {
+        height: 60rem;
+      }
+    }
+  }
+  tbody[number-body] {
+    width: 100%;
+    td {
+      height: 50rem;
+      font-size: 12rem;
+      font-weight: 400;
+      color: #fff;
+    }
+    tr {
+      background: #213743;
+      border: 1rem solid #2f4553;
+    }
+  }
+}
+.zero {
+  background: linear-gradient(135deg, #fb4e4e 50%, #eb43dd 50%);
+  color: #fff;
+  border: none;
+}
+.five {
+  background: linear-gradient(135deg, #5cba47 50%, #eb43dd 50%);
+  color: #fff;
+  border: none;
+}
+.even {
+  background: #fb4e4e;
+  color: #fff;
+  border: none;
+}
+.odd {
+  background: #5cba47;
+  color: #fff;
+  border: none;
+}
+.svg-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  line {
+    stroke: #24ee89;
+  }
+}
+.static-ball-color {
+  background: #fb4e4e;
+  color: #fff;
+  border: none;
+}
+.number-list {
+  border: 1rem solid #24ee89;
+  color: #24ee89;
+}

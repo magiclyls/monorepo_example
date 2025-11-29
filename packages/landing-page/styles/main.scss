@@ -1,0 +1,59 @@
+@import './animation.css';
+
+:root {
+  --ph-game-gap-x: 7rem;
+  --ph-game-gap-y: 7rem;
+}
+
+body {
+  font-size: 14rem;
+  font-family: 'PingFang SC', Helvetica, Arial, sans-serif;
+  background-color: #f6f7f8;
+  color: #6d7693;
+}
+
+.center {
+  @apply flex justify-center items-center;
+}
+
+.hide-scroll-bar {
+  scrollbar-width: none;
+}
+
+.hide-scroll-bar::-webkit-scrollbar {
+  display: none;
+}
+
+/* 设置 info-tooltip样式 */
+.v-popper--theme-info-tooltip {
+  z-index: 1 !important;
+  .v-popper__inner {
+    background-color: rgba(0, 0, 0, 0.75);
+    color: #ffffff;
+    padding: 1rem 10rem;
+    border-radius: 4rem;
+    font-size: 10rem;
+    line-height: 14rem;
+    font-weight: 600;
+  }
+  .v-popper__arrow-outer {
+    border-color: rgba(0, 0, 0, 0.75);
+  }
+}
+.h5-fixed-top {
+  position: fixed;
+  left: 50%;
+  transform: translate(-50%);
+  max-width: var(--pc-max-width);
+  width: 100%;
+  top: 0;
+}
+
+.h5-fixed-bottom {
+  position: fixed;
+  left: 50%;
+  transform: translate(-50%);
+  max-width: var(--pc-max-width);
+  width: 100%;
+  bottom: 0;
+}

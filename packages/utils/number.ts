@@ -1,4 +1,7 @@
+import type { EnumCurrencyKey } from '@tg/types'
 import Big from 'big.js'
+import { getCurrencyConfig } from './currency'
+import { application } from './main'
 
 /**
  * @file number.ts
@@ -124,4 +127,57 @@ export function formatWithSubstring(num: string | number) {
 
   // 调整部分和小数部分拼接
   return r + (fraction ? `.${fraction}` : '')
+}
+export function toFixedByLockCurrency(amount: string, currencyType: EnumCurrencyKey) {
+  const decimalNum = getCurrencyConfig(currencyType).decimal
+  return application.formatNumDecimal(+amount, decimalNum)
+}
+
+export function combinations<T>(arr: T[], size: number): T[][] {
+  if (size === 0)
+    return []
+  if (size > arr.length)
+    return []
+
+  if (size === arr.length)
+    return [arr]
+
+  const result: T[][] = []
+
+  // 递归生成组合
+  function combine(start: number, current: T[]) {
+    if (current.length === size) {
+      result.push([...current])
+      return
+    }
+
+    for (let i = start; i < arr.length; i++) {
+      current.push(arr[i])
+      combine(i + 1, current)
+      current.pop()
+    }
+  }
+
+  combine(0, [])
+  return result
+}
+export function groupSameNumbers(arr: number[]): string[] {
+  const countMap: { [key: number]: number } = {}
+
+  // 统计每个数字出现的次数
+  arr.forEach((num) => {
+    countMap[num] = (countMap[num] || 0) + 1
+  })
+
+  const result: number[][] = []
+
+  // 创建分组
+  for (const num in countMap) {
+    const numericNum = Number(num)
+    const count = countMap[numericNum]
+    const group = Array.from({ length: count }, () => numericNum)
+    result.push(group)
+  }
+
+  return result.map(nums => nums.join(''))
 }

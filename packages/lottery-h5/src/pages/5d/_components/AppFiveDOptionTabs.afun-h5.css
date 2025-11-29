@@ -1,0 +1,42 @@
+.wrap {
+  display: flex;
+  border-bottom: 1px solid #1a2c38;
+}
+.tab {
+  display: flex;
+  align-items: end;
+
+  .label {
+    width: 40rem;
+    height: 40rem;
+    border-radius: 19px 19px 0 0;
+    background: #2f4553;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 18rem;
+    font-weight: 600;
+    color: #fff;
+  }
+
+  .dot {
+    width: 10rem;
+    height: 10rem;
+    background: #2f4553;
+  }
+
+  &.last {
+    .label {
+      font-size: 16rem;
+    }
+  }
+  &.active {
+    .label {
+      background: #24ee89;
+      color: #000;
+    }
+    .dot {
+      background: #24ee89;
+    }
+  }
+}

@@ -1,0 +1,1166 @@
+
+:root {
+  // 字体大小
+  --tg-font-size-xxs: 8px;
+  --tg-font-size-xs: 12px;
+  --tg-font-size-default: 14px;
+  --tg-font-size-base: 16px;
+  --tg-font-size-md: 18px;
+  --tg-font-size-lg: 20px;
+  --tg-font-size-xl: 24px;
+  --tg-font-size-2xl: 28px;
+  --tg-font-size-3xl: 32px;
+  --tg-font-size-4xl: 40px;
+  --tg-font-size-5xl: 54px;
+  --tg-font-size-6xl: 58px;
+
+  // 缺省图icon
+  --tg-empty-icon-size: 80px;
+
+  // 字体粗细
+  --tg-font-weight-normal: 400;
+  --tg-font-weight-medium: 500;
+  --tg-font-weight-semibold: 600;
+  --tg-font-weight-bold: 700;
+
+  // 按钮 padding size 水平方向
+  --tg-spacing-button-padding-horizontal-none: 0;
+  --tg-spacing-button-padding-horizontal-s: 8px;
+  --tg-spacing-button-padding-horizontal-xs: 12px;
+  --tg-spacing-button-padding-horizontal-sm: 16px;
+  --tg-spacing-button-padding-horizontal-md: 20px;
+  --tg-spacing-button-padding-horizontal-lg: 24px;
+  --tg-spacing-button-padding-horizontal-xl: 28px;
+  // 垂直方向
+  --tg-spacing-button-padding-vertical-none: 0;
+  --tg-spacing-button-padding-vertical-s: 8px;
+  --tg-spacing-button-padding-vertical-xs: 12px;
+  --tg-spacing-button-padding-vertical-sm: 13px;
+  --tg-spacing-button-padding-vertical-md: 14px;
+  --tg-spacing-button-padding-vertical-lg: 16px;
+  --tg-spacing-button-padding-vertical-xl: 18px;
+  --tg-spacing-button-padding-vertical-2xl: 20px;
+
+  --tg-spacing-input-padding-horizontal: 10px;
+  --tg-spacing-input-padding-vertical: 8px;
+
+  // 圆角
+  --tg-radius-none: 0;
+  --tg-radius-sm: 2px;
+  --tg-radius-default: 4px;
+  --tg-radius-xs: 6px;
+  --tg-radius-md: 8px;
+  --tg-radius-lg: 10px;
+  --tg-radius-xl: 12px;
+  --tg-radius-2xl: 14px;
+  --tg-radius-3xl: 16px;
+  --tg-radius-full: 64px;
+
+  // 头部高度
+  --tg-header-height: 60px;
+  --tg-header-height-n: -60px;
+  //footerbar高度
+  --tg-footerbar-height: 60px;
+  // 滚动条
+  --tg-scrollbar-size: 6px;
+
+  // 边框宽度
+  --tg-border-width-none: 0;
+  --tg-border-width-default: 1px;
+  --tg-border-width-sm: 2px;
+  --tg-border-width-md: 4px;
+
+  // z-index
+  --tg-z-index-0: 0;
+  --tg-z-index-10: 10;
+  --tg-z-index-20: 20;
+  --tg-z-index-30: 30;
+  --tg-z-index-40: 40;
+  --tg-z-index-50: 50;
+  --tg-z-index-secondary: 8888;
+  --tg-z-index-top: 9999;
+
+  // 间距
+  @for $i from 1 through 100 {
+    --tg-spacing-#{$i}: #{$i}px;
+  }
+
+  // 阴影
+  --tg-box-shadow: 0 1px 3px 0 #{rgba($color: var(--tg-color-black-rgb), $alpha: 0.2)},
+  0 1px 2px 0 #{rgba($color: var(--tg-color-black-rgb), $alpha: 0.122)};
+  --tg-box-shadow-lg: 0 10px 15px -3px #{rgba($color: var(--tg-color-black-rgb), $alpha: 0.2)},
+  0 4px 6px -2px #{rgba($color: var(--tg-color-black-rgb), $alpha: 0.1)};
+  --tg-text-shadow:0 1px 2px #{rgba($color: var(--tg-color-black-rgb), $alpha: 0.12)},
+  0 1px 3px #{rgba($color: var(--tg-color-black-rgb), $alpha: 0.2)};
+  --tg-text-shadow-lg: 0 2px 4px #{rgba($color: var(--tg-color-black-rgb), $alpha: 0.4)};
+  --tg-header-shadow: 0 4px 6px -1px #{rgba($color: var(--tg-color-black-rgb), $alpha: 0.2)},
+  0 2px 4px -1px #{rgba($color: var(--tg-color-black-rgb), $alpha: 0.122)};
+  --tg-drop-shadow:0 0 5px rgba(25, 25, 25, .25);
+  --tg-shadow-inset: inset 0 1px #{rgba($color: var(--tg-color-white-rgb), $alpha: 0.04)};
+  --tg-shadow-inset-dialog:0 10px 15px -3px rgba(0, 0, 0, .2),0 4px 6px -2px rgba(0, 0, 0, .1),inset 0 1px #ffffff0a;
+  --tg-shadow-banner: 0px 4px 4px 0px #{rgba($color: var(--tg-color-black-rgb), $alpha: 0.15)};
+  --text-shadow: var(--tg-text-shadow);
+  --tg-box-shadow-banner: var(--tg-shadow-banner);
+
+  // 基础过度
+  --tg-transition: all ease .25s;
+
+  // 左上角通知的top
+  --tg-notification-list-app-pwa-define-top: 126px;
+}
+
+// 大小菜单的宽度
+:root {
+  --tg-sidebar-width-lg: 240px;
+  --tg-sidebar-width-sm: 60px;
+  --tg-sidebar-width-lg-n: -240px;
+  --tg-sidebar-width-sm-n: -60px;
+  --tg-sidebar-top-height-sm: 60px;
+  --tg-sidebar-top-height-lg: 180px;
+}
+
+html,
+body {
+  width: 100%;
+  // height: 100%;
+  background-color: var(--tg-body-bg-colon);
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+  font-size: var(--tg-font-size-base);
+  --tg-icon-color: var(--tg-svg-default-color);
+  touch-action: manipulation;
+  &::-webkit-scrollbar {
+    display: none;
+  }
+}
+
+.tg-icon-container {
+  color: var(--tg-icon-color);
+}
+
+@for $i from 1 through 100 {
+  .mgt#{$i} {
+    margin-top: #{$i}px;
+  }
+
+  .mgb#{$i} {
+    margin-bottom: #{$i}px;
+  }
+}
+
+
+.tg-popup-parent--hidden {
+  overflow-y: hidden;
+}
+
+.tg-popup-parent--hidden--safari {
+  overflow-y: hidden;
+}
+
+html[lang="th"] {
+  .th-leading-5, .th-leading-5 .inner-label {
+    line-height: 1.5;
+  }
+  .th-leading-8{
+    line-height: 2.2;
+  }
+}
+html[lang="hi"] {
+  .hi-leading-5, .hi-leading-5 .inner-label {
+    line-height: 1.5;
+  }
+  .hi-leading-8{
+    line-height: 2.2;
+  }
+}
+
+#static-menu-language+div {
+  font-family: proxima-nova,sans-serif;
+}
+
+.center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.w-min-100 {
+  min-width: 100%;
+}
+
+.h-min-100 {
+  min-height: 100%;
+}
+
+.page-content {
+  width: 100%;
+}
+
+img.error {
+  opacity: 0;
+}
+
+.loading-content-height {
+  height: calc(100vh - var(--tg-header-height));
+}
+
+.home-container {
+  width: 100%;
+  max-width: 1200px;
+}
+
+.scrollable {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  max-width: 100%;
+  height: 100%;
+  flex: 1
+}
+
+.scroll-y {
+  scrollbar-color: var(--tg-secondary-main) transparent;
+  overflow-y: auto;
+  overflow-x: hidden;
+  min-height: 0;
+  -webkit-overflow-scrolling: touch;
+  -webkit-overflow-scroll: touch;
+  scrollbar-width: thin;
+  @include webTheme('white'){
+    scrollbar-color: #555555 transparent;
+  }
+  @include webTheme('green'){
+    scrollbar-color: #5ECEA6 transparent;
+  }
+}
+body.over-x-hidden {
+  overflow-x: hidden;
+  .scroll-x {
+    overflow-x: hidden;
+  }
+}
+
+.scroll-x {
+  scrollbar-color: var(--tg-secondary-main) transparent;
+  overflow-x: auto;
+  overflow-y: hidden;
+  -webkit-overflow-scrolling: touch;
+  transform: translateZ(0);
+  -moz-transform: none !important;
+  scrollbar-width: thin;
+  @include webTheme('greenblack') {
+    scrollbar-color: #131313 transparent;
+  }
+}
+
+.scroll-x::-webkit-scrollbar-thumb {
+  border-radius: var(--tg-radius-lg);
+}
+
+.scroll-y::-webkit-scrollbar-thumb,
+.scroll-x::-webkit-scrollbar-thumb {
+  border-radius: var(--tg-radius-lg);
+  background: var(--tg-secondary-main);
+}
+
+.scroll-x::-webkit-scrollbar {
+  height: var(--tg-scrollbar-size)
+}
+
+.hide-scrollbar {
+  scrollbar-width: none
+}
+
+.hide-scrollbar::-webkit-scrollbar {
+  display: none
+}
+
+.scroll-y::-webkit-scrollbar {
+  width: var(--tg-scrollbar-size)
+}
+
+.scroll-contain {
+  overscroll-behavior: contain;
+}
+
+.dropdown-scroll-content {
+  display: flex;
+  flex-direction: column;
+  padding: var(--tg-spacing-4) 0;
+  max-width: 100vw;
+  max-height: inherit;
+}
+
+.hoverable {
+  cursor: help;
+  display: inline-flex;
+}
+
+.tg-notification-list {
+  display: grid;
+  grid-auto-flow: row;
+  // gap: var(--tg-spacing-12);
+  position: fixed;
+  top: 5rem;
+  left: 1rem;
+  z-index: var(--tg-z-index-top);
+  > *:not(:last-child) {
+    margin-bottom: var(--tg-spacing-12);
+  }
+}
+
+.in-flutter-app {
+  overscroll-behavior-y: none !important;
+}
+
+.in-flutter-app .tg-notification-list {
+  top: calc(5rem - 60px);
+}
+
+body:has(.app-pwa-define), body:has(.app-pwa-img) {
+  .tg-notification-list {
+    top: var(--tg-notification-list-app-pwa-define-top);
+  }
+}
+
+.select-none {
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+// stack 布局
+.stack {
+  display: grid;
+  position: relative;
+
+  &.stretch {
+    width: 100%;
+  }
+
+  &.direction-horizontal {
+    grid-auto-flow: column;
+  }
+
+  &.direction-vertical {
+    grid-auto-flow: row;
+  }
+
+  &.x-stretch {
+    justify-content: stretch;
+  }
+
+  &.x-flex-start {
+    justify-content: flex-start;
+  }
+
+  &.x-space-between {
+    justify-content: space-between;
+  }
+
+  &.x-center {
+    justify-content: center;
+  }
+
+  &.y-flex-start {
+    align-items: flex-start;
+  }
+
+  &.y-center {
+    align-items: center;
+  }
+
+  &.gap-larger {
+    gap: var(--tg-spacing-24);
+  }
+
+  &.gap-big {
+    gap: var(--tg-spacing-16);
+  }
+
+  &.gap-medium {
+    gap: var(--tg-spacing-12);
+  }
+
+  &.gap-small {
+    gap: var(--tg-spacing-8);
+  }
+
+  &.padding-none {
+    padding: 0;
+  }
+
+  &.padding-bottom-medium {
+    padding-bottom: var(--tg-spacing-12);
+  }
+
+  &.padding-bottom-small {
+    padding-bottom: var(--tg-spacing-8);
+  }
+
+  &.padding-bottom-smaller {
+    padding-bottom: var(--tg-spacing-4);
+  }
+
+  &.padding-top-medium {
+    padding-top: var(--tg-spacing-12);
+  }
+
+  &.padding-left-large {
+    padding-left: var(--tg-spacing-16);
+  }
+
+  &.padding-right-medium {
+    padding-right: var(--tg-spacing-12);
+  }
+}
+
+// 页面垂直布局
+.layout-spacing {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+
+  &:not(.reset) {
+    padding-bottom: var(--tg-spacing-24);
+  }
+
+  &:not(.reset).variant-normal>*+* {
+    margin-top: var(--tg-spacing-24);
+  }
+
+  &:not(.reset).variant-normal {
+    padding-bottom: var(--tg-spacing-32);
+  }
+
+  &:not(.reset).no-bottom-spacing {
+    padding-bottom: unset;
+  }
+
+  &.gap-medium {
+    gap: var(--tg-spacing-24);
+  }
+}
+
+.tg-mt-24 {
+  margin-top: var(--tg-spacing-24);
+}
+
+.cursor-pointer {
+  cursor: pointer;
+}
+
+.cursor-help {
+  cursor: help;
+}
+
+.page-stack-wrap {
+  font-size: var(--tg-font-size-default);
+  color: var(--tg-text-white);
+  opacity: 0.5;
+}
+
+/* 设置 info-tooltip样式 */
+.v-popper--theme-info-tooltip {
+  z-index: 1 !important;
+  .v-popper__inner {
+    background: #1475e1;
+    color: #ffffff;
+    padding: 1px 10px;
+    border-radius: 4px;
+    font-size: 10px;
+    line-height: 14px;
+    font-weight: 600;
+    @include webTheme('green') {
+      background: white;
+      color: #02432D;
+    }
+    /*  @include webTheme('white') {
+       background: #e91134;
+     } */
+  }
+  .v-popper__arrow-outer {
+    border-color: #1475e1;
+    @include webTheme('green') {
+      border-color: white;
+    }
+    /*  @include webTheme('white') {
+       border-color: #e91134;
+     } */
+  }
+
+}
+
+// 设置 VDropdown VTooltip VTooltip 圆角 阴影
+.v-popper--theme-tg-popper-outer,
+.v-popper--theme-tg-popper-outer-deep {
+  &.v-popper--theme-dropdown {
+    .v-popper__inner {
+      border-radius: var(--tg-radius-default);
+      background: var(--tg-popper-bg);
+      color: var(--tg-popper-color-default);
+      border: 0;
+      box-shadow: var(--tg-box-shadow-lg);
+
+      .need-pad-y {
+        padding: var(--tg-spacing-4) 0;
+      }
+    }
+
+    .v-popper__arrow-inner,
+    .v-popper__arrow-outer {
+      border-color: var(--tg-popper-bg);
+    }
+    &.deep-tooltip{
+      .v-popper__inner {
+        @include webTheme('green'){
+          background: #197B59;
+        }
+      }
+      .v-popper__arrow-inner,
+      .v-popper__arrow-outer {
+        @include webTheme('green'){
+          border-color: #197B59;
+        }
+      }
+      .tiny-menu-item-title{
+        @include webTheme('green') {
+          color: #76F0C5;
+        }
+      }
+    }
+
+    &.deep-mode{
+      .v-popper__inner {
+        @include webTheme('white'){
+          background: #e8e8e8;
+        }
+      }
+      .v-popper__arrow-inner,
+      .v-popper__arrow-outer {
+        @include webTheme('white'){
+          border-color: #e8e8e8;
+        }
+      }
+    }
+  }
+
+}
+
+// body:has(.tg-base-dialog) .v-popper--theme-tg-popper-outer {
+//   z-index: 10000;
+// }
+
+.v-popper--theme-tg-popper-outer {
+  // z-index: 9;
+  &.low-z-index-pop {
+    z-index: 9;
+  }
+  &.v-popper--theme-tooltip {
+    .v-popper__inner {
+      border-radius: var(--tg-radius-default);
+      padding: 0;
+      background: var(--tg-popper-bg);
+      color: var(--tg-popper-color-default);
+      border: 0;
+      box-shadow: var(--tg-box-shadow-lg);
+    }
+
+    .v-popper__arrow-inner,
+    .v-popper__arrow-outer {
+      border-color: var(--tg-popper-bg);
+    }
+  }
+}
+
+// 鼠标悬停气泡提示提示
+.tiny-menu-item-title {
+  color: var(--tg-popper-color-default);
+  font-size: var(--tg-font-size-default);
+  font-weight: var(--tg-font-weight-semibold);
+  padding: var(--tg-spacing-button-padding-vertical-xs) var(--tg-spacing-button-padding-horizontal-xs);
+  text-align: center;
+  min-width: var(--tg-sidebar-width-sm);
+}
+
+// 气泡下拉选项
+.popper-option {
+  cursor: pointer;
+  padding: var(--tg-spacing-button-padding-vertical-xs) var(--tg-spacing-button-padding-horizontal-xs);
+  font-size: var(--tg-font-size-default);
+  color: var(--tg-popper-color-default);
+}
+
+.semibold {
+  font-weight: var(--tg-font-weight-semibold);
+}
+
+.bold {
+  font-weight: var(--tg-font-weight-bold);
+}
+
+// 供应商slider
+.provider-item-wrap {
+  border-radius: var(--tg-radius-md);
+  overflow: hidden;
+  cursor: pointer;
+  position: relative;
+  transition: all 0.3s ease;
+
+  &:hover {
+    transform: translateY(-3px);
+  }
+}
+
+// 游戏列表页顶部样式
+.group-banner-wrap {
+  position: relative;
+
+  .group-banner-bg {
+    position: absolute;
+    top: 0px;
+    height: 100%;
+    left: -100%;
+    width: 300%;
+    background: var(--tg-secondary-grey);
+    @include webTheme('green') {
+      background: var(--tg-secondary-dark);
+    }
+    @include webTheme('greenblack') {
+      background: linear-gradient(0deg, rgba(24, 174, 142, 0.1) -6.25%, rgba(34, 34, 34, 0) 100%);
+    }
+    @include webTheme('white') {
+      background: #F5F5F5;
+    }
+  }
+
+  .banner-wrap {
+    position: relative;
+    z-index: 1;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    grid-gap: var(--tg-spacing-button-padding-horizontal-sm);
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    line-height: 1;
+
+    .banner {
+      width: 100%;
+      height: 115px;
+      display: flex;
+      overflow: hidden;
+      justify-content: space-between;
+      position: relative;
+
+      .left {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        white-space: nowrap;
+
+        h1 {
+          font-weight: 600;
+          font-size: var(--tg-font-size-lg);
+          color: var(--tg-text-white);
+        }
+      }
+
+      .right {
+        width: 214.59px;
+        height: 100%;
+        position: absolute;
+        right: 0;
+        top: 0;
+        overflow: hidden;
+      }
+    }
+  }
+
+  &.less-than-700 {
+    .banner-wrap {
+      .banner {
+        height: 80px;
+
+        .right {
+          width: 149.28px;
+        }
+      }
+    }
+  }
+}
+
+// 体育页面title
+.sports-page-title {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  min-height: 44px;
+
+  .left {
+    display: flex;
+    align-items: center;
+    font-size: var(--tg-font-size-md);
+    color: var(--tg-text-white);
+    font-weight: var(--tg-font-weight-semibold);
+    gap: var(--tg-spacing-8);
+    line-height: 1.5;
+  }
+
+  .right {
+    display: flex;
+    align-items: center;
+  }
+}
+
+.dialog-loading-height {
+  min-height: 200px;
+}
+
+.red-circle {
+  display: block;
+  width: 0.4rem;
+  height: 0.4rem;
+  background-color: red;
+  border-radius: 50%;
+}
+
+.accordion-badge-wrap {
+  --tg-badge-font-size: 12px;
+  margin-right: 16px;
+  display: flex;
+}
+
+.margin-auto {
+  margin: 0 auto;
+}
+
+#app {
+  position: relative;
+  background-color: var(--tg-body-bg );
+}
+
+@media screen and (min-width: 1280px) {
+
+  // 游戏列表页顶部样式
+  .group-banner-wrap {
+
+    .banner-wrap {
+
+      .banner {
+
+        .left {
+
+          h1 {
+            font-size: var(--tg-font-size-xl);
+          }
+        }
+      }
+    }
+  }
+}
+
+html,body {
+  height: 100%;
+}
+
+.lock-scroll {
+  overflow: hidden;
+}
+
+@media screen and (min-width: 768px) {
+  #app {
+    height: 1px;
+    min-height: 100%;
+    width: 100%;
+    padding-top: 0;
+    padding-bottom: 0;
+    &.auto{
+      height: auto;
+    }
+  }
+}
+
+@media screen and (max-width: 768px) {
+  html.mobile-100dvh-layout, html.mobile-100dvh-layout body, html.mobile-100dvh-layout body #app {
+    width: 100vw;
+    height: 100%;
+    height: 100vh; // 100dvh;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+  }
+}
+
+.scroll-light::-webkit-scrollbar-thumb {
+  background: var(--tg-secondary-light);
+}
+
+.over-ellipsis{
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.mini-game-crash canvas {
+  width: 100%;
+  transform-origin: 50% 50%;
+  transform: scale(1, -1);
+  background: #0F212E;
+  position: relative;
+  z-index: 0;
+  @include webTheme('greenblack') {
+    background: #373737;
+  }
+  @include webTheme('white') {
+    background: #E3E3E3;
+  }
+}
+
+.mini-game-crash .fake {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: #0F212E;
+  opacity: 0;
+  @include webTheme('greenblack') {
+    background: #373737;
+  }
+  @include webTheme('green') {
+    background: #055434;
+  }
+  @include webTheme('white') {
+    background: #373737;
+  }
+}
+
+.mini-game-crash-outer.hidden-local .fake {
+  opacity: 1;
+  z-index: 1;
+}
+
+.mini-game-crash-outer.hidden-local canvas {
+  visibility: hidden;
+  opacity: 0;
+  z-index: -2;
+  width: 0 !important;
+  height: 0 !important;
+}
+
+#aliyunCaptcha-img-box {
+  img {
+    width: auto;
+  }
+}
+
+.tg-base-dialog-header {
+  padding: var(--tg-spacing-16) var(--tg-spacing-16) var(--tg-spacing-16);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--tg-spacing-12);
+  font-size: var(--tg-font-size-lg);
+  touch-action: none;
+  h2 {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: var(--tg-spacing-8);
+    font-size: var(--tg-font-size-base);
+    line-height: 24px;
+    > span {
+      font-weight: var(--tg-font-weight-semibold);
+    }
+  }
+  .close {
+    cursor: pointer;
+    font-size: var(--tg-font-size-base);
+    display: flex;
+    position: relative;
+    z-index: var(--tg-z-index-top);
+    &:hover {
+      --tg-icon-color: var(--tg-text-white);
+    }
+  }
+}
+
+.tg-base-notify.rebate-notify {
+  .left {
+    padding-top: 12px;
+    padding-bottom: 12px;
+  }
+  .right {
+    padding-top: 12px;
+    padding-bottom: 12px;
+    .title {
+      margin-bottom: 2px;
+    }
+  }
+}
+
+.dialog2-background {
+  background: #{rgba($color: var(--tg-color-grey-rgb), $alpha: 0.7)};
+  width: var(--pc-h5model-width, 100%);
+  left: var(--pc-h5model-left, 0);
+  @include webTheme('white'){
+    /* background: #{rgba($color: var(--tg-color-grey-rgb), $alpha: 0.6)}; */
+    background: rgba(0, 0, 0, 0.7);
+  }
+}
+
+.all-style-disabled {
+  * {
+    pointer-events: none;
+  }
+}
+
+
+
+@media screen and (max-width: 768px) {
+  .app-dollar-rain-countdown {
+    z-index: 2;
+    opacity: 1;
+  }
+  body:has(.app-tg-right-sidebar), body:has(.app-service) {
+    .app-dollar-rain-countdown {
+      z-index: -20;
+      opacity: 0;
+    }
+  }
+}
+
+.preload-dialog {
+  display: none;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  width: var(--pc-h5model-width,100%);
+  height: 100%;
+  z-index: 30;
+  transform: translate3d(-50%, -50%, 0);
+}
+
+.preload-fadein {
+  display: block;
+  animation: preloadfadein .2s;
+}
+.preload-fadeout {
+  animation: preloadfadeout .2s;
+}
+.preload-fadein-fullScreen {
+  z-index: 41;
+  display: block;
+  animation: preloadfadein-fullScreen .2s;
+}
+.preload-fadeout-fullScreen {
+  animation: preloadfadeOut-fullScreen .2s;
+}
+// 解决pc时全屏登陆注册划入动画从外面划进来问题
+.tg-dialog-list-wrap-on-full-screen{
+  position: fixed;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 888;
+  overflow: hidden;
+}
+
+/* 移出动画 */
+@keyframes preloadfadeout {
+  0% {
+    opacity: 1;
+    transform: translate3d(-50%, -50%, 0);
+  }
+  100% {
+    opacity: 0;
+    transform: translate3d(-50%, -48%, 0) ;
+  }
+}
+/* 进入动画 */
+@keyframes preloadfadein {
+  0% {
+    opacity: 0;
+    transform: translate3d(-50%, -48%, 0) ;
+  }
+  100% {
+    opacity: 1;
+    transform: translate3d(-50%, -50%, 0);
+  }
+}
+/* 满屏时不要抖动 */
+/* 进入动画 */
+@keyframes preloadfadein-fullScreen {
+  0% {
+    display: none;
+    transform: translate3d(50%, -50%, 0)
+  }
+  100% {
+    display: block;
+    transform: translate3d(-50%, -50%, 0)
+  }
+}
+/* 移出动画 */
+@keyframes preloadfadeOut-fullScreen {
+  0% {
+    display: block;
+    transform: translate3d(-50%, -50%, 0)
+  }
+  100% {
+    display: none;
+    transform: translate3d(50%, -50%, 0)
+  }
+}
+/* 全局样式定义 */
+.bg-tg-primary {
+  background-color: var(--tg-primary-main);
+}
+.bg-tg-secondary {
+  background-color: var(--tg-secondary-main);
+}
+.bg-tg-secondary-grey {
+  background-color: var(--tg-secondary-grey);
+}
+.bg-tg-secondary-dark {
+  background-color: var(--tg-secondary-dark);
+}
+.bg-tg-secondary-deepdark {
+  background-color: var(--tg-secondary-deepdark);
+}
+.text-tg-secondary-deepdark {
+  color: var(--tg-secondary-deepdark);
+}
+.text-tg-text-error {
+  color: var(--tg-text-error);
+}
+.text-tg-text-error-sub {
+  color: var(--tg-text-error-sub);
+}
+.text-tg-secondary-light {
+  color: var(--tg-secondary-light);
+}
+.text-tg-text-black {
+  color: var(--tg-text-black);
+}
+.bg-tg-primary-success {
+  background-color: var(--tg-primary-success);
+}
+.bg-tg-text-white {
+  background-color: var(--tg-text-white);
+}
+.text-tg-text-white {
+  color: var(--tg-text-white);
+}
+.bg-tg-text-green {
+  background-color: var(--tg-text-green);
+}
+.text-tg-text-blue {
+  color: var(--tg-text-blue);
+}
+.text-tg-text-green {
+  color: var(--tg-text-green);
+}
+.bg-tg-text-grey {
+  background-color: var(--tg-text-grey);
+}
+.text-tg-text-grey {
+  color: var(--tg-text-grey);
+}
+.text-tg-text-grey-light {
+  color: var(--tg-text-grey-light);
+}
+.border-tg-text-grey {
+  border-color: var(--tg-text-grey);
+}
+.border-tg-text-grey-light {
+  border-color: var(--tg-text-grey-light);
+}
+.bg-tg-text-placeholder {
+  background-color: var(--tg-text-placeholder);
+}
+.bg-tg-border-color-deep-grey {
+  background-color: var(--tg-border-color-deep-grey);
+}
+.bg-tg-popper-hover-bg {
+  background-color: var(--tg-popper-hover-bg);
+}
+.bg-tg-dialog-mask {
+  background-color: var(--tg-dialog-mask);
+}
+.bg-tg-sport-card-bg {
+  background-color: var(--tg-sport-card-bg);
+}
+.bg-tg-third-grey {
+  background-color: var(--tg-third-grey);
+}
+.bg-tg-wallet-left-card-bg {
+  background-color: var(--tg-wallet-left-card-bg);
+}
+.text-tg-text-lightgrey {
+  color: var(--tg-text-lightgrey);
+}
+.text-tg-wallet-optionbs-placehoder-color {
+  color: var(--tg-wallet-optionbs-placehoder-color);
+}
+.border-tg-secondary {
+  border-color: var(--tg-secondary-main);
+}
+.border-tg-border-color-deep-grey {
+  border-color: var(--tg-border-color-deep-grey);
+}
+.border-tg-primary-active {
+  border-color: var(--tg-primary-active);
+}
+.border-tg-text-lightgrey {
+  border-color: var(--tg-text-lightgrey);
+}
+.border-tg-text-error {
+  border-color: var(--tg-text-error);
+}
+.border-tg-text-blue {
+  border-color: var(--tg-text-blue);
+}
+.border-tg-sport-card-bg {
+  border-color: var(--tg-sport-card-bg);
+}
+.border-tg-divider-dark {
+  border-color: var(--tg-divider-dark);
+}
+.border-b-tg-secondary {
+  border-bottom-color: var(--tg-secondary-main);
+}
+.text-tg-text-white {
+  color: var(--tg-text-white);
+}
+.font-medium {
+  font-weight: var(--tg-font-weight-medium);
+}
+.font-semibold {
+  font-weight: var(--tg-font-weight-semibold);
+}
+.text-xs {
+  font-size: var(--tg-font-size-xs);
+}
+.text-sm {
+  font-size: var(--tg-font-size-default);
+}
+.text-base {
+  font-size: var(--tg-font-size-base);
+}
+.text-lg {
+  font-size: var(--tg-font-size-lg);
+}
+.text-xl {
+  font-size: var(--tg-font-size-xl);
+}
+.text-2xl {
+  font-size: var(--tg-font-size-2xl);
+}
+.text-3xl {
+  font-size: var(--tg-font-size-3xl);
+}

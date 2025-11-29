@@ -1,0 +1,36 @@
+<script lang="ts" setup>
+defineOptions({
+  name: 'IconUniDiamondsLoading',
+})
+</script>
+
+<template>
+  <i class="tg-icon-container">
+    <svg viewBox="0 0 96 96" class="svg-icon" style="">
+      <title />
+      <path
+        d="m94.856 33.295-18.26-21.98a11.646 11.646 0 0 0-7.477-4.103l-.057-.006-19.63-2.534a11.989 11.989 0 0 0-1.45-.087c-.512 0-1.013.03-1.51.092l.06-.005-19.537 2.534a11.75 11.75 0 0 0-7.541 4.09l-.014.02-18.26 21.98A4.936 4.936 0 0 0 0 36.501a4.93 4.93 0 0 0 1.185 3.215l-.006-.009L44.274 89.72a4.898 4.898 0 0 0 3.708 1.694 4.898 4.898 0 0 0 3.706-1.689l.005-.005 43.095-50.013A4.93 4.93 0 0 0 96 36.461a4.931 4.931 0 0 0-1.152-3.174l.005.008h.003Z"
+      />
+    </svg>
+  </i>
+</template>
+
+<style scoped>
+.tg-icon-container {
+  height: 1em;
+  width: 1em;
+  line-height: 1em;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+}
+
+.tg-icon-container svg {
+  width: 1em;
+  height: 1em;
+  fill: currentColor;
+}
+</style>

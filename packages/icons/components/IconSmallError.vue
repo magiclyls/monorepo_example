@@ -1,0 +1,50 @@
+<script lang="ts" setup>
+defineOptions({
+  name: 'IconSmallError',
+})
+</script>
+
+<template>
+  <i class="tg-icon-container">
+    <svg
+      width="15"
+      height="14"
+      viewBox="0 0 15 14"
+      fill="none"
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <g clip-path="url(#clip0_28729_21365)">
+        <g>
+          <path
+            d="M7.5 14C11.3658 14 14.5 10.8658 14.5 7C14.5 3.13425 11.3658 0 7.5 0C3.63425 0 0.5 3.13425 0.5 7C0.5 10.8658 3.63425 14 7.5 14ZM6.33341 2.695H8.66659V7.28591H6.33341V2.695ZM7.5 8.6275C7.7654 8.62746 8.02486 8.70612 8.24555 8.85355C8.46625 9.00097 8.63826 9.21053 8.73985 9.45572C8.84144 9.70092 8.86803 9.97073 8.81626 10.231C8.76449 10.4913 8.63669 10.7304 8.44902 10.9181C8.26135 11.1058 8.02225 11.2336 7.76194 11.2854C7.50163 11.3371 7.23182 11.3105 6.98663 11.2089C6.74144 11.1074 6.53187 10.9353 6.38445 10.7146C6.23703 10.494 6.15836 10.2345 6.15841 9.96909V9.96341C6.15838 9.78798 6.1929 9.61427 6.26002 9.45219C6.32713 9.29012 6.42551 9.14284 6.54954 9.01879C6.67358 8.89474 6.82083 8.79633 6.9829 8.72919C7.14497 8.66206 7.31867 8.6275 7.49409 8.6275H7.50066H7.5Z"
+          />
+        </g>
+      </g>
+      <defs>
+        <clipPath>
+          <rect width="14" height="14" transform="translate(0.5)" />
+        </clipPath>
+      </defs>
+    </svg>
+  </i>
+</template>
+
+<style scoped>
+.tg-icon-container {
+  height: 1em;
+  width: 1em;
+  line-height: 1em;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+}
+
+.tg-icon-container svg {
+  width: 1em;
+  height: 1em;
+  fill: currentColor;
+}
+</style>

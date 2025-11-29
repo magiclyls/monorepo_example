@@ -1,12 +1,4 @@
-
-# 禁用的  **⚠️** **⚠️** 
-
-## CSS 属性
-```css
-display: flex;
-/* 不能在flex布局中使用 gap。 grid布局可以使用 */
-gap: 10px; 
-```
+##  css禁止使用dvh，vh单位
 
 ## vueuse 函数
 ```js
@@ -46,6 +38,6 @@ gap: 10px;
 
 
 ## 关于业务接口数据处理
-所有网络请求放在路由组件里面，比如 `/zh/casino` 这个页面的的数据请求都放在 `casino/index.vue`     
+所有网络请求放在路由组件里面，比如 `/zh/casino` 这个页面的的数据请求都放在 `casino/index.vue`
 弹窗组件，看情况尽量放在最上面的组件里面
 AppBetData,AppHeader,LeftSilderBar这类组件，业务相关的，放在自己独立业务组件的顶层

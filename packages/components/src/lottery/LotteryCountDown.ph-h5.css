@@ -1,0 +1,21 @@
+.win-go > .digit-box {
+  background: white;
+  color: #f23038;
+}
+.racing > .digit-box {
+  background: white;
+  color: #f23038;
+}
+.racing > .digit-box:nth-child(3) {
+  background: transparent;
+  color: white;
+}
+.k3 > .digit-box {
+  background: #efeff4;
+  color: #f23038;
+}
+.trx-win-go > .digit-box {
+  background: #f23038;
+  color: white;
+  border: 1rem solid #fff;
+}

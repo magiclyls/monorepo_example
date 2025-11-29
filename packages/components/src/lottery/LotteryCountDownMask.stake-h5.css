@@ -1,0 +1,9 @@
+.num {
+  width: 108rem;
+  height: 160rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #f23038;
+  border-radius: 15rem;
+}

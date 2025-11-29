@@ -1,0 +1,41 @@
+<script lang="ts" setup>
+defineOptions({
+  name: 'IconUniBars',
+})
+</script>
+
+<template>
+  <i class="tg-icon-container">
+    <svg
+      width="28"
+      height="28"
+      viewBox="0 0 28 28"
+      fill="none"
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <path
+        d="M26.9814 2.31519V6.94558H8.89617V9.27265H4.30238V6.94558H1.01758V2.31519H4.30238V0H8.89617V2.31519H26.9814ZM23.6966 9.36961H19.1028V11.6848H1.01758V16.3152H19.1028V18.6304H23.6966V16.3152H26.9448V11.6848H23.6966V9.36961ZM14.4605 18.7274H9.83016V21.0544H1.01758V25.6848H9.83016V28H14.4605V25.6848H26.9814V21.0544H14.4605V18.7274Z"
+      />
+    </svg>
+  </i>
+</template>
+
+<style scoped>
+.tg-icon-container {
+  height: 1em;
+  width: 1em;
+  line-height: 1em;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+}
+
+.tg-icon-container svg {
+  width: 1em;
+  height: 1em;
+  fill: currentColor;
+}
+</style>

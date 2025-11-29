@@ -1,0 +1,10 @@
+.watch-active {
+  color: #f23038;
+  border-radius: 8rem;
+  background: linear-gradient(0deg, #fff9fa 0%, #f23038 100%);
+  box-shadow: 0 -1rem 4rem 0 #ffdfdb inset;
+}
+.lottery-kind-tabs-bg1 {
+  background: #fff;
+  color: #6d7693;
+}

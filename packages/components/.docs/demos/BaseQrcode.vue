@@ -1,6 +1,5 @@
 <script lang="ts" setup>
 import QrcodeVue from 'qrcode.vue'
-import { defineProps, withDefaults } from 'vue'
 
 interface Props {
   // 待编码的字符串内容（例如 URL）

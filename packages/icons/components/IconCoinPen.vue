@@ -1,0 +1,51 @@
+<script lang="ts" setup>
+defineOptions({
+  name: 'IconCoinPen',
+})
+</script>
+
+<template>
+  <i class="tg-icon-container">
+    <svg
+      width="28"
+      height="28"
+      viewBox="0 0 28 28"
+      fill="none"
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <g clip-path="url(#clip0_8532_20294)">
+        <path
+          d="M14 28C21.7321 28 28 21.7321 28 14C28 6.26792 21.7321 0 14 0C6.26792 0 0 6.26792 0 14C0 21.7321 6.26792 28 14 28Z"
+        />
+        <path
+          d="M7.22148 16.135C8.03815 16.9517 9.29815 17.6283 10.8382 17.6283C11.8415 17.6283 12.4482 17.2083 12.4482 16.66C12.4482 16.0183 11.7132 15.7617 10.5115 15.505C8.64482 15.1317 6.03148 14.6533 6.03148 11.97C6.03148 10.0683 7.64148 8.42334 10.5465 8.42334C12.3665 8.42334 13.9415 8.97168 15.1432 9.99834L13.5448 12.0867C12.5882 11.305 11.3515 10.92 10.3482 10.92C9.34482 10.92 9.00648 11.305 9.00648 11.8067C9.00648 12.4017 9.70648 12.6 10.9548 12.845C12.8215 13.23 15.3998 13.7783 15.3998 16.345C15.3998 18.62 13.7198 20.1367 10.6748 20.1367C8.38815 20.1367 6.78982 19.425 5.64648 18.34L7.18648 16.1467L7.22148 16.135ZM19.1795 8.26001H21.6412L17.6162 20.265H15.1545L19.1795 8.26001ZM20.7315 16.94C21.5948 16.94 22.3298 17.6633 22.3298 18.5383C22.3298 19.4133 21.5948 20.1367 20.7315 20.1367C19.8682 20.1367 19.1332 19.4017 19.1332 18.5383C19.1332 17.675 19.8682 16.94 20.7315 16.94Z"
+        />
+      </g>
+      <defs>
+        <clipPath>
+          <rect width="28" height="28" />
+        </clipPath>
+      </defs>
+    </svg>
+  </i>
+</template>
+
+<style scoped>
+.tg-icon-container {
+  height: 1em;
+  width: 1em;
+  line-height: 1em;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+}
+
+.tg-icon-container svg {
+  width: 1em;
+  height: 1em;
+  fill: currentColor;
+}
+</style>

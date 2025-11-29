@@ -1,0 +1,96 @@
+.app-win-go-bet {
+  background-color: #1a2c38;
+  .header-bg-green {
+    background: linear-gradient(90deg, #3faa70 0, #47ba7c 100%); /* 渐变绿 */
+    position: relative;
+    clip-path: polygon(0 0, 100% 0, 100% 70%, 50% 100%, 0 70%);
+  }
+  .header-bg-purple {
+    background: var(---, linear-gradient(90deg, #b658fe 0%, #cd74ff 100%));
+    position: relative;
+    clip-path: polygon(0 0, 100% 0, 100% 70%, 50% 100%, 0 70%);
+  }
+  .header-bg-red {
+    background: var(---, linear-gradient(90deg, #fc5050 0%, #ff646c 100%));
+    position: relative;
+    clip-path: polygon(0 0, 100% 0, 100% 70%, 50% 100%, 0 70%);
+  }
+  .header-bg-big {
+    background: var(---, linear-gradient(90deg, #ffa82e 0%, #ffc511 100%));
+    position: relative;
+    clip-path: polygon(0 0, 100% 0, 100% 70%, 50% 100%, 0 70%);
+  }
+  .header-bg-small {
+    background: var(---, linear-gradient(90deg, #6ca6f3 0%, #87bcf5 100%));
+    position: relative;
+    clip-path: polygon(0 0, 100% 0, 100% 70%, 50% 100%, 0 70%);
+  }
+  .header-bg-zero {
+    background: linear-gradient(to bottom right, #fd565c 50%, #b658fe 0);
+    position: relative;
+    clip-path: polygon(0 0, 100% 0, 100% 70%, 50% 100%, 0 70%);
+  }
+  .header-bg-five {
+    background: linear-gradient(to bottom right, #40ad72 50%, #eb43dd 0);
+    position: relative;
+    clip-path: polygon(0 0, 100% 0, 100% 70%, 50% 100%, 0 70%);
+  }
+  .green-btn {
+    background-color: #47ba7c;
+    color: white;
+  }
+  .red-btn {
+    background-color: #ff646c;
+    color: white;
+  }
+  .purple-btn {
+    background-color: #cd74ff;
+    color: white;
+  }
+  .big-btn {
+    background-color: #ffa82e;
+    color: white;
+  }
+  .small-btn {
+    background-color: #6da7f4;
+    color: white;
+  }
+  .zero-btn {
+    background-color: #ff646c;
+    color: white;
+  }
+  .five-btn {
+    background-color: #47ba7c;
+    color: white;
+  }
+  input {
+    text-align: center;
+    line-height: 26rem;
+    width: 79rem;
+    font-size: 15rem;
+  }
+  .kind-text {
+    color: #000;
+  }
+  .select-bg {
+    color: #fff;
+    background-color: #0f212e;
+  }
+  .money-text {
+    color: #b1bad3;
+  }
+  .note-text {
+    color: #b1bad3;
+  }
+  .note-text-link {
+    color: #24ee89;
+  }
+  .cancel-btn {
+    background-color: #2f4553;
+    color: #b1bad3;
+  }
+  .submit-btn {
+    background: linear-gradient(90deg, #24ee89 0%, #9fe871 100%);
+    color: #000;
+  }
+}

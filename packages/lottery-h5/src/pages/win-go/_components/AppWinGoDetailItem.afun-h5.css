@@ -1,0 +1,32 @@
+.item-bg {
+  background-color: #213743;
+  border-top: 1rem solid #2f4553;
+}
+.item-bg:first-child {
+  border-top: none;
+}
+.detail-time {
+  color: #b1bad3;
+}
+.detail {
+  color: #b1bad3;
+}
+.detail-title {
+  color: #fff;
+}
+.detail-bg {
+  padding-left: 2rem;
+  padding-right: 2rem;
+  background-color: #2f4553;
+  border-radius: 4rem;
+  line-height: 25rem;
+}
+.Succeed {
+  border-color: #47ba7c;
+  color: #47ba7c;
+}
+
+.Failed {
+  border-color: #fd565c;
+  color: #fd565c;
+}
