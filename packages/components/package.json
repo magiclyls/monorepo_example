@@ -1,0 +1,21 @@
+{
+  "name": "@tg/bccomponents",
+  "type": "module",
+  "version": "0.0.8",
+  "packageManager": "pnpm@8.6.7",
+  "main": "index.ts",
+  "scripts": {
+    "docs:dev": "vitepress dev .docs",
+    "docs:build": "vitepress build .docs",
+    "docs:preview": "vitepress preview .docs"
+  },
+  "dependencies": {
+    "@tg/hooks": "workspace:^",
+    "@tg/stores": "workspace:^",
+    "@tg/types": "workspace:^",
+    "@tg/utils": "workspace:^"
+  },
+  "devDependencies": {
+    "vitepress": "^1.6.3"
+  }
+}

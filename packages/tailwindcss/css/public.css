@@ -1,0 +1,113 @@
+@layer base {
+  body {
+    color: var(--color-white);
+    font-family: avertastd;
+    font-size: 0.875rem;
+    line-height: 1.5;
+    background-color: var(--color-bg-black-2);
+  }
+
+  table {
+    text-indent: 0;
+    border-color: inherit;
+    border-collapse: collapse;
+  }
+
+  button,
+  input,
+  optgroup,
+  select,
+  textarea {
+    font-family: inherit;
+    font-feature-settings: inherit;
+    font-variation-settings: inherit;
+    font-size: 100%;
+    font-weight: inherit;
+    line-height: inherit;
+    letter-spacing: inherit;
+    color: inherit;
+    outline: none;
+    margin: 0;
+    padding: 0;
+  }
+
+  button,
+  select {
+    text-transform: none;
+  }
+
+  a {
+    outline: none;
+    appearance: none;
+    margin: 0;
+    padding: 0;
+    background: none;
+    border: none;
+    font-size: inherit;
+    line-height: inherit;
+    cursor: pointer;
+  }
+}
+
+.scroll-y {
+  overflow-y: auto;
+  overflow-x: hidden;
+  overscroll-behavior: contain;
+  -webkit-overflow-scrolling: touch;
+}
+
+.scroll-bar *::-webkit-scrollbar {
+  height: 0.5rem;
+  width: 0.5rem;
+}
+
+.scroll-bar *::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.scroll-bar *::-webkit-scrollbar-thumb {
+  background-color: #0000004d;
+  border-radius: 0.25rem;
+}
+
+.scroll-x {
+  overflow-y: hidden;
+  overflow-x: auto;
+  overscroll-behavior: contain;
+}
+
+.scroll-bar .scroll-x,
+.scroll-w .scroll-y {
+  scrollbar-width: thin;
+  scrollbar-color: rgba(0, 0, 0, 0.3) transparent;
+}
+
+.lock-scroll {
+  overflow: hidden;
+}
+
+.hide-scroll {
+  scrollbar-width: none;
+}
+
+.dropdown-layer {
+  padding: 0 0.5rem;
+  border-radius: 0.5rem;
+  box-shadow:
+    var(--color-black-100) 0 4px 6px -1px,
+    var(--color-black-50) 0 2px 4px -1px;
+}
+
+.bg-layer3 {
+  background-color: var(--color-bg-black-3);
+}
+
+.bg-layer4 {
+  background-color: var(--color-bg-black-4);
+}
+
+.center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}

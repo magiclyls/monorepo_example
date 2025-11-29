@@ -1,0 +1,23 @@
+:root {
+  --tg-footer-height: 4.5rem;
+
+  --tg-sports-bet-slip-box-shadow: 0 0 60px rgba(0, 0, 0, 0.65);
+  --tg-sports-bet-slip-num-box-shadow: rgba(0, 0, 0, 0.2) 0px 2px 10px 0px;
+}
+
+/*
+🧑‍💻🧑‍💻 所有使用z-index的元素 🧑‍💻🧑‍💻
+
+体育盘口信息展示更多时
+app-sports-market-info
+z-index: 9;
+
+🔖体育投注单浮动窗口
+.app-sports-bet-slip
+z-index: 100;
+
+🔖弹窗组件
+.yl-dialog__wrapper
+z-index: 2000;
+
+*/
